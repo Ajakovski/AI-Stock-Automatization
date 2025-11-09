@@ -365,3 +365,395 @@ sqlite3.OperationalError: Cannot add a UNIQUE column
 2025-11-09 11:06:32,684 [INFO] Posted news alert: International Agency Elevates Ghana Credit Rating Citing Economic Progress (MED)
 2025-11-09 11:06:32,835 [ERROR] Discord error 429: {"message": "You are being rate limited.", "retry_after": 0.3, "global": false}
 2025-11-09 11:06:32,837 [INFO] Posted news alert: Mettler-Toledo International (NYSE:MTD) Updates FY 2025 Earnings Guidance (MED)
+2025-11-09 20:23:49,787 [INFO] === Bot startup ===
+2025-11-09 20:23:49,803 [INFO] Loaded 28 personal tickers from watchlist.txt.
+2025-11-09 20:23:50,806 [INFO] Fetched S&P500 master list: 503 tickers.
+2025-11-09 20:23:50,809 [INFO] Loaded recent_randoms (len=0)
+2025-11-09 20:23:50,810 [INFO] Loaded 28 personal tickers from watchlist.txt.
+2025-11-09 20:23:50,812 [INFO] Personal list size (valid S&P): 14
+2025-11-09 20:23:50,814 [INFO] Cycle tickers: 50 total (14 personal + 36 random).
+2025-11-09 20:23:50,815 [INFO] Random picks this cycle: ['TXN', 'HBAN', 'WBD', 'MPC', 'O', 'APA', 'DG', 'WY', 'ALGN', 'BAC', 'LIN', 'STZ', 'AME', 'COO', 'SO', 'MLM', 'LNT', 'LYV', 'IVZ', 'MRK', 'FANG', 'FCX', 'PNR', 'ROL', 'V', 'UHS', 'T', 'AIG', 'MSCI', 'HPQ', 'QCOM', 'KO', 'CMCSA', 'GEV', 'PEP', 'VZ']
+2025-11-09 20:23:51,284 [INFO] Fetched 10 articles for GOOG
+2025-11-09 20:23:51,713 [INFO] Discord posted: GOOG | MED | Alphabet (NASDAQ:GOOG) Shares Down 2% After Insider Selling
+2025-11-09 20:23:51,941 [INFO] Discord posted: GOOG | HIGH | The Top Cloud Stock for AI Investors to Buy Before It Surges 20%
+2025-11-09 20:23:52,253 [INFO] Discord posted: GOOG | MED | The 1 Number That Shows Why Alphabet Is a Buy Today
+2025-11-09 20:23:52,495 [INFO] Discord posted: GOOG | MED | Washington Trust Bank Sells 734 Shares of Alphabet Inc. $GOOG
+2025-11-09 20:23:52,757 [INFO] Discord posted: GOOG | MED | Alphabet Inc. $GOOG Shares Sold by Zevin Asset Management LLC
+2025-11-09 20:23:52,989 [INFO] Discord posted: GOOG | MED | Alphabet (NASDAQ:GOOG) CEO Sundar Pichai Sells 32,500 Shares of Stock
+2025-11-09 20:23:53,271 [INFO] Discord posted: GOOG | MED | Alphabet Inc. $GOOG Shares Sold by Pekin Hardy Strauss Inc.
+2025-11-09 20:23:53,551 [INFO] Discord posted: GOOG | MED | Alphabet Inc. (GOOG) To Go Ex-Dividend on December 8th
+2025-11-09 20:23:55,021 [INFO] Fetched 10 articles for AMZN
+2025-11-09 20:23:55,303 [INFO] Discord posted: AMZN | MED | 3 Reasons to Buy This Top Tech Stock That's Likely to Join Nvidia, Apple, Microsoft, and Alphabet in the $3 Trillion Market Cap Club Next Year
+2025-11-09 20:23:55,516 [INFO] Discord posted: AMZN | MED | Amazon.com (NASDAQ:AMZN) Shares Down 2.9% – What’s Next?
+2025-11-09 20:23:55,801 [INFO] Discord posted: AMZN | MED | WealthPLAN Partners LLC Sells 4,622 Shares of Amazon.com, Inc. $AMZN
+2025-11-09 20:23:57,212 [INFO] Fetched 10 articles for AAPL
+2025-11-09 20:23:57,416 [INFO] Discord posted: AAPL | MED | Acorn Creek Capital LLC Sells 1,379 Shares of Apple Inc. $AAPL
+2025-11-09 20:23:57,685 [INFO] Discord posted: AAPL | MED | Advocate Group LLC Lowers Stock Holdings in Apple Inc. $AAPL
+2025-11-09 20:23:57,970 [INFO] Discord posted: AAPL | HIGH | Apple (NASDAQ:AAPL) Downgraded to “Hold” Rating by Wall Street Zen
+2025-11-09 20:23:58,268 [INFO] Discord posted: AAPL | MED | Apple Inc. (AAPL) To Go Ex-Dividend on November 10th
+2025-11-09 20:23:58,536 [INFO] Discord posted: AAPL | MED | Why Apple Stock Might Be Spared If an AI Bubble Bursts
+2025-11-09 20:23:59,957 [INFO] Fetched 10 articles for NVDA
+2025-11-09 20:24:00,186 [INFO] Discord posted: NVDA | MED | 5th Street Advisors LLC Lowers Position in NVIDIA Corporation $NVDA
+2025-11-09 20:24:00,457 [INFO] Discord posted: NVDA | MED | 5th Street Advisors LLC Has $327,000 Holdings in NVIDIA Corporation $NVDA
+2025-11-09 20:24:00,674 [INFO] Discord posted: NVDA | MED | STKd 100% NVDA & 100% AMD ETF (NASDAQ:LAYS) Shares Down 10.8% – Here’s What Happened
+2025-11-09 20:24:00,893 [INFO] Discord posted: NVDA | MED | Prediction: This Will Be Broadcom's Stock Price 5 Years From Now
+2025-11-09 20:24:02,312 [INFO] Fetched 10 articles for TSLA
+2025-11-09 20:24:02,627 [INFO] Discord posted: TSLA | MED | Tesla, Inc. $TSLA Holdings Raised by Acadian Asset Management LLC
+2025-11-09 20:24:02,841 [INFO] Discord posted: TSLA | MED | Tesla, Inc. $TSLA Holdings Lifted by Acadian Asset Management LLC
+2025-11-09 20:24:03,243 [INFO] Discord posted: TSLA | HIGH | Energy Stocks Worth Watching – November 7th
+2025-11-09 20:24:03,467 [INFO] Discord posted: TSLA | MED | STKd 100% UBER & 100% TSLA ETF (NASDAQ:ZIPP) Shares Down 4% – Here’s Why
+2025-11-09 20:24:03,785 [INFO] Discord posted: TSLA | MED | Tesla (NASDAQ:TSLA) Trading Down 3.5% – Here’s What Happened
+2025-11-09 20:24:04,450 [INFO] Discord posted: TSLA | HIGH | Mid Cap Stocks To Follow Now – November 8th
+2025-11-09 20:24:04,659 [INFO] Discord posted: TSLA | MED | ZEGA Investments LLC Has $8.46 Million Position in Tesla, Inc. $TSLA
+2025-11-09 20:24:06,104 [INFO] Fetched 10 articles for META
+2025-11-09 20:24:06,477 [INFO] Discord posted: META | MED | Meta Platforms, Inc. $META Shares Purchased by Analyst IMS Investment Management Services Ltd.
+2025-11-09 20:24:06,740 [INFO] Discord posted: META | MED | Technology Stocks To Research – November 7th
+2025-11-09 20:24:06,952 [INFO] Discord posted: META | MED | Top Virtual Reality Stocks To Consider – November 7th
+2025-11-09 20:24:07,236 [INFO] Discord posted: META | MED | Global week ahead: AI wobble casts shadow over 'Davos for geeks'
+2025-11-09 20:24:07,453 [INFO] Discord posted: META | MED | Equities outrun intrinsic value as investors exaggerate future
+2025-11-09 20:24:07,771 [INFO] Discord posted: META | MED | In The Process Of Investing And Saving, How Can One Achieve Financial Freedom?
+2025-11-09 20:24:09,189 [INFO] Fetched 10 articles for MSFT
+2025-11-09 20:24:09,392 [INFO] Discord posted: MSFT | MED | Alpha Financial Partners LLC Buys 539 Shares of Microsoft Corporation $MSFT
+2025-11-09 20:24:09,619 [INFO] Discord posted: MSFT | MED | Allspring Global Investments Holdings LLC Purchases 126,746 Shares of Microsoft Corporation $MSFT
+2025-11-09 20:24:10,011 [INFO] Discord posted: MSFT | MED | Almanack Investment Partners LLC. Boosts Stake in Microsoft Corporation $MSFT
+2025-11-09 20:24:10,414 [INFO] Discord posted: MSFT | MED | Should You Buy Microsoft (MSFT) For Long-Term AI Gains?
+2025-11-09 20:24:10,663 [INFO] Discord posted: MSFT | MED | 1,118 Shares in Microsoft Corporation $MSFT Purchased by Wealth Advisory Team LLC
+2025-11-09 20:24:12,096 [INFO] Fetched 10 articles for PG
+2025-11-09 20:24:12,327 [INFO] Discord posted: PG | MED | Acadian Asset Management LLC Buys 331,719 Shares of Procter & Gamble Company (The) $PG
+2025-11-09 20:24:12,585 [INFO] Discord posted: PG | MED | Acadian Asset Management LLC Has $244.25 Million Position in Procter & Gamble Company (The) $PG
+2025-11-09 20:24:12,767 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.873, "global": false}
+2025-11-09 20:24:12,960 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.677, "global": false}
+2025-11-09 20:24:13,160 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.478, "global": false}
+2025-11-09 20:24:13,383 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:13,555 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:14,963 [INFO] Fetched 9 articles for NKE
+2025-11-09 20:24:15,211 [INFO] Discord posted: NKE | MED | AE Wealth Management LLC Has $19.55 Million Stock Holdings in NIKE, Inc. $NKE
+2025-11-09 20:24:15,400 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:15,615 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:15,851 [INFO] Discord posted: NKE | MED | Stokes Family Office LLC Has $2.09 Million Position in NIKE, Inc. $NKE
+2025-11-09 20:24:16,057 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.578, "global": false}
+2025-11-09 20:24:16,279 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.36, "global": false}
+2025-11-09 20:24:16,499 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.142, "global": false}
+2025-11-09 20:24:16,699 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.949, "global": false}
+2025-11-09 20:24:18,128 [INFO] Fetched 10 articles for MRNA
+2025-11-09 20:24:18,388 [INFO] Discord posted: MRNA | MED | 1ST Source Bank Sells 6,493 Shares of Pfizer Inc. $PFE
+2025-11-09 20:24:18,572 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.068, "global": false}
+2025-11-09 20:24:18,806 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.839, "global": false}
+2025-11-09 20:24:19,238 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.427, "global": false}
+2025-11-09 20:24:19,450 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:19,759 [INFO] Discord posted: MRNA | MED | Arcturus Therapeutics (ARCT) to Release Quarterly Earnings on Monday
+2025-11-09 20:24:20,005 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.632, "global": false}
+2025-11-09 20:24:21,426 [INFO] Fetched 7 articles for TGT
+2025-11-09 20:24:21,616 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:21,849 [INFO] Discord posted: TGT | MED | Target Corporation (NYSE:TGT) Given Average Recommendation of “Hold” by Analysts
+2025-11-09 20:24:22,079 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.574, "global": false}
+2025-11-09 20:24:22,313 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.321, "global": false}
+2025-11-09 20:24:22,500 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.143, "global": false}
+2025-11-09 20:24:23,929 [INFO] Fetched 10 articles for NEE
+2025-11-09 20:24:24,155 [INFO] Discord posted: NEE | MED | AE Wealth Management LLC Has $10.81 Million Stock Position in NextEra Energy, Inc. $NEE
+2025-11-09 20:24:24,355 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.286, "global": false}
+2025-11-09 20:24:24,697 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.954, "global": false}
+2025-11-09 20:24:24,897 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.745, "global": false}
+2025-11-09 20:24:25,091 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.543, "global": false}
+2025-11-09 20:24:25,325 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.326, "global": false}
+2025-11-09 20:24:25,504 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:25,859 [INFO] Discord posted: NEE | MED | NextEra Energy, Inc. $NEE is Mark Sheptoff Financial Planning LLC’s 2nd Largest Position
+2025-11-09 20:24:26,054 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.584, "global": false}
+2025-11-09 20:24:26,272 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.372, "global": false}
+2025-11-09 20:24:27,743 [INFO] Fetched 10 articles for PYPL
+2025-11-09 20:24:27,980 [INFO] Discord posted: PYPL | MED | PayPal Holdings, Inc. $PYPL Shares Purchased by Summit Investment Advisors Inc.
+2025-11-09 20:24:28,161 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.474, "global": false}
+2025-11-09 20:24:28,358 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.279, "global": false}
+2025-11-09 20:24:28,545 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.093, "global": false}
+2025-11-09 20:24:28,754 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.882, "global": false}
+2025-11-09 20:24:28,986 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.659, "global": false}
+2025-11-09 20:24:29,184 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.458, "global": false}
+2025-11-09 20:24:29,361 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:30,802 [INFO] Fetched 10 articles for ABT
+2025-11-09 20:24:31,128 [INFO] Discord posted: ABT | MED | 1ST Source Bank Has $5.20 Million Position in Abbott Laboratories $ABT
+2025-11-09 20:24:31,322 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.32, "global": false}
+2025-11-09 20:24:31,534 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:31,810 [INFO] Discord posted: ABT | MED | Menlo Advisors LLC Sells 1,450 Shares of Abbott Laboratories $ABT
+2025-11-09 20:24:32,016 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.63, "global": false}
+2025-11-09 20:24:32,198 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.436, "global": false}
+2025-11-09 20:24:32,381 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.254, "global": false}
+2025-11-09 20:24:33,795 [INFO] Fetched 10 articles for TXN
+2025-11-09 20:24:33,996 [INFO] Discord posted: TXN | MED | Retail Salesperson req. Proc.
+2025-11-09 20:24:34,268 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.375, "global": false}
+2025-11-09 20:24:34,485 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.159, "global": false}
+2025-11-09 20:24:34,706 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.945, "global": false}
+2025-11-09 20:24:34,944 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.692, "global": false}
+2025-11-09 20:24:35,143 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.5, "global": false}
+2025-11-09 20:24:35,351 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:35,522 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:35,678 [ERROR] Discord error 429: {"message": "You are being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:36,034 [INFO] Discord posted: TXN | MED | Texas Instruments Incorporated (NASDAQ:TXN) Given Average Rating of “Hold” by Brokerages
+2025-11-09 20:24:37,451 [INFO] Fetched 7 articles for HBAN
+2025-11-09 20:24:37,631 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:37,949 [INFO] Discord posted: HBAN | MED | Modera Wealth Management LLC Decreases Stock Position in Huntington Bancshares Incorporated $HBAN
+2025-11-09 20:24:38,175 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.469, "global": false}
+2025-11-09 20:24:38,421 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.222, "global": false}
+2025-11-09 20:24:38,625 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.016, "global": false}
+2025-11-09 20:24:38,974 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.663, "global": false}
+2025-11-09 20:24:39,153 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.486, "global": false}
+2025-11-09 20:24:40,594 [INFO] Fetched 10 articles for WBD
+2025-11-09 20:24:40,939 [INFO] Discord posted: WBD | HIGH | 109,000 Shares in Warner Bros. Discovery, Inc. $WBD Purchased by Andra AP fonden
+2025-11-09 20:24:41,158 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.481, "global": false}
+2025-11-09 20:24:41,390 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:41,577 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:41,865 [INFO] Discord posted: WBD | MED | Warner Bros. Discovery (NASDAQ:WBD) Price Target Raised to $25.00 at Raymond James Financial
+2025-11-09 20:24:42,091 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.547, "global": false}
+2025-11-09 20:24:42,324 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.314, "global": false}
+2025-11-09 20:24:42,558 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.1, "global": false}
+2025-11-09 20:24:42,740 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.898, "global": false}
+2025-11-09 20:24:44,163 [INFO] Fetched 8 articles for MPC
+2025-11-09 20:24:44,438 [INFO] Discord posted: MPC | MED | Paradigm Asset Management Co. LLC Buys 8,100 Shares of Marathon Petroleum Corporation $MPC
+2025-11-09 20:24:44,671 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.978, "global": false}
+2025-11-09 20:24:44,897 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.758, "global": false}
+2025-11-09 20:24:45,093 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.541, "global": false}
+2025-11-09 20:24:45,302 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.332, "global": false}
+2025-11-09 20:24:45,534 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:47,004 [INFO] Fetched 10 articles for O
+2025-11-09 20:24:47,207 [INFO] Discord posted: O | MED | What is Northland Capmk’s Forecast for Honest Q1 Earnings?
+2025-11-09 20:24:47,452 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:47,765 [INFO] Discord posted: O | MED | WAVE Life Sciences (WVE) Expected to Announce Quarterly Earnings on Monday
+2025-11-09 20:24:47,957 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.681, "global": false}
+2025-11-09 20:24:48,131 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.506, "global": false}
+2025-11-09 20:24:48,386 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.264, "global": false}
+2025-11-09 20:24:48,560 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.077, "global": false}
+2025-11-09 20:24:48,798 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.836, "global": false}
+2025-11-09 20:24:50,245 [INFO] Fetched 7 articles for APA
+2025-11-09 20:24:50,481 [INFO] Discord posted: APA | MED | Stephens Forecasts Strong Price Appreciation for APA (NASDAQ:APA) Stock
+2025-11-09 20:24:50,680 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.955, "global": false}
+2025-11-09 20:24:50,869 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.775, "global": false}
+2025-11-09 20:24:51,075 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.563, "global": false}
+2025-11-09 20:24:51,266 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.374, "global": false}
+2025-11-09 20:24:51,451 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:51,629 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:53,040 [INFO] Fetched 5 articles for DG
+2025-11-09 20:24:53,356 [INFO] Discord posted: DG | MED | AGF Management Ltd. Purchases 31,453 Shares of Dollar General Corporation $DG
+2025-11-09 20:24:53,560 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:24:53,843 [INFO] Discord posted: DG | MED | SouthState Corp Buys 531 Shares of Dollar General Corporation $DG
+2025-11-09 20:24:54,027 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.609, "global": false}
+2025-11-09 20:24:54,220 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.421, "global": false}
+2025-11-09 20:24:55,651 [INFO] Fetched 10 articles for WY
+2025-11-09 20:24:55,934 [INFO] Discord posted: WY | MED | 1ST Source Bank Lowers Stock Position in AbbVie Inc. $ABBV
+2025-11-09 20:24:56,157 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.484, "global": false}
+2025-11-09 20:24:56,341 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.297, "global": false}
+2025-11-09 20:24:56,538 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.107, "global": false}
+2025-11-09 20:24:56,792 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.854, "global": false}
+2025-11-09 20:24:58,211 [INFO] Fetched 3 articles for ALGN
+2025-11-09 20:24:58,450 [INFO] Discord posted: ALGN | MED | Achmea Investment Management B.V. Trims Holdings in Align Technology, Inc. $ALGN
+2025-11-09 20:24:58,685 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.959, "global": false}
+2025-11-09 20:24:58,917 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.734, "global": false}
+2025-11-09 20:25:00,355 [INFO] Fetched 10 articles for BAC
+2025-11-09 20:25:00,582 [INFO] Discord posted: BAC | MED | Analysts Issue Forecasts for Bank of America FY2025 Earnings
+2025-11-09 20:25:00,771 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.862, "global": false}
+2025-11-09 20:25:01,013 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.63, "global": false}
+2025-11-09 20:25:01,210 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.435, "global": false}
+2025-11-09 20:25:01,413 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:01,679 [INFO] Discord posted: BAC | HIGH | Walkner Condon Financial Advisors LLC Acquires 979 Shares of Bank of America Corporation $BAC
+2025-11-09 20:25:01,858 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.777, "global": false}
+2025-11-09 20:25:02,114 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.521, "global": false}
+2025-11-09 20:25:03,590 [INFO] Fetched 10 articles for LIN
+2025-11-09 20:25:03,836 [INFO] Discord posted: LIN | MED | Revolution Medicines (NASDAQ:RVMD) Price Target Raised to $73.00
+2025-11-09 20:25:04,032 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.603, "global": false}
+2025-11-09 20:25:04,210 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.426, "global": false}
+2025-11-09 20:25:04,474 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.165, "global": false}
+2025-11-09 20:25:04,673 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.967, "global": false}
+2025-11-09 20:25:06,309 [INFO] Discord posted: LIN | MED | RWA Wealth Partners LLC Reduces Holdings in Linde PLC $LIN
+2025-11-09 20:25:06,497 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.137, "global": false}
+2025-11-09 20:25:06,681 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.962, "global": false}
+2025-11-09 20:25:08,155 [INFO] Fetched 5 articles for STZ
+2025-11-09 20:25:08,920 [INFO] Discord posted: STZ | MED | Cheers! Beer and Liquor Stocks on Sale With High Yields to 7.25%
+2025-11-09 20:25:09,142 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.523, "global": false}
+2025-11-09 20:25:09,426 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:09,712 [INFO] Discord posted: STZ | MED | Constellation Brands Inc $STZ Shares Bought by Atlantic Union Bankshares Corp
+2025-11-09 20:25:09,937 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.724, "global": false}
+2025-11-09 20:25:11,353 [INFO] Fetched 10 articles for AME
+2025-11-09 20:25:11,562 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:12,463 [INFO] Discord posted: AME | MED | Bakkt (BKKT) to Release Earnings on Monday
+2025-11-09 20:25:12,653 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.985, "global": false}
+2025-11-09 20:25:12,915 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.723, "global": false}
+2025-11-09 20:25:13,157 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.486, "global": false}
+2025-11-09 20:25:13,340 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:13,521 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:13,743 [INFO] Discord posted: AME | MED | Bitdeer Technologies Group (BTDR) Projected to Post Earnings on Monday
+2025-11-09 20:25:13,966 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.683, "global": false}
+2025-11-09 20:25:15,391 [INFO] Fetched 10 articles for COO
+2025-11-09 20:25:15,609 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:15,865 [INFO] Discord posted: COO | HIGH | Andra AP fonden Acquires 31,623 Shares of Dayforce, Inc. $DAY
+2025-11-09 20:25:16,090 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.55, "global": false}
+2025-11-09 20:25:16,311 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.323, "global": false}
+2025-11-09 20:25:16,545 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.091, "global": false}
+2025-11-09 20:25:16,725 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.911, "global": false}
+2025-11-09 20:25:17,073 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.567, "global": false}
+2025-11-09 20:25:18,488 [INFO] Fetched 10 articles for SO
+2025-11-09 20:25:18,705 [INFO] Discord posted: SO | MED | Andra AP fonden Boosts Stock Holdings in Kohl’s Corporation $KSS
+2025-11-09 20:25:19,002 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.638, "global": false}
+2025-11-09 20:25:19,233 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.414, "global": false}
+2025-11-09 20:25:19,453 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:19,693 [INFO] Discord posted: SO | MED | Owners of Indigenous Eats venture into boutique business with newly opened Indigenous Chic in River Park Square - Sun, 09 Nov 2025 PST
+2025-11-09 20:25:19,924 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.723, "global": false}
+2025-11-09 20:25:20,164 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.483, "global": false}
+2025-11-09 20:25:21,616 [INFO] Fetched 8 articles for MLM
+2025-11-09 20:25:21,887 [INFO] Discord posted: MLM | MED | Amica Retiree Medical Trust Lowers Stake in Martin Marietta Materials, Inc. $MLM
+2025-11-09 20:25:22,085 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.552, "global": false}
+2025-11-09 20:25:22,326 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.312, "global": false}
+2025-11-09 20:25:22,534 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.114, "global": false}
+2025-11-09 20:25:22,762 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.879, "global": false}
+2025-11-09 20:25:23,019 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.617, "global": false}
+2025-11-09 20:25:23,231 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.412, "global": false}
+2025-11-09 20:25:23,486 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:24,956 [INFO] Fetched 3 articles for LNT
+2025-11-09 20:25:25,169 [INFO] Discord posted: LNT | MED | Magellan Asset Management Ltd Has $10.41 Million Holdings in Alliant Energy Corporation $LNT
+2025-11-09 20:25:25,365 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:25,562 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:27,036 [INFO] Fetched 7 articles for LYV
+2025-11-09 20:25:27,313 [INFO] Discord posted: LYV | MED | FY2025 Earnings Forecast for LYV Issued By Seaport Res Ptn
+2025-11-09 20:25:27,501 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:27,757 [INFO] Discord posted: LYV | MED | Guggenheim Cuts Live Nation Entertainment (NYSE:LYV) Price Target to $175.00
+2025-11-09 20:25:27,985 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.667, "global": false}
+2025-11-09 20:25:28,263 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.38, "global": false}
+2025-11-09 20:25:28,515 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.132, "global": false}
+2025-11-09 20:25:30,005 [INFO] Fetched 4 articles for IVZ
+2025-11-09 20:25:30,247 [INFO] Discord posted: IVZ | MED | Invesco (NYSE:IVZ) Upgraded at Zacks Research
+2025-11-09 20:25:30,517 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.126, "global": false}
+2025-11-09 20:25:30,707 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.937, "global": false}
+2025-11-09 20:25:32,133 [INFO] Fetched 10 articles for MRK
+2025-11-09 20:25:32,366 [INFO] Discord posted: MRK | MED | AE Wealth Management LLC Sells 184,984 Shares of Merck & Co., Inc. $MRK
+2025-11-09 20:25:32,568 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.076, "global": false}
+2025-11-09 20:25:32,778 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.862, "global": false}
+2025-11-09 20:25:32,957 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.677, "global": false}
+2025-11-09 20:25:33,229 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.433, "global": false}
+2025-11-09 20:25:33,415 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:33,620 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:33,875 [INFO] Discord posted: MRK | HIGH | True Wealth Design LLC Acquires 708 Shares of Merck & Co., Inc. $MRK
+2025-11-09 20:25:34,092 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.549, "global": false}
+2025-11-09 20:25:34,247 [ERROR] Discord error 429: {"message": "You are being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:35,663 [INFO] Fetched 10 articles for FANG
+2025-11-09 20:25:35,870 [INFO] Discord posted: FANG | MED | Bank of America Cuts DoorDash (NASDAQ:DASH) Price Target to $305.00
+2025-11-09 20:25:36,078 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.562, "global": false}
+2025-11-09 20:25:36,280 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.36, "global": false}
+2025-11-09 20:25:36,457 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.177, "global": false}
+2025-11-09 20:25:36,653 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.983, "global": false}
+2025-11-09 20:25:36,870 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.765, "global": false}
+2025-11-09 20:25:37,118 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.555, "global": false}
+2025-11-09 20:25:37,328 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.317, "global": false}
+2025-11-09 20:25:37,613 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:39,119 [INFO] Fetched 10 articles for FCX
+2025-11-09 20:25:39,450 [INFO] Discord posted: FCX | MED | What is Zacks Research’s Forecast for FCX FY2025 Earnings?
+2025-11-09 20:25:39,842 [INFO] Discord posted: FCX | MED | FCX Investor News: If You Have Suffered Losses in Freeport-McMoRan Inc. (NYSE: FCX), You Are ...
+2025-11-09 20:25:40,055 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.579, "global": false}
+2025-11-09 20:25:40,283 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.361, "global": false}
+2025-11-09 20:25:40,553 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.099, "global": false}
+2025-11-09 20:25:40,752 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.883, "global": false}
+2025-11-09 20:25:42,153 [INFO] Fetched 1 articles for PNR
+2025-11-09 20:25:42,374 [INFO] Discord posted: PNR | MED | Pentair plc $PNR Shares Sold by Bank of New York Mellon Corp
+2025-11-09 20:25:43,792 [INFO] Fetched 4 articles for ROL
+2025-11-09 20:25:44,105 [INFO] Discord posted: ROL | MED | Rollins, Inc. (ROL) To Go Ex-Dividend on November 10th
+2025-11-09 20:25:44,318 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.32, "global": false}
+2025-11-09 20:25:44,545 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.103, "global": false}
+2025-11-09 20:25:44,741 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.897, "global": false}
+2025-11-09 20:25:46,161 [INFO] Fetched 10 articles for V
+2025-11-09 20:25:46,385 [INFO] Discord posted: V | HIGH | Andra AP fonden Takes $1.43 Million Position in Qiagen N.V. $QGEN
+2025-11-09 20:25:46,609 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.026, "global": false}
+2025-11-09 20:25:46,803 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.838, "global": false}
+2025-11-09 20:25:46,978 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.657, "global": false}
+2025-11-09 20:25:48,750 [INFO] Discord posted: V | MED | AE Wealth Management LLC Grows Stock Holdings in LyondellBasell Industries N.V. $LYB
+2025-11-09 20:25:48,930 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.706, "global": false}
+2025-11-09 20:25:49,113 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.526, "global": false}
+2025-11-09 20:25:49,303 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.331, "global": false}
+2025-11-09 20:25:49,536 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:50,934 [INFO] Fetched 2 articles for UHS
+2025-11-09 20:25:51,276 [INFO] Discord posted: UHS | MED | Los Angeles Capital Management LLC Purchases 43,304 Shares of Universal Health Services, Inc. $UHS
+2025-11-09 20:25:52,712 [INFO] Fetched 10 articles for T
+2025-11-09 20:25:52,940 [INFO] Discord posted: T | MED | Stock Yards Bancorp, Inc. $SYBT Shares Sold by Amica Mutual Insurance Co.
+2025-11-09 20:25:53,145 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.488, "global": false}
+2025-11-09 20:25:53,329 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.313, "global": false}
+2025-11-09 20:25:53,544 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:53,787 [INFO] Discord posted: T | HIGH | Andra AP fonden Makes New $2.02 Million Investment in DraftKings Inc. $DKNG
+2025-11-09 20:25:53,977 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.666, "global": false}
+2025-11-09 20:25:54,175 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.466, "global": false}
+2025-11-09 20:25:54,384 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.259, "global": false}
+2025-11-09 20:25:54,579 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.063, "global": false}
+2025-11-09 20:25:56,002 [INFO] Fetched 10 articles for AIG
+2025-11-09 20:25:56,272 [INFO] Discord posted: AIG | MED | American International Group, Inc. $AIG Shares Sold by Resona Asset Management Co. Ltd.
+2025-11-09 20:25:56,489 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.147, "global": false}
+2025-11-09 20:25:56,724 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.916, "global": false}
+2025-11-09 20:25:56,909 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.731, "global": false}
+2025-11-09 20:25:57,099 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.542, "global": false}
+2025-11-09 20:25:58,506 [INFO] Fetched 10 articles for MSCI
+2025-11-09 20:25:58,763 [INFO] Discord posted: MSCI | HIGH | AGF Management Ltd. Acquires 4,473 Shares of Fidelity MSCI Real Estate Index ETF $FREL
+2025-11-09 20:25:58,935 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.704, "global": false}
+2025-11-09 20:25:59,143 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.494, "global": false}
+2025-11-09 20:25:59,350 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:59,587 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:25:59,794 [INFO] Discord posted: MSCI | HIGH | Fidelity MSCI Energy Index ETF $FENY Shares Acquired by AGF Management Ltd.
+2025-11-09 20:25:59,992 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.648, "global": false}
+2025-11-09 20:26:01,407 [INFO] Fetched 1 articles for HPQ
+2025-11-09 20:26:01,595 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:26:03,096 [INFO] Fetched 10 articles for QCOM
+2025-11-09 20:26:03,428 [INFO] Discord posted: QCOM | MED | AE Wealth Management LLC Grows Stake in QUALCOMM Incorporated $QCOM
+2025-11-09 20:26:03,609 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:26:03,863 [INFO] Discord posted: QCOM | MED | QUALCOMM (NASDAQ:QCOM) Price Target Raised to $205.00
+2025-11-09 20:26:04,052 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.586, "global": false}
+2025-11-09 20:26:04,251 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.391, "global": false}
+2025-11-09 20:26:04,480 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.16, "global": false}
+2025-11-09 20:26:04,658 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.977, "global": false}
+2025-11-09 20:26:04,838 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.802, "global": false}
+2025-11-09 20:26:05,034 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.603, "global": false}
+2025-11-09 20:26:05,199 [ERROR] Discord error 429: {"message": "You are being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:26:06,664 [INFO] Fetched 10 articles for KO
+2025-11-09 20:26:06,933 [INFO] Discord posted: KO | MED | AGF Management Ltd. Raises Holdings in CocaCola Company (The) $KO
+2025-11-09 20:26:07,116 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.524, "global": false}
+2025-11-09 20:26:07,326 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.322, "global": false}
+2025-11-09 20:26:07,554 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:26:07,985 [INFO] Discord posted: KO | MED | CocaCola (NYSE:KO) Stock Price Up 2.2% After Analyst Upgrade
+2025-11-09 20:26:08,180 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.465, "global": false}
+2025-11-09 20:26:08,398 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.26, "global": false}
+2025-11-09 20:26:08,593 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.045, "global": false}
+2025-11-09 20:26:08,790 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.847, "global": false}
+2025-11-09 20:26:10,200 [INFO] Fetched 10 articles for CMCSA
+2025-11-09 20:26:10,427 [INFO] Discord posted: CMCSA | MED | Acadian Asset Management LLC Buys 352,728 Shares of Comcast Corporation $CMCSA
+2025-11-09 20:26:10,607 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.027, "global": false}
+2025-11-09 20:26:10,794 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.841, "global": false}
+2025-11-09 20:26:10,987 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.65, "global": false}
+2025-11-09 20:26:11,178 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.472, "global": false}
+2025-11-09 20:26:11,372 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:26:11,603 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:26:11,897 [INFO] Discord posted: CMCSA | MED | Modera Wealth Management LLC Decreases Stock Position in Comcast Corporation $CMCSA
+2025-11-09 20:26:12,049 [ERROR] Discord error 429: {"message": "You are being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:26:12,262 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.375, "global": false}
+2025-11-09 20:26:13,677 [INFO] Fetched 10 articles for GEV
+2025-11-09 20:26:13,899 [INFO] Discord posted: GEV | MED | Acadian Asset Management LLC Grows Stock Holdings in GE Vernova Inc. $GEV
+2025-11-09 20:26:14,132 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.512, "global": false}
+2025-11-09 20:26:14,377 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.278, "global": false}
+2025-11-09 20:26:14,568 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.072, "global": false}
+2025-11-09 20:26:14,810 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.838, "global": false}
+2025-11-09 20:26:14,986 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.658, "global": false}
+2025-11-09 20:26:15,200 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.443, "global": false}
+2025-11-09 20:26:15,472 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:26:15,646 [ERROR] Discord error 429: {"message": "You are being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:26:17,099 [INFO] Fetched 10 articles for PEP
+2025-11-09 20:26:17,332 [INFO] Discord posted: PEP | MED | 1ST Source Bank Sells 1,573 Shares of PepsiCo, Inc. $PEP
+2025-11-09 20:26:17,531 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:26:17,847 [INFO] Discord posted: PEP | MED | OUTFRONT Media (NYSE:OUT) Posts Quarterly Earnings Results, Misses Estimates By $0.21 EPS
+2025-11-09 20:26:18,029 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.613, "global": false}
+2025-11-09 20:26:18,239 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.404, "global": false}
+2025-11-09 20:26:18,428 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.216, "global": false}
+2025-11-09 20:26:18,600 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.034, "global": false}
+2025-11-09 20:26:18,791 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.849, "global": false}
+2025-11-09 20:26:18,997 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.643, "global": false}
+2025-11-09 20:26:20,434 [INFO] Fetched 10 articles for VZ
+2025-11-09 20:26:20,696 [INFO] Discord posted: VZ | MED | Acadian Asset Management LLC Has $325.55 Million Holdings in Verizon Communications Inc. $VZ
+2025-11-09 20:26:20,930 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.71, "global": false}
+2025-11-09 20:26:21,122 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.517, "global": false}
+2025-11-09 20:26:21,337 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:26:21,559 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:26:21,852 [INFO] Discord posted: VZ | MED | Marco Investment Management LLC Has $3.62 Million Stock Position in Verizon Communications Inc. $VZ
+2025-11-09 20:26:22,078 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.562, "global": false}
+2025-11-09 20:26:22,334 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.308, "global": false}
+2025-11-09 20:26:22,536 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.108, "global": false}
+2025-11-09 20:26:22,680 [ERROR] Discord error 429: {"message": "You are being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 20:26:23,681 [INFO] Cycle complete. Sleeping 6000s.
