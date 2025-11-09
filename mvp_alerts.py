@@ -1,228 +1,361 @@
+#!/usr/bin/env python3
+"""
+MVP: Lightweight US Stock Alerts (Form4 + NewsData)
+- Uses official SEC Atom feed (no scraping)
+- News via NewsData.io API
+- Posts only MEDIUM/HIGH alerts to Discord
+- Logs everything to 'bot.log'
+"""
+
 import os
-import time
-import logging
-import requests
-import sqlite3
-from datetime import datetime, timedelta
 import re
-from urllib.parse import urlencode
+import time
+import json
+import logging
+import sqlite3
+import requests
+import xml.etree.ElementTree as ET
+from datetime import datetime, timedelta
+from dotenv import load_dotenv
+from bs4 import BeautifulSoup
+import pandas as pd
+import pytz
 
-# ========== CONFIG ==========
-DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1435654882710519888/ZDx_dGG22dknR4hGrENapdaG1Cm-VyUCUvrXmI6kGxcw0KLILP5AJKmNB14L9TzD65J-"
-NEWSDATA_API_KEY = "pub_f22ba9249c104a038d7e1b904b949e3a"
+# ------------------- CONFIG -------------------
+load_dotenv()
+DISCORD_WEBHOOK = os.getenv("DISCORD_WEBHOOK_URL") or "https://discord.com/api/webhooks/1435654882710519888/ZDx_dGG22dknR4hGrENapdaG1Cm-VyUCUvrXmI6kGxcw0KLILP5AJKmNB14L9TzD65J-"
+NEWSDATA_KEY = os.getenv("NEWSDATA_API_KEY") or "pub_f22ba9249c104a038d7e1b904b949e3a"
+DEDUPE_MINUTES = int(os.getenv("DEDUPE_WINDOW_MINUTES", "30"))
+POLL_INTERVAL = int(os.getenv("POLL_INTERVAL_SECONDS", "90"))
+WATCHLIST_SOURCE = os.getenv("WATCHLIST_SOURCE", "SP500")
 
+USER_AGENT = {"User-Agent": "StockAI-Bot/1.1 (ajakovski@yahoo.com)"}
 DB_PATH = "events.db"
-LOG_PATH = "bot.log"
+LOG_FILE = "bot.log"
 
-POLL_INTERVAL = 180  # seconds (3 minutes)
-DEDUPE_WINDOW_MINUTES = 30
+US_TZ = pytz.timezone("America/New_York")
 
-# ========== LOGGER SETUP ==========
+# keywords
+BUY_KEYWORDS = ["buy", "purchase", "acquire", "purchased", "bought"]
+SELL_KEYWORDS = ["sell", "sold", "disposition", "sold out"]
+CEO_KEYWORDS = ["chief executive", "ceo", "chief executive officer", "president"]
+CFO_KEYWORDS = ["chief financial", "cfo", "chief financial officer"]
+NEWS_ALERT_KEYWORDS = [
+    "acquire", "merger", "buyback", "earnings", "downgrade", "upgrade",
+    "surprise", "fraud", "restat", "guidance", "lawsuit", "sec investigation"
+]
+
+# ------------------- LOGGING -------------------
 logging.basicConfig(
-    filename=LOG_PATH,
+    filename=LOG_FILE,
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
 )
-logging.info("========== Bot Startup ==========")
+console = logging.StreamHandler()
+console.setLevel(logging.INFO)
+formatter = logging.Formatter("%(asctime)s [%(levelname)s] %(message)s")
+console.setFormatter(formatter)
+logging.getLogger("").addHandler(console)
 
-# ========== SECTOR DICTIONARY ==========
-SECTOR_TICKERS = {
-    "Technology": ["AAPL", "MSFT", "NVDA", "AMD", "INTC", "GOOGL", "META", "CRM"],
-    "Financials": ["JPM", "BAC", "GS", "MS", "C", "WFC", "BLK"],
-    "Healthcare": ["UNH", "LLY", "JNJ", "PFE", "MRK", "TMO", "ABBV"],
-    "Consumer Discretionary": ["AMZN", "TSLA", "HD", "NKE", "MCD", "SBUX"],
-    "Energy": ["XOM", "CVX", "COP", "SLB", "EOG"],
-    "Industrials": ["GE", "CAT", "UPS", "BA", "HON", "UNP"],
-    "Materials": ["LIN", "SHW", "ECL", "NEM"],
-    "Real Estate": ["O", "PLD", "SPG", "EQIX"],
-    "Utilities": ["NEE", "DUK", "SO", "AEP"],
-    "Communication Services": ["NFLX", "T", "VZ", "CMCSA"],
-}
-
-FIN_KEYWORDS = [
-    "earnings", "forecast", "price target", "guidance",
-    "acquisition", "merger", "downgrade", "upgrade",
-    "buyback", "ipo", "sec", "investigation",
-    "plunge", "surge", "profit", "loss",
-    "beats expectations", "misses estimates", "dividend"
-]
-
-# ========== DATABASE SETUP ==========
-# ========== DATABASE SETUP WITH MIGRATION ==========
+# ------------------- DATABASE -------------------
 def init_db():
     conn = sqlite3.connect(DB_PATH)
-    cur = conn.cursor()
-
-    # Create table if it doesn't exist
-    cur.execute(
-        """CREATE TABLE IF NOT EXISTS events (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            title TEXT,
-            url TEXT UNIQUE,
-            timestamp TEXT
-        )"""
+    c = conn.cursor()
+    c.execute("""
+    CREATE TABLE IF NOT EXISTS events (
+        id INTEGER PRIMARY KEY,
+        source TEXT,
+        ticker TEXT,
+        event_type TEXT,
+        role_flag TEXT,
+        severity TEXT,
+        title TEXT,
+        link TEXT,
+        raw TEXT,
+        created_at TEXT
     )
+    """)
+    conn.commit()
+    return conn
 
-    # --- Schema migration check ---
-    # Get all current columns
-    cur.execute("PRAGMA table_info(events)")
-    cols = [c[1] for c in cur.fetchall()]
+def already_seen(conn, source, ticker, event_type):
+    c = conn.cursor()
+    time_threshold = (datetime.utcnow() - timedelta(minutes=DEDUPE_MINUTES)).isoformat()
+    c.execute("""
+    SELECT 1 FROM events
+    WHERE source=? AND ticker=? AND event_type=? AND created_at>?
+    """, (source, ticker, event_type, time_threshold))
+    return c.fetchone() is not None
 
-    # Ensure required columns exist
-    required = {"id", "title", "url", "timestamp"}
-    missing = required - set(cols)
+def save_event(conn, data):
+    c = conn.cursor()
+    c.execute("""
+    INSERT INTO events (source,ticker,event_type,role_flag,severity,title,link,raw,created_at)
+    VALUES (?,?,?,?,?,?,?,?,?)
+    """, (
+        data.get("source"),
+        data.get("ticker"),
+        data.get("event_type"),
+        data.get("role_flag"),
+        data.get("severity"),
+        data.get("title"),
+        data.get("link"),
+        data.get("raw"),
+        datetime.utcnow().isoformat()
+    ))
+    conn.commit()
 
-    if missing:
-        for col in missing:
-            if col == "url":
-                cur.execute("ALTER TABLE events ADD COLUMN url TEXT UNIQUE")
-                logging.warning("Database migrated: added 'url' column.")
-            elif col == "timestamp":
-                cur.execute("ALTER TABLE events ADD COLUMN timestamp TEXT")
-                logging.warning("Database migrated: added 'timestamp' column.")
-            elif col == "title":
-                cur.execute("ALTER TABLE events ADD COLUMN title TEXT")
-                logging.warning("Database migrated: added 'title' column.")
-        conn.commit()
-
-    conn.close()
-
-
-def is_duplicate(url):
-    conn = sqlite3.connect(DB_PATH)
-    cur = conn.cursor()
-    time_threshold = (datetime.utcnow() - timedelta(minutes=DEDUPE_WINDOW_MINUTES)).isoformat()
+# ------------------- SEC FORM 4 -------------------
+def fetch_recent_form4_entries():
+    url = "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=4&output=atom"
     try:
-        cur.execute("SELECT 1 FROM events WHERE url=? AND timestamp>?", (url, time_threshold))
-        found = cur.fetchone()
-    except sqlite3.OperationalError as e:
-        logging.error(f"DB query failed: {e}")
-        found = None
-    conn.close()
-    return bool(found)
-
-
-def store_event(title, url):
-    conn = sqlite3.connect(DB_PATH)
-    cur = conn.cursor()
-    try:
-        cur.execute(
-            "INSERT OR IGNORE INTO events (title, url, timestamp) VALUES (?, ?, ?)",
-            (title, url, datetime.utcnow().isoformat())
-        )
-        conn.commit()
-    except sqlite3.OperationalError as e:
-        logging.error(f"DB insert failed: {e}")
-    conn.close()
-
-# ========== NEWS FETCH ==========
-def fetch_news_for_sector(sector_name, tickers):
-    query = " OR ".join(tickers)
-    params = {
-        "apikey": NEWSDATA_API_KEY,
-        "q": query,
-        "category": "business",
-        "language": "en",
-        "country": "us",
-    }
-    url = f"https://newsdata.io/api/1/news?{urlencode(params)}"
-    try:
-        resp = requests.get(url, timeout=10)
-        resp.raise_for_status()
-        data = resp.json()
-        results = data.get("results", [])
-        logging.info(f"Fetched {len(results)} articles for sector {sector_name}.")
-        return results
+        r = requests.get(url, headers=USER_AGENT, timeout=20)
+        r.raise_for_status()
+        root = ET.fromstring(r.content)
+        ns = {'atom': 'http://www.w3.org/2005/Atom'}
+        entries = []
+        for entry in root.findall('atom:entry', ns):
+            title = entry.find('atom:title', ns).text
+            link = entry.find('atom:link', ns).attrib.get('href')
+            summary = entry.find('atom:summary', ns)
+            summary_text = summary.text if summary is not None else ""
+            m = re.search(r"\(([A-Z0-9.-]{1,6})\)", title or "")
+            ticker = m.group(1).upper() if m else None
+            entries.append({
+                "title": title,
+                "link": link,
+                "summary": summary_text,
+                "ticker": ticker
+            })
+        logging.info(f"Fetched {len(entries)} Form4 entries from SEC.")
+        return entries
     except Exception as e:
-        logging.error(f"NewsData fetch error ({sector_name}): {e}")
+        logging.error(f"SEC Form4 fetch error: {e}")
         return []
 
-# ========== RELEVANCE & SEVERITY ==========
-def classify_article(article, tickers):
-    title = (article.get("title") or "").lower()
-    desc = (article.get("description") or "").lower()
-    text = f"{title} {desc}"
+def score_form4(entry_text):
+    t = entry_text.lower()
+    severity = "LOW"
+    if any(kw in t for kw in BUY_KEYWORDS):
+        severity = "MED"
+    if any(kw in t for kw in CEO_KEYWORDS + CFO_KEYWORDS):
+        severity = "HIGH"
+    return severity
 
-    matched_tickers = [t for t in tickers if t.lower() in text]
-    matched_keywords = [k for k in FIN_KEYWORDS if k in text]
+# ------------------- NEWSDATA -------------------
+def fetch_news_newsdata(tickers):
+    results = []
+    if not NEWSDATA_KEY:
+        logging.warning("No NewsData API key found.")
+        return []
 
-    if not matched_tickers and not matched_keywords:
-        return None, "Filtered (irrelevant)"
+    try:
+        for i in range(0, len(tickers), 8):  # smaller batches = safer
+            subset = tickers[i:i + 8]
+            # Use spaces, not plus signs, and keep "OR" uppercased
+            query = " OR ".join(subset)
+            params = {
+                "apikey": NEWSDATA_KEY,
+                "q": query,
+                "language": "en",
+            }
+            url = "https://newsdata.io/api/1/news"
+            r = requests.get(url, params=params, headers=USER_AGENT, timeout=20)
+
+            if r.status_code == 422:
+                logging.warning(f"NewsData skipped bad query batch: {subset}")
+                time.sleep(1)
+                continue
+
+            r.raise_for_status()
+            data = r.json()
+            for item in data.get("results", []):
+                results.append({
+                    "title": item.get("title"),
+                    "description": item.get("description") or "",
+                    "url": item.get("link"),
+                    "source": item.get("source_id"),
+                    "published": item.get("pubDate")
+                })
+            logging.info(f"NewsData batch ok ({len(results)} total so far)")
+            time.sleep(1.5)
+
+        logging.info(f"Fetched {len(results)} total news articles from NewsData.io.")
+        return results
+
+    except Exception as e:
+        logging.error(f"NewsData fetch error: {e}")
+        return []
+
+
+def score_news(article):
+    """
+    Enhanced severity ranking for NewsData articles.
+    Returns: LOW / MED / HIGH
+    """
+    text = (article.get("title", "") + " " + article.get("description", "")).lower()
+
+    # --- High-impact triggers ---
+    high_signals = [
+        "merger", "acquisition", "acquires", "acquired", "buyout", "takeover",
+        "lawsuit", "charged", "investigation", "sec investigation",
+        "bankruptcy", "files for bankruptcy", "data breach", "fraud",
+        "resignation", "steps down", "fined", "settlement", "layoffs",
+        "mass layoff", "hack", "cyberattack", "guidance cut",
+        "guidance lowered", "downgrade", "recall", "trading halted",
+        "delisting", "collapse", "fire", "explosion"
+    ]
+
+    # --- Medium-impact triggers ---
+    med_signals = [
+        "earnings", "quarterly results", "eps", "revenue", "forecast",
+        "price target", "beats", "misses", "upgrade", "expands",
+        "partnership", "restructuring", "ipo", "share offering",
+        "dividend", "new product", "guidance"
+    ]
+
+    high_weight = sum(1 for w in high_signals if w in text)
+    med_weight = sum(1 for w in med_signals if w in text)
 
     severity = "LOW"
-    if any(w in text for w in ["plunge", "surge", "downgrade", "acquisition", "investigation", "ipo"]):
+    if high_weight >= 1 or ("miss" in text and "expectation" in text):
         severity = "HIGH"
-    elif any(w in text for w in ["earnings", "forecast", "price target", "guidance", "upgrade", "buyback", "dividend"]):
+    elif med_weight >= 1:
         severity = "MED"
 
-    return severity, ", ".join(matched_tickers or matched_keywords)
+    # Escalate MED to HIGH if clearly negative
+    if severity == "MED" and any(word in text for word in [
+        "lawsuit", "fined", "downgrade", "layoff", "resignation", "bankruptcy"
+    ]):
+        severity = "HIGH"
 
-# ========== DISCORD ALERT ==========
-def post_to_discord(article, severity, sector, match_info):
-    title = article.get("title", "No title")
-    url = article.get("link", "No URL")
-    desc = article.get("description", "No description")
+    return severity
 
-    if len(desc) > 1024:
-        desc = desc[:1021] + "..."
+
+# ------------------- DISCORD -------------------
+def post_to_discord(payload):
+    if not DISCORD_WEBHOOK:
+        logging.warning("No Discord webhook configured.")
+        return
+
+    desc = payload.get("description", "") or ""
+    # Truncate long messages to prevent 400 errors
+    if len(desc) > 950:
+        desc = desc[:950] + "..."
 
     embed = {
-        "title": f"{severity} — {title}",
-        "url": url,
-        "color": 0xFF0000 if severity == "HIGH" else 0xFFA500,
+        "title": payload.get("title"),
+        "description": desc,
+        "url": payload.get("link"),
         "fields": [
-            {"name": "Sector", "value": sector, "inline": True},
-            {"name": "Match", "value": match_info or "N/A", "inline": True},
-            {"name": "Description", "value": desc},
+            {"name": "Ticker", "value": payload.get("ticker") or "N/A", "inline": True},
+            {"name": "Source", "value": payload.get("source"), "inline": True},
+            {"name": "Severity", "value": payload.get("severity"), "inline": True}
         ],
         "timestamp": datetime.utcnow().isoformat()
     }
 
+    data = {"content": None, "embeds": [embed]}
+    headers = {"Content-Type": "application/json"}
+
     try:
-        r = requests.post(DISCORD_WEBHOOK, json={"embeds": [embed]}, timeout=10)
-        if r.status_code != 204:
+        r = requests.post(DISCORD_WEBHOOK, json=data, headers=headers, timeout=10)
+        if r.status_code not in (200, 204):
             logging.error(f"Discord error {r.status_code}: {r.text}")
-        else:
-            logging.info(f"Posted alert: {title} ({severity})")
     except Exception as e:
         logging.error(f"Discord post failed: {e}")
 
-# ========== MAIN LOOP ==========
-def main():
-    logging.info("Initializing database...")
-    init_db()
-    logging.info(f"Loaded {sum(len(v) for v in SECTOR_TICKERS.values())} tickers across {len(SECTOR_TICKERS)} sectors.")
-    logging.info("Bot started successfully. (Form-4 fetching disabled for now.)")
+# ------------------- HELPERS -------------------
+def load_sp500():
+    try:
+        url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
+        r = requests.get(url, headers=USER_AGENT, timeout=15)
+        soup = BeautifulSoup(r.text, "lxml")
+        table = soup.find("table", {"id": "constituents"})
+        df = pd.read_html(str(table))[0]
+        tickers = set(df.Symbol.str.replace('.', '-', regex=False).str.upper().tolist())
+        logging.info(f"Loaded {len(tickers)} S&P500 tickers.")
+        return tickers
+    except Exception as e:
+        logging.error(f"S&P500 load failed: {e}")
+        return set()
+
+# ------------------- MAIN LOOP -------------------
+def main_loop():
+    conn = init_db()
+    watchlist = load_sp500() if WATCHLIST_SOURCE == "SP500" else set()
+    logging.info("Bot started successfully.")
 
     while True:
-        total_articles = 0
-        for sector, tickers in SECTOR_TICKERS.items():
-            articles = fetch_news_for_sector(sector, tickers)
-            total_articles += len(articles)
-
-            for a in articles:
-                url = a.get("link")
-                if not url or is_duplicate(url):
+        try:
+            # --- SEC Form 4 ---
+            form4_entries = fetch_recent_form4_entries()
+            for entry in form4_entries:
+                if not entry.get("ticker") or entry["ticker"] not in watchlist:
                     continue
-                severity, match_info = classify_article(a, tickers)
-                if severity in ("MED", "HIGH"):
-                    store_event(a.get("title", "No title"), url)
-                    post_to_discord(a, severity, sector, match_info)
-                else:
-                    logging.info(f"Skipped ({severity or 'NONE'}) — {a.get('title', 'No title')} [{match_info}]")
+                text = entry.get("summary", "")
+                severity = score_form4(text)
+                if severity == "LOW":
+                    continue
+                if already_seen(conn, "form4", entry["ticker"], severity):
+                    continue
+                data = {
+                    "source": "form4",
+                    "ticker": entry["ticker"],
+                    "event_type": "insider_tx",
+                    "role_flag": None,
+                    "severity": severity,
+                    "title": f"Form4 Alert — {entry['ticker']} — {severity}",
+                    "link": entry["link"],
+                    "raw": text
+                }
+                save_event(conn, data)
+                desc = f"**Event:** Insider transaction\n\n{entry['summary'][:600]}..."
+                post_to_discord({
+                    "title": data["title"],
+                    "description": desc,
+                    "link": data["link"],
+                    "ticker": data["ticker"],
+                    "source": "SEC Form 4",
+                    "severity": severity
+                })
+                logging.info(f"Posted Form4 alert: {entry['ticker']} ({severity})")
 
-        logging.info(f"Cycle complete. Total processed: {total_articles}. Sleeping {POLL_INTERVAL}s.")
+            # --- NewsData ---
+            news_items = fetch_news_newsdata(list(watchlist)[:100])
+            for art in news_items:
+                severity = score_news(art)
+                if severity == "LOW":
+                    continue
+                if already_seen(conn, "news", art.get("title", "")[:100], severity):
+                    continue
+                data = {
+                    "source": "news",
+                    "ticker": "MULTI",
+                    "event_type": "news",
+                    "role_flag": None,
+                    "severity": severity,
+                    "title": art.get("title"),
+                    "link": art.get("url"),
+                    "raw": art.get("description", "")
+                }
+                save_event(conn, data)
+                desc = f"**Headline:** {art.get('title')}\n\n{art.get('description')}"
+                post_to_discord({
+                    "title": f"News Alert — {severity}",
+                    "description": desc,
+                    "link": art.get("url"),
+                    "ticker": data["ticker"],
+                    "source": "NewsData.io",
+                    "severity": severity
+                })
+                logging.info(f"Posted news alert: {art.get('title')} ({severity})")
+
+        except Exception as e:
+            logging.error(f"Main loop error: {e}")
+
         time.sleep(POLL_INTERVAL)
 
-# ========== DISABLED: SEC FORM-4 FETCH ==========
-# def fetch_sec_form4_entries():
-#     pass  # Placeholder – temporarily disabled
-
-# ========== STARTUP ==========
+# ------------------- ENTRY -------------------
 if __name__ == "__main__":
-    try:
-        main()
-    except KeyboardInterrupt:
-        logging.info("Bot stopped manually.")
-    except Exception as e:
-        logging.exception(f"Fatal error: {e}")
+    main_loop()
