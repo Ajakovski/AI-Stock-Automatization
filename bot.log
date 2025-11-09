@@ -1,0 +1,300 @@
+2025-11-08 16:29:51,567 [INFO] Loaded 503 S&P500 tickers.
+2025-11-08 16:29:51,570 [INFO] Bot started successfully.
+2025-11-08 16:29:52,346 [INFO] Fetched 40 Form4 entries from SEC.
+2025-11-08 16:29:53,362 [ERROR] NewsData fetch error: 422 Client Error: UNPROCESSABLE ENTITY for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=TSCO+OR+TAP+OR+BAX+OR+ANET+OR+TECH+OR+HRL+OR+KEY+OR+PKG+OR+AVGO+OR+COST+OR+V+OR+GL+OR+CPT+OR+CRL+OR+ITW+OR+REGN+OR+PCG+OR+EPAM+OR+IT+OR+FOXA&language=en
+2025-11-08 16:49:27,416 [INFO] Loaded 503 S&P500 tickers.
+2025-11-08 16:49:27,419 [INFO] Bot started successfully.
+2025-11-08 16:49:28,243 [INFO] Fetched 40 Form4 entries from SEC.
+2025-11-08 16:49:29,173 [INFO] NewsData batch ok (10 total so far)
+2025-11-08 16:49:31,731 [INFO] NewsData batch ok (20 total so far)
+2025-11-08 16:49:34,149 [INFO] NewsData batch ok (30 total so far)
+2025-11-08 16:49:36,728 [INFO] NewsData batch ok (40 total so far)
+2025-11-08 16:49:39,110 [INFO] NewsData batch ok (50 total so far)
+2025-11-08 16:49:41,542 [INFO] NewsData batch ok (60 total so far)
+2025-11-08 16:49:43,963 [INFO] NewsData batch ok (70 total so far)
+2025-11-08 16:49:46,445 [INFO] NewsData batch ok (80 total so far)
+2025-11-08 16:49:48,910 [INFO] NewsData batch ok (90 total so far)
+2025-11-08 16:49:51,437 [INFO] NewsData batch ok (100 total so far)
+2025-11-08 16:49:53,898 [INFO] NewsData batch ok (110 total so far)
+2025-11-08 16:49:56,363 [INFO] NewsData batch ok (120 total so far)
+2025-11-08 16:49:58,778 [INFO] NewsData batch ok (130 total so far)
+2025-11-08 16:50:00,280 [INFO] Fetched 130 total news articles from NewsData.io.
+2025-11-08 16:50:01,198 [INFO] Posted news alert: Fiverr International (NYSE:FVRR) Reaches New 12-Month Low – What’s Next? (MED)
+2025-11-08 16:50:01,880 [ERROR] Discord error 400: {"embeds": ["0"]}
+2025-11-08 16:50:01,883 [INFO] Posted news alert: Microsoft lets shopping bots loose in a sandbox (MED)
+2025-11-08 16:50:02,729 [INFO] Posted news alert: Fiverr International (NYSE:FVRR) Reaches New 12-Month Low – What’s Next? (MED)
+2025-11-08 16:50:03,535 [INFO] Posted news alert: UPS, GE, Boeing served lawsuit in wake of deadly Louisville plane crash (MED)
+2025-11-08 16:50:04,305 [INFO] Posted news alert: Take-Two Interactive Software (NASDAQ:TTWO) Issues Quarterly Earnings Results, Beats Estimates By $0.13 EPS (MED)
+2025-11-08 16:50:05,208 [INFO] Posted news alert: Acorn Energy (NASDAQ:ACFN) Posts Quarterly Earnings Results (MED)
+2025-11-08 16:50:06,041 [INFO] Posted news alert: Chime Financial (NASDAQ:CHYM) Price Target Lowered to $24.00 at UBS Group (MED)
+2025-11-08 16:50:06,760 [INFO] Posted news alert: Fiverr International (NYSE:FVRR) Reaches New 12-Month Low – What’s Next? (MED)
+2025-11-08 16:50:07,946 [INFO] Posted news alert: JPMorgan Chase & Co. Issues Positive Forecast for Iron Mountain (NYSE:IRM) Stock Price (MED)
+2025-11-08 16:51:38,815 [INFO] Fetched 40 Form4 entries from SEC.
+2025-11-08 16:51:39,751 [INFO] NewsData batch ok (10 total so far)
+2025-11-08 16:51:42,318 [INFO] NewsData batch ok (20 total so far)
+2025-11-08 16:51:44,838 [INFO] NewsData batch ok (30 total so far)
+2025-11-08 16:51:47,412 [INFO] NewsData batch ok (40 total so far)
+2025-11-08 16:51:49,830 [INFO] NewsData batch ok (50 total so far)
+2025-11-08 16:51:52,245 [INFO] NewsData batch ok (60 total so far)
+2025-11-08 16:51:54,687 [INFO] NewsData batch ok (70 total so far)
+2025-11-08 16:51:57,110 [INFO] NewsData batch ok (80 total so far)
+2025-11-08 16:51:59,505 [INFO] NewsData batch ok (90 total so far)
+2025-11-08 16:52:01,970 [INFO] NewsData batch ok (100 total so far)
+2025-11-08 16:52:04,414 [INFO] NewsData batch ok (110 total so far)
+2025-11-08 16:52:06,851 [INFO] NewsData batch ok (120 total so far)
+2025-11-08 16:52:09,337 [INFO] NewsData batch ok (130 total so far)
+2025-11-08 16:52:10,840 [INFO] Fetched 130 total news articles from NewsData.io.
+2025-11-08 16:52:12,017 [INFO] Posted news alert: Fiverr International (NYSE:FVRR) Reaches New 12-Month Low – What’s Next? (MED)
+2025-11-08 16:52:12,850 [INFO] Posted news alert: CRH (NYSE:CRH) Announces Quarterly Earnings Results, Beats Expectations By $0.27 EPS (MED)
+2025-11-08 16:52:13,713 [INFO] Posted news alert: NexGen Energy (NYSE:NXE) Releases Quarterly Earnings Results, Misses Expectations By $0.01 EPS (MED)
+2025-11-08 16:52:14,525 [INFO] Posted news alert: Liberty Media Corporation – Liberty Formula One Series C (NASDAQ:FWONK) Announces Earnings Results, Misses Estimates By $0.18 EPS (MED)
+2025-11-08 16:52:15,277 [INFO] Posted news alert: Burford Capital (NYSE:BUR) Posts Earnings Results, Misses Expectations By $0.39 EPS (MED)
+2025-11-08 16:52:16,246 [INFO] Posted news alert: Eyepoint Pharmaceuticals (NASDAQ:EYPT) Posts Quarterly Earnings Results, Misses Expectations By $0.08 EPS (MED)
+2025-11-08 16:52:17,007 [INFO] Posted news alert: LegalZoom.com (NASDAQ:LZ) Announces Quarterly Earnings Results (MED)
+2025-11-08 16:52:17,923 [INFO] Posted news alert: Corpay (NYSE:CPAY) Announces Quarterly Earnings Results (MED)
+2025-11-08 16:52:18,693 [INFO] Posted news alert: UPS, GE, Boeing served lawsuit in wake of deadly Louisville plane crash (MED)
+2025-11-08 16:52:19,638 [INFO] Posted news alert: Take-Two Interactive Software (NASDAQ:TTWO) Issues Quarterly Earnings Results, Beats Estimates By $0.13 EPS (MED)
+2025-11-08 16:52:20,332 [INFO] Posted news alert: Acorn Energy (NASDAQ:ACFN) Posts Quarterly Earnings Results (MED)
+2025-11-08 16:52:21,309 [INFO] Posted news alert: Chime Financial (NASDAQ:CHYM) Price Target Lowered to $24.00 at UBS Group (MED)
+2025-11-08 16:52:22,016 [INFO] Posted news alert: CRH (NYSE:CRH) Announces Quarterly Earnings Results, Beats Expectations By $0.27 EPS (MED)
+2025-11-08 16:52:22,781 [INFO] Posted news alert: NexGen Energy (NYSE:NXE) Releases Quarterly Earnings Results, Misses Expectations By $0.01 EPS (MED)
+2025-11-08 16:52:23,686 [INFO] Posted news alert: Liberty Media Corporation – Liberty Formula One Series C (NASDAQ:FWONK) Announces Earnings Results, Misses Estimates By $0.18 EPS (MED)
+2025-11-08 16:52:24,414 [INFO] Posted news alert: Burford Capital (NYSE:BUR) Posts Earnings Results, Misses Expectations By $0.39 EPS (MED)
+2025-11-08 16:52:25,146 [INFO] Posted news alert: Eyepoint Pharmaceuticals (NASDAQ:EYPT) Posts Quarterly Earnings Results, Misses Expectations By $0.08 EPS (MED)
+2025-11-08 16:52:25,979 [INFO] Posted news alert: LegalZoom.com (NASDAQ:LZ) Announces Quarterly Earnings Results (MED)
+2025-11-08 16:52:26,688 [INFO] Posted news alert: Corpay (NYSE:CPAY) Announces Quarterly Earnings Results (MED)
+2025-11-08 16:52:27,471 [INFO] Posted news alert: Fiverr International (NYSE:FVRR) Reaches New 12-Month Low – What’s Next? (MED)
+2025-11-08 16:52:28,181 [INFO] Posted news alert: JPMorgan Chase & Co. Issues Positive Forecast for Iron Mountain (NYSE:IRM) Stock Price (MED)
+2025-11-08 16:53:58,968 [INFO] Fetched 40 Form4 entries from SEC.
+2025-11-08 16:54:00,065 [INFO] NewsData batch ok (10 total so far)
+2025-11-08 16:54:02,562 [INFO] NewsData batch ok (20 total so far)
+2025-11-08 16:54:04,998 [INFO] NewsData batch ok (30 total so far)
+2025-11-08 16:54:07,456 [INFO] NewsData batch ok (40 total so far)
+2025-11-08 16:54:09,933 [INFO] NewsData batch ok (50 total so far)
+2025-11-08 16:54:12,361 [INFO] NewsData batch ok (60 total so far)
+2025-11-08 16:54:14,820 [INFO] NewsData batch ok (70 total so far)
+2025-11-08 16:54:17,301 [INFO] NewsData batch ok (80 total so far)
+2025-11-08 16:54:19,861 [INFO] NewsData batch ok (90 total so far)
+2025-11-08 16:54:22,305 [INFO] NewsData batch ok (100 total so far)
+2025-11-08 16:54:24,746 [INFO] NewsData batch ok (110 total so far)
+2025-11-08 16:54:27,188 [INFO] NewsData batch ok (120 total so far)
+2025-11-08 16:54:29,638 [INFO] NewsData batch ok (130 total so far)
+2025-11-08 16:54:31,140 [INFO] Fetched 130 total news articles from NewsData.io.
+2025-11-08 16:54:31,789 [ERROR] Discord error 400: {"embeds": ["0"]}
+2025-11-08 16:54:31,799 [INFO] Posted news alert: Microsoft lets shopping bots loose in a sandbox (MED)
+2025-11-08 16:54:32,720 [INFO] Posted news alert: Moody’s downgrades ride-hailing firm Ola’s rating; flags risk of covenant breach (MED)
+2025-11-08 16:54:33,663 [INFO] Posted news alert: Fiverr International (NYSE:FVRR) Reaches New 12-Month Low – What’s Next? (MED)
+2025-11-08 16:54:34,444 [INFO] Posted news alert: Rapport Therapeutics (NASDAQ:RAPP) Releases Earnings Results, Beats Expectations By $0.06 EPS (MED)
+2025-11-08 16:54:35,151 [INFO] Posted news alert: QUALCOMM (NASDAQ:QCOM) Announces Earnings Results, Beats Expectations By $0.13 EPS (MED)
+2025-11-08 16:54:36,214 [INFO] Posted news alert: Rocket Pharmaceuticals (NASDAQ:RCKT) Announces Earnings Results, Beats Expectations By $0.03 EPS (MED)
+2025-11-08 16:54:37,111 [INFO] Posted news alert: UPS, GE, Boeing served lawsuit in wake of deadly Louisville plane crash (MED)
+2025-11-08 16:54:37,811 [INFO] Posted news alert: Take-Two Interactive Software (NASDAQ:TTWO) Issues Quarterly Earnings Results, Beats Estimates By $0.13 EPS (MED)
+2025-11-08 16:54:38,489 [INFO] Posted news alert: Quantum Biopharma (NASDAQ:QNTM) Announces Earnings Results (MED)
+2025-11-08 16:54:39,221 [INFO] Posted news alert: Quantum Biopharma (NASDAQ:QNTM) Releases Quarterly Earnings Results (MED)
+2025-11-08 16:54:40,096 [INFO] Posted news alert: Acorn Energy (NASDAQ:ACFN) Posts Quarterly Earnings Results (MED)
+2025-11-08 16:54:40,827 [INFO] Posted news alert: Chime Financial (NASDAQ:CHYM) Price Target Lowered to $24.00 at UBS Group (MED)
+2025-11-08 16:54:41,575 [INFO] Posted news alert: [Anambra Election 2025] D-Day is here: Attention shifts to 5,718 polling units (MED)
+2025-11-08 16:54:42,287 [INFO] Posted news alert: Rapport Therapeutics (NASDAQ:RAPP) Releases Earnings Results, Beats Expectations By $0.06 EPS (MED)
+2025-11-08 16:54:43,047 [INFO] Posted news alert: QUALCOMM (NASDAQ:QCOM) Announces Earnings Results, Beats Expectations By $0.13 EPS (MED)
+2025-11-08 16:54:43,706 [INFO] Posted news alert: Rocket Pharmaceuticals (NASDAQ:RCKT) Announces Earnings Results, Beats Expectations By $0.03 EPS (MED)
+2025-11-08 16:54:44,496 [INFO] Posted news alert: Protagonist Therapeutics (NASDAQ:PTGX) Posts Quarterly Earnings Results, Misses Estimates By $0.03 EPS (MED)
+2025-11-08 16:54:46,887 [INFO] Posted news alert: Avita Medical (NASDAQ:RCEL) Releases Quarterly Earnings Results, Misses Expectations By $0.03 EPS (MED)
+2025-11-08 16:54:47,710 [INFO] Posted news alert: Rani Therapeutics (NASDAQ:RANI) Posts Quarterly Earnings Results, Misses Expectations By $0.03 EPS (MED)
+2025-11-08 16:54:48,423 [INFO] Posted news alert: JPMorgan Chase & Co. Issues Positive Forecast for Iron Mountain (NYSE:IRM) Stock Price (MED)
+2025-11-08 18:54:23,643 [INFO] Loaded 503 S&P500 tickers.
+2025-11-08 18:54:23,647 [INFO] Bot started successfully.
+2025-11-08 18:54:24,560 [INFO] Fetched 40 Form4 entries from SEC.
+2025-11-08 18:54:25,700 [INFO] NewsData batch ok (10 total so far)
+2025-11-08 18:54:28,186 [INFO] NewsData batch ok (20 total so far)
+2025-11-08 18:54:30,745 [INFO] NewsData batch ok (30 total so far)
+2025-11-08 18:54:33,198 [INFO] NewsData batch ok (40 total so far)
+2025-11-08 18:54:35,766 [INFO] NewsData batch ok (50 total so far)
+2025-11-08 18:54:38,266 [INFO] NewsData batch ok (60 total so far)
+2025-11-08 18:54:40,703 [INFO] NewsData batch ok (70 total so far)
+2025-11-08 18:54:43,148 [INFO] NewsData batch ok (80 total so far)
+2025-11-08 18:54:45,621 [INFO] NewsData batch ok (90 total so far)
+2025-11-08 18:54:48,030 [INFO] NewsData batch ok (100 total so far)
+2025-11-08 18:54:50,435 [INFO] NewsData batch ok (110 total so far)
+2025-11-08 18:54:52,939 [INFO] NewsData batch ok (120 total so far)
+2025-11-08 18:54:55,360 [INFO] NewsData batch ok (130 total so far)
+2025-11-08 18:54:56,863 [INFO] Fetched 130 total news articles from NewsData.io.
+2025-11-08 18:54:57,775 [INFO] Posted news alert: Host Hotels & Resorts: Resilient REIT With Solid Room For Upside (MED)
+2025-11-08 18:54:58,578 [INFO] Posted news alert: Where is the money? (MED)
+2025-11-08 18:54:59,322 [INFO] Posted news alert: Expeditors International of Washington (NASDAQ:EXPD) Price Target Raised to $130.00 at Stifel Nicolaus (MED)
+2025-11-08 18:55:00,169 [INFO] Posted news alert: UH faculty and advisors: Prepare for transition to new eBanner system (MED)
+2025-11-08 18:55:01,280 [INFO] Posted news alert: Sanskrit heart of Bharat, must reach all: Dattatreya Hosabale (HIGH)
+2025-11-08 18:55:02,029 [INFO] Posted news alert: Coal City starts fast, closes strong to defeat Dixon in second round of Class 4A playoffs (HIGH)
+2025-11-08 18:55:02,790 [INFO] Posted news alert: Vande Mataram remains as moral compass for Indian democracy: Haryana CM (HIGH)
+2025-11-08 18:55:03,699 [INFO] Posted news alert: Mizuho Maintains ‘Underperform’ on Texas Instruments (TXN) After Q3 Earnings (MED)
+2025-11-08 18:55:04,597 [INFO] Posted news alert: Coal City starts fast, closes strong to defeat Dixon in second round of Class 4A playoffs (HIGH)
+2025-11-08 18:55:05,309 [INFO] Posted news alert: Fog and fight: Cooper takes down dangerous South Oldham to reach round two (HIGH)
+2025-11-08 18:55:07,308 [INFO] Posted news alert: Stifel Slightly Lowers Realty Income (O) Price Target, Maintains Buy Rating After Strong Q3 Results (MED)
+2025-11-08 18:55:08,212 [INFO] Posted news alert: Coal City starts fast, closes strong to defeat Dixon in second round of Class 4A playoffs (HIGH)
+2025-11-08 18:55:09,462 [INFO] Posted news alert: TD Cowen Raises AT&T Price Target to $33 Amid Solid Subscriber Growth (MED)
+2025-11-08 18:55:10,304 [INFO] Posted news alert: Kwara Emerges 3rd In Sub-national Fiscal Performance (MED)
+2025-11-08 18:55:11,129 [INFO] Posted news alert: Dozens charged with treason over violence linked to disputed election (HIGH)
+2025-11-08 18:55:12,023 [INFO] Posted news alert: Hotter than usual weather expected to continue through early week across Israel (MED)
+2025-11-08 18:55:12,874 [INFO] Posted news alert: Panipat: 2 criminals injured in police encounter after firing at cops (HIGH)
+2025-11-08 18:55:13,642 [INFO] Posted news alert: Air China Cancels 20 New Flights Over 6 Chinese Cities: Beijing, Chengdu, Wuhan, Taiyuan, , Mianyang, Changchun, Nanjing,Yancheng and More Affected Areas in China – All You Need to Know (MED)
+2025-11-08 18:56:44,430 [INFO] Fetched 40 Form4 entries from SEC.
+2025-11-08 18:56:45,511 [INFO] NewsData batch ok (10 total so far)
+2025-11-08 18:56:48,063 [INFO] NewsData batch ok (20 total so far)
+2025-11-08 18:56:50,537 [INFO] NewsData batch ok (30 total so far)
+2025-11-08 18:56:53,024 [INFO] NewsData batch ok (40 total so far)
+2025-11-08 18:56:55,593 [INFO] NewsData batch ok (50 total so far)
+2025-11-08 18:56:58,026 [INFO] NewsData batch ok (60 total so far)
+2025-11-08 18:57:00,463 [INFO] NewsData batch ok (70 total so far)
+2025-11-08 18:57:02,873 [INFO] NewsData batch ok (80 total so far)
+2025-11-08 18:57:05,460 [INFO] NewsData batch ok (90 total so far)
+2025-11-08 18:57:08,007 [INFO] NewsData batch ok (100 total so far)
+2025-11-08 18:57:10,563 [INFO] NewsData batch ok (110 total so far)
+2025-11-08 18:57:13,010 [INFO] NewsData batch ok (120 total so far)
+2025-11-08 18:57:15,451 [INFO] NewsData batch ok (130 total so far)
+2025-11-08 18:57:16,953 [INFO] Fetched 130 total news articles from NewsData.io.
+2025-11-08 18:57:17,911 [INFO] Posted news alert: Host Hotels & Resorts: Resilient REIT With Solid Room For Upside (MED)
+2025-11-08 18:57:19,161 [INFO] Posted news alert: Where is the money? (MED)
+2025-11-08 18:57:19,994 [INFO] Posted news alert: Expeditors International of Washington (NASDAQ:EXPD) Price Target Raised to $130.00 at Stifel Nicolaus (MED)
+2025-11-08 18:57:21,016 [INFO] Posted news alert: UH faculty and advisors: Prepare for transition to new eBanner system (MED)
+2025-11-08 18:57:21,858 [INFO] Posted news alert: Sanskrit heart of Bharat, must reach all: Dattatreya Hosabale (HIGH)
+2025-11-08 18:57:22,653 [INFO] Posted news alert: Coal City starts fast, closes strong to defeat Dixon in second round of Class 4A playoffs (HIGH)
+2025-11-08 18:57:23,434 [INFO] Posted news alert: Coal City starts fast, closes strong to defeat Dixon in second round of Class 4A playoffs (HIGH)
+2025-11-08 18:57:24,283 [INFO] Posted news alert: Fog and fight: Cooper takes down dangerous South Oldham to reach round two (HIGH)
+2025-11-08 18:57:25,030 [INFO] Posted news alert: Stifel Slightly Lowers Realty Income (O) Price Target, Maintains Buy Rating After Strong Q3 Results (MED)
+2025-11-08 18:57:25,949 [INFO] Posted news alert: Freedom Capital Maintains Hold on Coca-Cola (KO), Raises Price Target to $78 (MED)
+2025-11-08 18:57:27,189 [INFO] Posted news alert: Police reveal the fines issued to rogue cyclists on Sheffield streets, amid concerns over rule breakers (HIGH)
+2025-11-08 18:57:27,952 [INFO] Posted news alert: Kwara Emerges 3rd In Sub-national Fiscal Performance (MED)
+2025-11-08 18:57:28,731 [INFO] Posted news alert: Dozens charged with treason over violence linked to disputed election (HIGH)
+2025-11-08 18:57:29,497 [INFO] Posted news alert: Hotter than usual weather expected to continue through early week across Israel (MED)
+2025-11-08 18:57:30,336 [INFO] Posted news alert: Panipat: 2 criminals injured in police encounter after firing at cops (HIGH)
+2025-11-08 18:57:31,402 [INFO] Posted news alert: Air China Cancels 20 New Flights Over 6 Chinese Cities: Beijing, Chengdu, Wuhan, Taiyuan, , Mianyang, Changchun, Nanjing,Yancheng and More Affected Areas in China – All You Need to Know (MED)
+2025-11-08 18:59:02,194 [INFO] Fetched 40 Form4 entries from SEC.
+2025-11-08 18:59:03,182 [INFO] NewsData batch ok (10 total so far)
+2025-11-08 18:59:05,646 [INFO] NewsData batch ok (20 total so far)
+2025-11-08 18:59:08,097 [INFO] NewsData batch ok (30 total so far)
+2025-11-08 18:59:10,580 [INFO] NewsData batch ok (40 total so far)
+2025-11-08 18:59:13,055 [INFO] NewsData batch ok (50 total so far)
+2025-11-08 18:59:15,490 [INFO] NewsData batch ok (60 total so far)
+2025-11-08 18:59:17,941 [INFO] NewsData batch ok (70 total so far)
+2025-11-08 18:59:20,479 [INFO] NewsData batch ok (80 total so far)
+2025-11-08 18:59:22,937 [INFO] NewsData batch ok (90 total so far)
+2025-11-08 18:59:25,459 [INFO] NewsData batch ok (100 total so far)
+2025-11-08 18:59:27,935 [INFO] NewsData batch ok (110 total so far)
+2025-11-08 18:59:30,448 [INFO] NewsData batch ok (120 total so far)
+2025-11-08 18:59:32,905 [INFO] NewsData batch ok (130 total so far)
+2025-11-08 18:59:34,411 [INFO] Fetched 130 total news articles from NewsData.io.
+2025-11-08 18:59:35,169 [INFO] Posted news alert: Host Hotels & Resorts: Resilient REIT With Solid Room For Upside (MED)
+2025-11-08 18:59:35,943 [INFO] Posted news alert: Where is the money? (MED)
+2025-11-08 18:59:36,735 [INFO] Posted news alert: Expeditors International of Washington (NASDAQ:EXPD) Price Target Raised to $130.00 at Stifel Nicolaus (MED)
+2025-11-08 18:59:37,543 [INFO] Posted news alert: UH faculty and advisors: Prepare for transition to new eBanner system (MED)
+2025-11-08 18:59:38,296 [INFO] Posted news alert: Sanskrit heart of Bharat, must reach all: Dattatreya Hosabale (HIGH)
+2025-11-08 18:59:39,112 [INFO] Posted news alert: Coal City starts fast, closes strong to defeat Dixon in second round of Class 4A playoffs (HIGH)
+2025-11-08 18:59:39,840 [INFO] Posted news alert: Fog and fight: Cooper takes down dangerous South Oldham to reach round two (HIGH)
+2025-11-08 18:59:40,517 [INFO] Posted news alert: Date snow set to begin falling in UK next week - according to Met Office (MED)
+2025-11-08 18:59:41,289 [INFO] Posted news alert: Kwara Emerges 3rd In Sub-national Fiscal Performance (MED)
+2025-11-08 18:59:42,142 [INFO] Posted news alert: Dozens charged with treason over violence linked to disputed election (HIGH)
+2025-11-08 18:59:42,861 [INFO] Posted news alert: Hotter than usual weather expected to continue through early week across Israel (MED)
+2025-11-08 18:59:43,645 [INFO] Posted news alert: Panipat: 2 criminals injured in police encounter after firing at cops (HIGH)
+2025-11-08 18:59:44,442 [INFO] Posted news alert: Air China Cancels 20 New Flights Over 6 Chinese Cities: Beijing, Chengdu, Wuhan, Taiyuan, , Mianyang, Changchun, Nanjing,Yancheng and More Affected Areas in China – All You Need to Know (MED)
+2025-11-08 19:01:15,266 [INFO] Fetched 40 Form4 entries from SEC.
+2025-11-08 19:01:16,247 [INFO] NewsData batch ok (10 total so far)
+2025-11-08 19:01:18,691 [INFO] NewsData batch ok (20 total so far)
+2025-11-08 19:01:21,112 [INFO] NewsData batch ok (30 total so far)
+2025-11-08 19:01:23,554 [INFO] NewsData batch ok (40 total so far)
+2025-11-08 19:01:26,073 [INFO] NewsData batch ok (50 total so far)
+2025-11-08 19:01:28,574 [INFO] NewsData batch ok (60 total so far)
+2025-11-08 19:01:31,009 [INFO] NewsData batch ok (70 total so far)
+2025-11-08 19:01:33,483 [INFO] NewsData batch ok (80 total so far)
+2025-11-08 19:01:36,003 [INFO] NewsData batch ok (90 total so far)
+2025-11-08 19:01:38,465 [INFO] NewsData batch ok (100 total so far)
+2025-11-08 19:01:40,975 [INFO] NewsData batch ok (110 total so far)
+2025-11-08 19:01:43,475 [INFO] NewsData batch ok (120 total so far)
+2025-11-08 19:01:45,865 [INFO] NewsData batch ok (130 total so far)
+2025-11-08 19:01:47,366 [INFO] Fetched 130 total news articles from NewsData.io.
+2025-11-08 19:01:49,750 [INFO] Posted news alert: Host Hotels & Resorts: Resilient REIT With Solid Room For Upside (MED)
+2025-11-08 19:01:50,609 [INFO] Posted news alert: Where is the money? (MED)
+2025-11-08 19:01:51,451 [INFO] Posted news alert: Expeditors International of Washington (NASDAQ:EXPD) Price Target Raised to $130.00 at Stifel Nicolaus (MED)
+2025-11-08 19:01:52,224 [INFO] Posted news alert: UH faculty and advisors: Prepare for transition to new eBanner system (MED)
+2025-11-08 19:01:53,029 [INFO] Posted news alert: Sanskrit heart of Bharat, must reach all: Dattatreya Hosabale (HIGH)
+2025-11-08 19:01:53,803 [INFO] Posted news alert: I tried Google’s NotebookLM update — and it actually helped me remember what I read (MED)
+2025-11-08 19:01:54,532 [INFO] Posted news alert: I asked ChatGPT for a portfolio of FTSE 100 dividend shares to buy. Can I beat it? (MED)
+2025-11-08 19:01:55,331 [INFO] Posted news alert: I've Worked With Hundreds Of Kids, A Simple Change In Schools Could Boost Mental Health (MED)
+2025-11-08 19:01:56,197 [INFO] Posted news alert: I tried Google’s NotebookLM update — and it actually helped me remember what I read (MED)
+2025-11-08 19:01:57,477 [INFO] Posted news alert: England facing drastic measures due to extreme drought next year (MED)
+2025-11-08 19:01:58,596 [INFO] Posted news alert: I asked ChatGPT for a portfolio of FTSE 100 dividend shares to buy. Can I beat it? (MED)
+2025-11-08 19:02:00,322 [INFO] Posted news alert: I tried Google’s NotebookLM update — and it actually helped me remember what I read (MED)
+2025-11-08 19:02:01,046 [INFO] Posted news alert: I asked ChatGPT for a portfolio of FTSE 100 dividend shares to buy. Can I beat it? (MED)
+2025-11-08 19:02:01,806 [INFO] Posted news alert: England facing drastic measures due to extreme drought next year (MED)
+2025-11-08 19:02:02,686 [INFO] Posted news alert: Kwara Emerges 3rd In Sub-national Fiscal Performance (MED)
+2025-11-08 19:02:03,473 [INFO] Posted news alert: Dozens charged with treason over violence linked to disputed election (HIGH)
+2025-11-08 19:02:04,346 [INFO] Posted news alert: Air China Cancels 20 New Flights Over 6 Chinese Cities: Beijing, Chengdu, Wuhan, Taiyuan, , Mianyang, Changchun, Nanjing,Yancheng and More Affected Areas in China – All You Need to Know (MED)
+2025-11-08 20:46:57,680 [INFO] ========== Bot Startup ==========
+2025-11-08 20:46:57,724 [INFO] Initializing database...
+2025-11-08 20:46:57,735 [INFO] Loaded 55 tickers across 10 sectors.
+2025-11-08 20:46:57,757 [INFO] Bot started successfully. (Form-4 fetching disabled for now.)
+2025-11-08 20:47:03,943 [INFO] ========== Bot Startup ==========
+2025-11-08 20:47:03,946 [INFO] Initializing database...
+2025-11-08 20:47:03,947 [INFO] Loaded 55 tickers across 10 sectors.
+2025-11-08 20:47:03,947 [INFO] Bot started successfully. (Form-4 fetching disabled for now.)
+2025-11-08 20:47:05,092 [INFO] Fetched 10 articles for sector Technology.
+2025-11-08 20:47:05,095 [ERROR] Fatal error: no such column: url
+Traceback (most recent call last):
+  File "<ipython-input-1-48d173ae8808>", line 190, in <module>
+    main()
+    ~~~~^^
+  File "<ipython-input-1-48d173ae8808>", line 171, in main
+    if not url or is_duplicate(url):
+                  ~~~~~~~~~~~~^^^^^
+  File "<ipython-input-1-48d173ae8808>", line 69, in is_duplicate
+    cur.execute("SELECT 1 FROM events WHERE url=? AND timestamp>?", (url, time_threshold))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: url
+2025-11-08 20:48:07,379 [INFO] ========== Bot Startup ==========
+2025-11-08 20:48:07,381 [INFO] Initializing database...
+2025-11-08 20:48:07,382 [INFO] Loaded 55 tickers across 10 sectors.
+2025-11-08 20:48:07,382 [INFO] Bot started successfully. (Form-4 fetching disabled for now.)
+2025-11-08 20:48:19,907 [INFO] ========== Bot Startup ==========
+2025-11-08 20:48:19,909 [INFO] Initializing database...
+2025-11-08 20:48:19,910 [INFO] Loaded 55 tickers across 10 sectors.
+2025-11-08 20:48:19,910 [INFO] Bot started successfully. (Form-4 fetching disabled for now.)
+2025-11-08 20:48:20,964 [INFO] Fetched 10 articles for sector Technology.
+2025-11-08 20:48:20,974 [ERROR] Fatal error: no such column: url
+Traceback (most recent call last):
+  File "<ipython-input-1-89858e0af792>", line 190, in <module>
+    main()
+    ~~~~^^
+  File "<ipython-input-1-89858e0af792>", line 171, in main
+    if not url or is_duplicate(url):
+                  ~~~~~~~~~~~~^^^^^
+  File "<ipython-input-1-89858e0af792>", line 69, in is_duplicate
+    cur.execute("SELECT 1 FROM events WHERE url=? AND timestamp>?", (url, time_threshold))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: url
+2025-11-08 21:06:58,989 [INFO] ========== Bot Startup ==========
+2025-11-08 21:06:58,989 [INFO] Initializing database...
+2025-11-08 21:06:58,991 [ERROR] Fatal error: Cannot add a UNIQUE column
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\Stock AI Automatization\mvp_alerts.py", line 224, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\User\Desktop\Stock AI Automatization\mvp_alerts.py", line 193, in main
+    init_db()
+    ~~~~~~~^^
+  File "C:\Users\User\Desktop\Stock AI Automatization\mvp_alerts.py", line 78, in init_db
+    cur.execute("ALTER TABLE events ADD COLUMN url TEXT UNIQUE")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: Cannot add a UNIQUE column
+2025-11-08 21:11:04,993 [INFO] ========== Bot Startup ==========
+2025-11-08 21:11:04,996 [INFO] Initializing database...
+2025-11-08 21:11:05,002 [WARNING] Database migrated: added 'timestamp' column.
+2025-11-08 21:11:05,002 [ERROR] Fatal error: Cannot add a UNIQUE column
+Traceback (most recent call last):
+  File "<ipython-input-1-16ed0465aab1>", line 224, in <module>
+    main()
+    ~~~~^^
+  File "<ipython-input-1-16ed0465aab1>", line 193, in main
+    init_db()
+    ~~~~~~~^^
+  File "<ipython-input-1-16ed0465aab1>", line 78, in init_db
+    cur.execute("ALTER TABLE events ADD COLUMN url TEXT UNIQUE")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: Cannot add a UNIQUE column

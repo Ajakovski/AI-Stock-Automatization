@@ -1,0 +1,7 @@
+requests
+feedparser
+beautifulsoup4
+python-dotenv
+pytz
+pandas
+lxml
