@@ -298,3 +298,70 @@ Traceback (most recent call last):
     cur.execute("ALTER TABLE events ADD COLUMN url TEXT UNIQUE")
     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 sqlite3.OperationalError: Cannot add a UNIQUE column
+2025-11-09 10:51:28,483 [ERROR] S&P500 load failed: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2025-11-09 10:51:28,484 [INFO] Bot started successfully.
+2025-11-09 10:51:28,668 [INFO] Fetched 40 Form4 entries from SEC.
+2025-11-09 10:51:28,669 [INFO] Fetched 0 total news articles from NewsData.io.
+2025-11-09 10:53:09,861 [ERROR] S&P500 load failed: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2025-11-09 10:53:09,875 [INFO] Bot started successfully.
+2025-11-09 10:53:10,066 [INFO] Fetched 40 Form4 entries from SEC.
+2025-11-09 10:53:10,069 [INFO] Fetched 0 total news articles from NewsData.io.
+2025-11-09 10:55:42,119 [ERROR] S&P500 load failed: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2025-11-09 10:55:42,123 [INFO] Bot started successfully.
+2025-11-09 10:55:42,512 [INFO] Fetched 40 Form4 entries from SEC.
+2025-11-09 10:55:42,515 [INFO] Fetched 0 total news articles from NewsData.io.
+2025-11-09 10:57:12,709 [INFO] Fetched 40 Form4 entries from SEC.
+2025-11-09 10:57:12,711 [INFO] Fetched 0 total news articles from NewsData.io.
+2025-11-09 11:05:32,406 [ERROR] S&P500 load failed: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2025-11-09 11:05:32,421 [INFO] Bot started successfully.
+2025-11-09 11:05:32,636 [INFO] Fetched 40 Form4 entries from SEC.
+2025-11-09 11:05:32,639 [INFO] Fetched 0 total news articles from NewsData.io.
+2025-11-09 11:06:01,687 [INFO] Loaded 503 S&P500 tickers.
+2025-11-09 11:06:01,688 [INFO] Bot started successfully.
+2025-11-09 11:06:01,905 [INFO] Fetched 40 Form4 entries from SEC.
+2025-11-09 11:06:02,358 [INFO] NewsData batch ok (10 total so far)
+2025-11-09 11:06:04,292 [INFO] NewsData batch ok (20 total so far)
+2025-11-09 11:06:06,196 [INFO] NewsData batch ok (30 total so far)
+2025-11-09 11:06:08,105 [INFO] NewsData batch ok (40 total so far)
+2025-11-09 11:06:10,046 [INFO] NewsData batch ok (50 total so far)
+2025-11-09 11:06:12,004 [INFO] NewsData batch ok (60 total so far)
+2025-11-09 11:06:13,940 [INFO] NewsData batch ok (70 total so far)
+2025-11-09 11:06:15,851 [INFO] NewsData batch ok (80 total so far)
+2025-11-09 11:06:17,847 [INFO] NewsData batch ok (90 total so far)
+2025-11-09 11:06:19,757 [INFO] NewsData batch ok (100 total so far)
+2025-11-09 11:06:21,668 [INFO] NewsData batch ok (110 total so far)
+2025-11-09 11:06:23,638 [INFO] NewsData batch ok (120 total so far)
+2025-11-09 11:06:25,617 [INFO] NewsData batch ok (130 total so far)
+2025-11-09 11:06:27,118 [INFO] Fetched 130 total news articles from NewsData.io.
+2025-11-09 11:06:27,371 [INFO] Posted news alert: Critical Review: L’Oreal (OTCMKTS:LRLCY) and Yatsen (NYSE:YSG) (MED)
+2025-11-09 11:06:27,631 [INFO] Posted news alert: Growlife (PHOT) vs. Its Competitors Head to Head Comparison (MED)
+2025-11-09 11:06:27,916 [INFO] Posted news alert: Hf Foods Group (NASDAQ:HFFG) & Top Wealth Group (NASDAQ:TWG) Critical Review (MED)
+2025-11-09 11:06:28,130 [INFO] Posted news alert: Pb ‘needs to do a lot’ to eliminate farm fires: CAQM (HIGH)
+2025-11-09 11:06:28,375 [INFO] Posted news alert: Vertex Presents Updated Phase 1/2 Data From RUBY-3 Study That Continue to Demonstrate Best-in-Class Potential for Povetacicept in Adults with IgA Nephropathy and Primary Membranous Nephropathy at American Society of Nephrology Kidney Week (HIGH)
+2025-11-09 11:06:28,709 [INFO] Posted news alert: Vertex Presents Updated Phase 1/2 Data From RUBY-3 Study That Continue to Demonstrate Best-in-Class Potential for Povetacicept in Adults with IgA Nephropathy and Primary Membranous Nephropathy at American Society of Nephrology Kidney Week (HIGH)
+2025-11-09 11:06:28,971 [INFO] Posted news alert: Microchip Technology (NASDAQ:MCHP) Given New $60.00 Price Target at TD Cowen (MED)
+2025-11-09 11:06:29,262 [INFO] Posted news alert: Microchip Technology (NASDAQ:MCHP) Price Target Lowered to $65.00 at Cantor Fitzgerald (MED)
+2025-11-09 11:06:29,481 [INFO] Posted news alert: Trade Desk (NASDAQ:TTD) Price Target Lowered to $70.00 at Evercore ISI (MED)
+2025-11-09 11:06:29,699 [INFO] Posted news alert: I Rewatched Fantastic Four: First Steps With My Casual Marvel Fan Fiancé And He Had Some Solid Takes (MED)
+2025-11-09 11:06:30,026 [INFO] Posted news alert: IHC directive violated: FBR denies taxpayers access to ‘order sheet entries’ (MED)
+2025-11-09 11:06:30,273 [INFO] Posted news alert: TD Cowen Issues Positive Forecast for MACOM Technology Solutions (NASDAQ:MTSI) Stock Price (MED)
+2025-11-09 11:06:30,425 [ERROR] Discord error 429: {"message": "You are being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 11:06:30,426 [INFO] Posted news alert: Host Hotels & Resorts (NASDAQ:HST) Price Target Raised to $18.00 at JPMorgan Chase & Co. (MED)
+2025-11-09 11:06:30,643 [INFO] Posted news alert: Best Growth Stocks To Research – November 8th (MED)
+2025-11-09 11:06:30,814 [ERROR] Discord error 429: {"message": "You are being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 11:06:30,815 [INFO] Posted news alert: Omar Cooper Jr's toe-tap TD keeps No. 2 Indiana's undefeated season alive vs Penn State in 27-24 win (MED)
+2025-11-09 11:06:31,054 [INFO] Posted news alert: Franklin Resources (NYSE:BEN) Announces Quarterly Earnings Results, Beats Expectations By $0.10 EPS (MED)
+2025-11-09 11:06:31,238 [ERROR] Discord error 429: {"message": "You are being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 11:06:31,239 [INFO] Posted news alert: Americold Realty Trust (NYSE:COLD) Posts Earnings Results, Meets Expectations (MED)
+2025-11-09 11:06:31,495 [INFO] Posted news alert: Celanese (NYSE:CE) Releases Earnings Results, Beats Expectations By $0.07 EPS (MED)
+2025-11-09 11:06:31,638 [ERROR] Discord error 429: {"message": "You are being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 11:06:31,640 [INFO] Posted news alert: CION Investment (NYSE:CION) Issues Quarterly Earnings Results (MED)
+2025-11-09 11:06:31,878 [INFO] Posted news alert: MarketAxess (NASDAQ:MKTX) Releases Earnings Results, Beats Estimates By $0.15 EPS (MED)
+2025-11-09 11:06:32,034 [ERROR] Discord error 429: {"message": "You are being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 11:06:32,035 [INFO] Posted news alert: Private partnerships take next steps from roads to prisons to hospitals (MED)
+2025-11-09 11:06:32,278 [INFO] Posted news alert: Lonestar has one of the most popular MA sweeps casino promos at sites like Chumba (MED)
+2025-11-09 11:06:32,446 [ERROR] Discord error 429: {"message": "You are being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 11:06:32,447 [INFO] Posted news alert: International Agency Elevates Ghana Credit Rating Citing Economic Progress (MED)
+2025-11-09 11:06:32,684 [INFO] Posted news alert: International Agency Elevates Ghana Credit Rating Citing Economic Progress (MED)
+2025-11-09 11:06:32,835 [ERROR] Discord error 429: {"message": "You are being rate limited.", "retry_after": 0.3, "global": false}
+2025-11-09 11:06:32,837 [INFO] Posted news alert: Mettler-Toledo International (NYSE:MTD) Updates FY 2025 Earnings Guidance (MED)
