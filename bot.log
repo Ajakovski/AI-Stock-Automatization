@@ -757,3 +757,23 @@ sqlite3.OperationalError: Cannot add a UNIQUE column
 2025-11-09 20:26:22,536 [ERROR] Discord error 429: {"message": "The resource is being rate limited.", "retry_after": 1.108, "global": false}
 2025-11-09 20:26:22,680 [ERROR] Discord error 429: {"message": "You are being rate limited.", "retry_after": 0.3, "global": false}
 2025-11-09 20:26:23,681 [INFO] Cycle complete. Sleeping 6000s.
+2025-11-10 12:30:59,624 [INFO] ========== Bot Startup ==========
+2025-11-10 12:30:59,663 [INFO] Loaded 28 tickers from watchlist.txt.
+2025-11-10 12:30:59,940 [INFO] Fetched 503 S&P500 tickers.
+2025-11-10 12:30:59,946 [INFO] Cycle composition: 28 watchlist + 22 random.
+2025-11-10 12:30:59,947 [INFO] Random tickers: ['RVTY', 'SOLS', 'FFIV', 'HCA', 'JBHT', 'LW', 'ABNB', 'WTW', 'TROW', 'BR', 'AZO', 'HD', 'EIX', 'INTU', 'KEY', 'STLD', 'CARR', 'VRSN', 'MTCH', 'MKC', 'NOC', 'INVH']
+2025-11-10 12:30:59,948 [INFO] Starting full news scan cycle.
+2025-11-10 12:31:00,432 [ERROR] Main loop error: no such column: url
+2025-11-10 12:34:27,049 [INFO] ========== Bot Startup ==========
+2025-11-10 12:34:27,061 [INFO] Loaded 28 tickers from watchlist.txt.
+2025-11-10 12:34:27,369 [INFO] Fetched 503 S&P500 tickers.
+2025-11-10 12:34:27,376 [INFO] Cycle composition: 28 watchlist + 22 random.
+2025-11-10 12:34:27,381 [INFO] Random tickers: ['LII', 'TXT', 'UPS', 'COIN', 'PNW', 'HBAN', 'FOXA', 'EXR', 'MAA', 'KR', 'CHTR', 'CVS', 'NI', 'LKQ', 'ZBRA', 'PEG', 'CME', 'TDY', 'AEP', 'EQIX', 'PGR', 'AOS']
+2025-11-10 12:34:27,387 [INFO] Starting full news scan cycle.
+2025-11-10 12:35:23,776 [INFO] ========== Bot Startup ==========
+2025-11-10 12:35:23,778 [INFO] Loaded 28 tickers from watchlist.txt.
+2025-11-10 12:35:23,896 [INFO] Fetched 503 S&P500 tickers.
+2025-11-10 12:35:23,898 [INFO] Cycle composition: 28 watchlist + 22 random.
+2025-11-10 12:35:23,899 [INFO] Random tickers: ['BIIB', 'TTD', 'IBM', 'CSX', 'D', 'ERIE', 'LDOS', 'ES', 'GEHC', 'EXE', 'IDXX', 'DXCM', 'EL', 'FSLR', 'DAL', 'YUM', 'IRM', 'TRGP', 'ROK', 'ADI', 'INCY', 'DIS']
+2025-11-10 12:35:23,900 [INFO] Starting full news scan cycle.
+2025-11-10 12:37:53,233 [ERROR] Main loop error: can only concatenate str (not "NoneType") to str
