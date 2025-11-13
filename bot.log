@@ -777,3 +777,508 @@ sqlite3.OperationalError: Cannot add a UNIQUE column
 2025-11-10 12:35:23,899 [INFO] Random tickers: ['BIIB', 'TTD', 'IBM', 'CSX', 'D', 'ERIE', 'LDOS', 'ES', 'GEHC', 'EXE', 'IDXX', 'DXCM', 'EL', 'FSLR', 'DAL', 'YUM', 'IRM', 'TRGP', 'ROK', 'ADI', 'INCY', 'DIS']
 2025-11-10 12:35:23,900 [INFO] Starting full news scan cycle.
 2025-11-10 12:37:53,233 [ERROR] Main loop error: can only concatenate str (not "NoneType") to str
+2025-11-13 08:13:40,702 [INFO] ========== Bot Startup ==========
+2025-11-13 08:13:40,727 [INFO] Loaded 28 tickers from watchlist.txt.
+2025-11-13 08:13:40,974 [ERROR] Failed to load S&P500 list: 'Symbol'
+2025-11-13 08:13:40,977 [INFO] Cycle composition: 28 watchlist + 0 random.
+2025-11-13 08:13:40,977 [INFO] Random tickers: []
+2025-11-13 08:13:40,978 [INFO] Starting full news scan cycle.
+2025-11-13 08:15:18,667 [ERROR] Main loop error: can only concatenate str (not "NoneType") to str
+2025-11-13 09:13:46,060 [INFO] === Bot startup ===
+2025-11-13 09:13:46,325 [INFO] Fetched S&P500 tickers from dataframe column '0' (1 tickers).
+2025-11-13 09:13:46,327 [INFO] Loaded 28 tickers from watchlist.txt.
+2025-11-13 09:13:46,422 [INFO] Fetched S&P500 tickers from dataframe column '0' (1 tickers).
+2025-11-13 09:13:46,424 [INFO] Cycle tickers: 29 total (28 personal + 1 random).
+2025-11-13 09:13:46,425 [INFO] Random picks this cycle: ['NAN']
+2025-11-13 09:13:46,426 [INFO] Starting news scan cycle...
+2025-11-13 09:13:46,875 [INFO] Fetched 10 articles for GOOG
+2025-11-13 09:13:47,785 [INFO] Discord posted: GOOG | HIGH | HIGH — GOOG — Laffer Tengler Investments Inc. Acquires 1,600 Shares of Alphabet Inc. $GOOG
+2025-11-13 09:13:49,533 [INFO] Fetched 10 articles for AMZN
+2025-11-13 09:13:50,490 [INFO] Discord posted: AMZN | MED | MED — AMZN — Dow Climbs 327 Points, Crosses 48,000: Stock Market Today
+2025-11-13 09:13:52,698 [INFO] Discord posted: AMZN | MED | MED — AMZN — Amazon Stock (NASDAQ: AMZN) Price Prediction and Forecast 2025-2030 for November 12
+2025-11-13 09:13:54,539 [INFO] Fetched 10 articles for AAPL
+2025-11-13 09:13:55,500 [INFO] Discord posted: AAPL | HIGH | HIGH — AAPL — Warren Buffett Stepping Down With 31% of Berkshire in Cash: His 3 Ultra Safest Stocks
+2025-11-13 09:13:58,045 [INFO] Fetched 10 articles for NVDA
+2025-11-13 09:13:59,085 [INFO] Discord posted: NVDA | MED | MED — NVDA — Hedge Fund and Insider Trading News: Scott Bessent, George Soros, Warren Buffett, Two Sigma Advisors, Renaissance Technologies, Elliott Management, Eisler Capital, Opendoor Technologies Inc (OPEN), BKV Corp (BKV), and More
+2025-11-13 09:14:01,155 [INFO] Discord posted: NVDA | MED | MED — NVDA — NVIDIA (NVDA) Is A Stock Where Individuals Won Over The Institutions, Says Jim Cramer
+2025-11-13 09:14:02,887 [INFO] Discord posted: NVDA | HIGH | HIGH — NVDA — Is Michael Burry Going To Be Wrong Again?
+2025-11-13 09:14:05,420 [INFO] Fetched 10 articles for TSLA
+2025-11-13 09:14:06,539 [INFO] Fetched 10 articles for META
+2025-11-13 09:14:07,460 [INFO] Discord posted: META | HIGH | HIGH — META — Defense startup Govini founder Eric Gillespie charged in child sex sting
+2025-11-13 09:14:09,769 [INFO] Discord posted: META | MED | MED — META — Dow jumps 350 points with end to government shutdown in sight
+2025-11-13 09:14:11,691 [INFO] Fetched 10 articles for MSFT
+2025-11-13 09:14:12,816 [INFO] Fetched 10 articles for PG
+2025-11-13 09:14:13,746 [INFO] Discord posted: PG | HIGH | HIGH — PG — Crude Oil Dips 4%; On Holding Shares Jump After Q3 Earnings
+2025-11-13 09:14:15,372 [INFO] Discord posted: PG | HIGH | HIGH — PG — PG&E Corporation (PCG)’s CEO Believes There’s More Than Enough Power For AI, Says Jim Cramer
+2025-11-13 09:14:17,375 [INFO] Discord posted: PG | HIGH | HIGH — PG — This Nuclear Stock Is Rallying Despite Burning Cash: Here's Why
+2025-11-13 09:14:19,163 [INFO] Fetched 10 articles for NKE
+2025-11-13 09:14:20,286 [INFO] Fetched 6 articles for TNYA
+2025-11-13 09:14:21,371 [INFO] Fetched 8 articles for RR
+2025-11-13 09:14:22,278 [INFO] Discord posted: RR | MED | MED — RR — Epson Encourages Practical and Personalized Gifting for the Holidays with Black Friday Promos Across Most-Loved Home Tech
+2025-11-13 09:14:24,448 [INFO] Discord posted: RR | MED | MED — RR — Wendy Mars Purchases 162 Shares of Rolls-Royce Holdings plc (LON:RR) Stock
+2025-11-13 09:14:26,811 [INFO] Discord posted: RR | HIGH | HIGH — RR — Birgit Behrendt Acquires 97 Shares of Rolls-Royce Holdings plc (LON:RR) Stock
+2025-11-13 09:14:28,929 [INFO] Fetched 10 articles for CAN
+2025-11-13 09:14:29,917 [INFO] Discord posted: CAN | MED | MED — CAN — Cahoon Park repairs, improvements included in the proposed 2026 Bay Village city budget
+2025-11-13 09:14:31,899 [INFO] Discord posted: CAN | MED | MED — CAN — Wall Street drifts around its records as AMD rallies
+2025-11-13 09:14:33,905 [INFO] Fetched 2 articles for DEFT
+2025-11-13 09:14:34,991 [INFO] Fetched 5 articles for SRFM
+2025-11-13 09:14:35,970 [INFO] Discord posted: SRFM | MED | MED — SRFM — Surf Air Mobility Reports Third Quarter 2025 Financial Results, Exceeding Revenue and Meeting Adjusted EBITDA Guidance
+2025-11-13 09:14:38,281 [INFO] Discord posted: SRFM | HIGH | HIGH — SRFM — Surf Air Mobility Inc (NYSE:SRFM) Reports Mixed Q3 2025 Results
+2025-11-13 09:14:40,648 [INFO] Fetched 10 articles for MRNA
+2025-11-13 09:14:41,620 [INFO] Discord posted: MRNA | MED | MED — MRNA — Renasant Bank Buys Shares of 41,897 Pfizer Inc. $PFE
+2025-11-13 09:14:43,710 [INFO] Fetched 10 articles for TGT
+2025-11-13 09:14:44,795 [INFO] Fetched 0 articles for DNUT
+2025-11-13 09:14:45,904 [INFO] Fetched 7 articles for ASST
+2025-11-13 09:14:46,913 [INFO] Discord posted: ASST | MED | MED — ASST — Small Cap Stocks To Research – November 10th
+2025-11-13 09:14:48,684 [INFO] Fetched 10 articles for CRCL
+2025-11-13 09:14:49,646 [INFO] Discord posted: CRCL | HIGH | HIGH — CRCL — Circle Internet Group (NYSE:CRCL) Releases Quarterly Earnings Results, Beats Expectations By $0.44 EPS
+2025-11-13 09:14:51,812 [INFO] Discord posted: CRCL | MED | MED — CRCL — Why Circle Internet Stock Fell 11% This Morning
+2025-11-13 09:14:54,096 [INFO] Discord posted: CRCL | HIGH | HIGH — CRCL — Circle Internet Group Q3 2025 Earnings Call Transcript
+2025-11-13 09:14:56,355 [INFO] Discord posted: CRCL | HIGH | HIGH — CRCL — Circle's Record Q3 Stuns Investors — But 202% Profit Surge Doesn't Lift CRCL
+2025-11-13 09:14:58,030 [INFO] Discord posted: CRCL | HIGH | HIGH — CRCL — Circle Internet Group stock is sliding despite strong revenue and higher average USDC in circulation
+2025-11-13 09:14:59,544 [INFO] Discord posted: CRCL | HIGH | HIGH — CRCL — Futures Rise With Government Set To Reopen Within Hours
+2025-11-13 09:15:01,362 [INFO] Discord posted: CRCL | MED | MED — CRCL — Stock Market Today: Dow Jones Index Rises But Circle Dives On Earnings (Live Coverage)
+2025-11-13 09:15:03,460 [INFO] Fetched 0 articles for HNST
+2025-11-13 09:15:04,663 [INFO] Fetched 10 articles for SES
+2025-11-13 09:15:05,588 [INFO] Discord posted: SES | MED | MED — SES — Brenntag (OTCMKTS:BNTGY) Shares Gap Up – Here’s What Happened
+2025-11-13 09:15:07,281 [INFO] Discord posted: SES | MED | MED — SES — Patented: Fluor Corp.’s Offshore System for Growing and Harvesting Seaweed, Plus More North Texas Inventive Activity
+2025-11-13 09:15:08,784 [INFO] Discord posted: SES | MED | MED — SES — Brenntag (OTCMKTS:BNTGY) Announces Quarterly Earnings Results
+2025-11-13 09:15:10,474 [INFO] Fetched 8 articles for AAL
+2025-11-13 09:15:11,629 [INFO] Fetched 10 articles for NEE
+2025-11-13 09:15:12,578 [INFO] Discord posted: NEE | HIGH | HIGH — NEE — XPLR Infrastructure, LP announces the pricing of $750 million of 7.750% senior unsecured notes due 2034
+2025-11-13 09:15:14,049 [INFO] Discord posted: NEE | HIGH | HIGH — NEE — Geode Capital Management LLC Acquires 526,996 Shares of NextEra Energy, Inc. $NEE
+2025-11-13 09:15:16,361 [INFO] Discord posted: NEE | MED | MED — NEE — XPLR Infrastructure, LP announces the launch of a cash tender offer by its direct subsidiary, XPLR Infrastructure Operating Partners, LP, for any and all of its outstanding 3.875% senior notes due 2026
+2025-11-13 09:15:18,783 [INFO] Discord posted: NEE | HIGH | HIGH — NEE — XPLR Infrastructure, LP announces the offering of $750 million in aggregate principal amount of senior unsecured notes
+2025-11-13 09:15:21,188 [INFO] Fetched 10 articles for VOW
+2025-11-13 09:15:22,152 [INFO] Discord posted: VOW | HIGH | HIGH — VOW — Morgan & Morgan drops ‘Steamboat Willie’ lawsuit against Disney
+2025-11-13 09:15:23,960 [INFO] Discord posted: VOW | HIGH | HIGH — VOW — Brazil's central bank vows tougher rules after surge in financial system cyberattacks
+2025-11-13 09:15:26,308 [INFO] Discord posted: VOW | HIGH | HIGH — VOW — Trump vows to proceed with $1B lawsuit against BBC
+2025-11-13 09:15:27,995 [INFO] Discord posted: VOW | HIGH | HIGH — VOW — Won tumbles to last year’s political crisis level; BOK chief vows to intervene if needed
+2025-11-13 09:15:30,090 [INFO] Fetched 9 articles for BITF
+2025-11-13 09:15:31,114 [INFO] Discord posted: BITF | MED | MED — BITF — Top Cryptocurrency Stocks To Watch Now – November 12th
+2025-11-13 09:15:32,738 [INFO] Discord posted: BITF | HIGH | HIGH — BITF — 12 Information Technology Stocks Moving In Wednesday's After-Market Session
+2025-11-13 09:15:34,705 [INFO] Discord posted: BITF | HIGH | HIGH — BITF — A Look Ahead: Bitfarms's Earnings Forecast
+2025-11-13 09:15:37,315 [INFO] Fetched 10 articles for PYPL
+2025-11-13 09:15:38,307 [INFO] Discord posted: PYPL | HIGH | HIGH — PYPL — KGI Securities Lowers PayPal (NASDAQ:PYPL) Price Target to $80.00
+2025-11-13 09:15:40,116 [INFO] Discord posted: PYPL | MED | MED — PYPL — How I Found the Trade That Made Me a Legend
+2025-11-13 09:15:42,238 [INFO] Fetched 0 articles for USGOLD
+2025-11-13 09:15:43,417 [INFO] Fetched 10 articles for ABT
+2025-11-13 09:15:44,561 [INFO] Fetched 10 articles for NAN
+2025-11-13 09:15:45,511 [INFO] Discord posted: NAN | HIGH | HIGH — NAN — Nan Fung Trinity HK Ltd. Acquires 31,300 Shares of PPG Industries, Inc. $PPG
+2025-11-13 09:15:46,986 [INFO] Cycle summary: HIGH=25 MED=20 LOW=133 posted=45
+2025-11-13 09:15:46,987 [INFO] Sleeping for 6000s until next cycle.
+2025-11-13 09:30:28,420 [INFO] === Bot startup ===
+2025-11-13 09:30:28,543 [ERROR] Failed to load S&P500 list: Missing optional dependency 'html5lib'.  Use pip or conda to install html5lib.
+2025-11-13 09:30:28,544 [INFO] Cycle tickers: 28 total (28 personal + 0 random).
+2025-11-13 09:30:28,545 [INFO] Random picks this cycle: []
+2025-11-13 09:30:28,913 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:28,914 [INFO] CRCL: 0 articles.
+2025-11-13 09:30:29,242 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:29,243 [INFO] TNYA: 0 articles.
+2025-11-13 09:30:29,557 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:29,558 [INFO] BITF: 0 articles.
+2025-11-13 09:30:29,908 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:29,909 [INFO] PG: 0 articles.
+2025-11-13 09:30:30,235 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:30,236 [INFO] META: 0 articles.
+2025-11-13 09:30:30,589 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:30,590 [INFO] USGOLD: 0 articles.
+2025-11-13 09:30:30,904 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:30,905 [INFO] VOW: 0 articles.
+2025-11-13 09:30:31,256 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:31,257 [INFO] AAPL: 0 articles.
+2025-11-13 09:30:31,596 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:31,597 [INFO] AAL: 0 articles.
+2025-11-13 09:30:31,943 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:31,944 [INFO] ABT: 0 articles.
+2025-11-13 09:30:32,261 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:32,263 [INFO] NKE: 0 articles.
+2025-11-13 09:30:32,573 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:32,575 [INFO] MSFT: 0 articles.
+2025-11-13 09:30:32,920 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:32,920 [INFO] ASST: 0 articles.
+2025-11-13 09:30:33,239 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:33,240 [INFO] SES: 0 articles.
+2025-11-13 09:30:33,587 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:33,588 [INFO] NEE: 0 articles.
+2025-11-13 09:30:33,933 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:33,934 [INFO] PYPL: 0 articles.
+2025-11-13 09:30:34,302 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:34,303 [INFO] MRNA: 0 articles.
+2025-11-13 09:30:34,622 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:34,623 [INFO] TGT: 0 articles.
+2025-11-13 09:30:34,969 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:34,971 [INFO] AMZN: 0 articles.
+2025-11-13 09:30:35,327 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:35,328 [INFO] GOOG: 0 articles.
+2025-11-13 09:30:35,650 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:35,651 [INFO] NVDA: 0 articles.
+2025-11-13 09:30:35,965 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:35,966 [INFO] HNST: 0 articles.
+2025-11-13 09:30:36,323 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:36,324 [INFO] TSLA: 0 articles.
+2025-11-13 09:30:36,638 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:36,639 [INFO] DEFT: 0 articles.
+2025-11-13 09:30:36,988 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:36,988 [INFO] SRFM: 0 articles.
+2025-11-13 09:30:37,341 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:37,342 [INFO] CAN: 0 articles.
+2025-11-13 09:30:37,662 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:37,663 [INFO] RR: 0 articles.
+2025-11-13 09:30:38,006 [ERROR] NewsData fetch error 422: {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-13 09:30:38,007 [INFO] DNUT: 0 articles.
+2025-11-13 09:30:38,008 [INFO] Cycle summary: HIGH=0 MED=0 LOW=0 posted=0
+2025-11-13 09:30:38,009 [INFO] Sleeping for 6000s until next cycle.
+2025-11-13 09:37:22,283 [INFO] === Bot startup ===
+2025-11-13 09:37:22,990 [INFO] Fetched S&P500 master list: 503 tickers.
+2025-11-13 09:37:22,992 [INFO] Loaded 28 tickers from watchlist.txt.
+2025-11-13 09:37:23,402 [INFO] Fetched S&P500 master list: 503 tickers.
+2025-11-13 09:37:23,405 [INFO] Cycle tickers: 50 total (28 personal + 22 random).
+2025-11-13 09:37:23,406 [INFO] Random picks this cycle: ['CSGP', 'ZBRA', 'APTV', 'CCI', 'GDDY', 'NWS', 'DIS', 'KVUE', 'DPZ', 'BG', 'EPAM', 'YUM', 'SHW', 'JBL', 'PGR', 'UPS', 'PNW', 'VLTO', 'WELL', 'UNH', 'A', 'RSG']
+2025-11-13 09:37:23,407 [INFO] Starting news scan cycle...
+2025-11-13 09:37:23,842 [INFO] Fetched 10 articles for GOOG
+2025-11-13 09:37:24,547 [INFO] GOOG: 10 fetched, 7 kept, 0 posted
+2025-11-13 09:37:24,936 [INFO] Fetched 10 articles for AMZN
+2025-11-13 09:37:25,638 [INFO] AMZN: 10 fetched, 0 kept, 0 posted
+2025-11-13 09:37:26,035 [INFO] Fetched 10 articles for AAPL
+2025-11-13 09:37:26,738 [INFO] AAPL: 10 fetched, 2 kept, 0 posted
+2025-11-13 09:37:40,914 [INFO] === Bot startup ===
+2025-11-13 09:37:41,531 [INFO] Fetched S&P500 master list: 503 tickers.
+2025-11-13 09:37:41,532 [INFO] Loaded 28 tickers from watchlist.txt.
+2025-11-13 09:37:41,901 [INFO] Fetched S&P500 master list: 503 tickers.
+2025-11-13 09:37:41,903 [INFO] Cycle tickers: 50 total (28 personal + 22 random).
+2025-11-13 09:37:41,904 [INFO] Random picks this cycle: ['CARR', 'WMB', 'MCO', 'KIM', 'BX', 'CVS', 'AFL', 'PPG', 'DVA', 'MA', 'NUE', 'PNC', 'CRM', 'RF', 'PSA', 'CNP', 'PPL', 'EXPE', 'PSKY', 'APH', 'MGM', 'AMGN']
+2025-11-13 09:37:41,905 [INFO] Starting news scan cycle...
+2025-11-13 09:37:42,286 [INFO] Fetched 10 articles for GOOG
+2025-11-13 09:37:42,990 [INFO] GOOG: 10 fetched, 7 kept, 0 posted
+2025-11-13 09:37:43,326 [INFO] Fetched 10 articles for AMZN
+2025-11-13 09:37:44,027 [INFO] AMZN: 10 fetched, 0 kept, 0 posted
+2025-11-13 09:37:44,378 [INFO] Fetched 10 articles for AAPL
+2025-11-13 09:37:45,080 [INFO] AAPL: 10 fetched, 2 kept, 0 posted
+2025-11-13 09:37:45,502 [INFO] Fetched 10 articles for NVDA
+2025-11-13 09:37:46,204 [INFO] NVDA: 10 fetched, 0 kept, 0 posted
+2025-11-13 09:37:46,637 [INFO] Fetched 10 articles for TSLA
+2025-11-13 09:37:47,340 [INFO] TSLA: 10 fetched, 3 kept, 0 posted
+2025-11-13 09:37:47,781 [INFO] Fetched 10 articles for META
+2025-11-13 09:37:48,483 [INFO] META: 10 fetched, 0 kept, 0 posted
+2025-11-13 09:37:48,898 [INFO] Fetched 10 articles for MSFT
+2025-11-13 09:37:49,599 [INFO] MSFT: 10 fetched, 0 kept, 0 posted
+2025-11-13 09:37:50,000 [INFO] Fetched 10 articles for PG
+2025-11-13 09:37:50,703 [INFO] PG: 10 fetched, 3 kept, 0 posted
+2025-11-13 09:37:51,087 [INFO] Fetched 10 articles for NKE
+2025-11-13 09:37:51,789 [INFO] NKE: 10 fetched, 5 kept, 0 posted
+2025-11-13 09:37:52,195 [INFO] Fetched 6 articles for TNYA
+2025-11-13 09:37:52,897 [INFO] TNYA: 6 fetched, 0 kept, 0 posted
+2025-11-13 09:37:53,283 [INFO] Fetched 8 articles for RR
+2025-11-13 09:37:53,985 [INFO] RR: 8 fetched, 0 kept, 0 posted
+2025-11-13 09:37:54,412 [INFO] Fetched 10 articles for CAN
+2025-11-13 09:37:55,114 [INFO] CAN: 10 fetched, 3 kept, 0 posted
+2025-11-13 09:37:55,525 [INFO] Fetched 2 articles for DEFT
+2025-11-13 09:37:56,227 [INFO] DEFT: 2 fetched, 0 kept, 0 posted
+2025-11-13 09:37:56,611 [INFO] Fetched 5 articles for SRFM
+2025-11-13 09:37:57,313 [INFO] SRFM: 5 fetched, 1 kept, 0 posted
+2025-11-13 09:37:57,724 [INFO] Fetched 10 articles for MRNA
+2025-11-13 09:37:58,425 [INFO] MRNA: 10 fetched, 0 kept, 0 posted
+2025-11-13 09:37:58,835 [INFO] Fetched 10 articles for TGT
+2025-11-13 09:37:59,538 [INFO] TGT: 10 fetched, 9 kept, 0 posted
+2025-11-13 09:37:59,992 [INFO] Fetched 0 articles for DNUT
+2025-11-13 09:38:00,694 [INFO] DNUT: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:01,071 [INFO] Fetched 7 articles for ASST
+2025-11-13 09:38:01,773 [INFO] ASST: 7 fetched, 0 kept, 0 posted
+2025-11-13 09:38:02,321 [INFO] Fetched 10 articles for CRCL
+2025-11-13 09:38:03,023 [INFO] CRCL: 10 fetched, 0 kept, 0 posted
+2025-11-13 09:38:03,431 [INFO] Fetched 0 articles for HNST
+2025-11-13 09:38:04,133 [INFO] HNST: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:04,528 [INFO] Fetched 10 articles for SES
+2025-11-13 09:38:05,229 [INFO] SES: 10 fetched, 0 kept, 0 posted
+2025-11-13 09:38:05,618 [INFO] Fetched 9 articles for AAL
+2025-11-13 09:38:06,320 [INFO] AAL: 9 fetched, 2 kept, 0 posted
+2025-11-13 09:38:06,713 [INFO] Fetched 10 articles for NEE
+2025-11-13 09:38:07,415 [INFO] NEE: 10 fetched, 3 kept, 0 posted
+2025-11-13 09:38:07,856 [INFO] Fetched 10 articles for VOW
+2025-11-13 09:38:08,559 [INFO] VOW: 10 fetched, 0 kept, 0 posted
+2025-11-13 09:38:08,934 [INFO] Fetched 9 articles for BITF
+2025-11-13 09:38:09,636 [INFO] BITF: 9 fetched, 2 kept, 0 posted
+2025-11-13 09:38:10,051 [INFO] Fetched 10 articles for PYPL
+2025-11-13 09:38:10,754 [INFO] PYPL: 10 fetched, 7 kept, 0 posted
+2025-11-13 09:38:11,192 [INFO] Fetched 0 articles for USGOLD
+2025-11-13 09:38:11,893 [INFO] USGOLD: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:12,299 [INFO] Fetched 10 articles for ABT
+2025-11-13 09:38:13,003 [INFO] ABT: 10 fetched, 9 kept, 0 posted
+2025-11-13 09:38:13,399 [INFO] Fetched 10 articles for CARR
+2025-11-13 09:38:14,102 [INFO] CARR: 10 fetched, 4 kept, 0 posted
+2025-11-13 09:38:14,454 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=WMB&language=en&category=business&country=us
+2025-11-13 09:38:15,155 [INFO] WMB: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:15,470 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=MCO&language=en&category=business&country=us
+2025-11-13 09:38:16,172 [INFO] MCO: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:16,485 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=KIM&language=en&category=business&country=us
+2025-11-13 09:38:17,191 [INFO] KIM: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:17,551 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=BX&language=en&category=business&country=us
+2025-11-13 09:38:18,252 [INFO] BX: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:18,567 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=CVS&language=en&category=business&country=us
+2025-11-13 09:38:19,269 [INFO] CVS: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:19,591 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=AFL&language=en&category=business&country=us
+2025-11-13 09:38:20,292 [INFO] AFL: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:20,641 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=PPG&language=en&category=business&country=us
+2025-11-13 09:38:21,342 [INFO] PPG: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:21,690 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=DVA&language=en&category=business&country=us
+2025-11-13 09:38:22,391 [INFO] DVA: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:22,710 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=MA&language=en&category=business&country=us
+2025-11-13 09:38:23,411 [INFO] MA: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:23,758 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=NUE&language=en&category=business&country=us
+2025-11-13 09:38:24,459 [INFO] NUE: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:24,776 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=PNC&language=en&category=business&country=us
+2025-11-13 09:38:25,477 [INFO] PNC: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:25,793 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=CRM&language=en&category=business&country=us
+2025-11-13 09:38:26,494 [INFO] CRM: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:26,841 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=RF&language=en&category=business&country=us
+2025-11-13 09:38:27,542 [INFO] RF: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:27,855 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=PSA&language=en&category=business&country=us
+2025-11-13 09:38:28,556 [INFO] PSA: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:28,905 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=CNP&language=en&category=business&country=us
+2025-11-13 09:38:29,607 [INFO] CNP: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:29,921 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=PPL&language=en&category=business&country=us
+2025-11-13 09:38:30,622 [INFO] PPL: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:31,004 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=EXPE&language=en&category=business&country=us
+2025-11-13 09:38:31,706 [INFO] EXPE: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:32,052 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=PSKY&language=en&category=business&country=us
+2025-11-13 09:38:32,754 [INFO] PSKY: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:33,070 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=APH&language=en&category=business&country=us
+2025-11-13 09:38:33,772 [INFO] APH: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:34,085 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=MGM&language=en&category=business&country=us
+2025-11-13 09:38:34,786 [INFO] MGM: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:35,135 [ERROR] NewsData fetch error: 429 Client Error: TOO MANY REQUESTS for url: https://newsdata.io/api/1/news?apikey=pub_f22ba9249c104a038d7e1b904b949e3a&q=AMGN&language=en&category=business&country=us
+2025-11-13 09:38:35,836 [INFO] AMGN: 0 fetched, 0 kept, 0 posted
+2025-11-13 09:38:35,837 [INFO] Cycle summary: HIGH=0 MED=0 LOW=60 posted=0
+2025-11-13 09:38:35,838 [INFO] Sleeping 6000s until next cycle.
+2025-11-13 09:53:58,934 [INFO] === Bot startup ===
+2025-11-13 09:53:59,052 [ERROR] Failed to load S&P500 list: Missing optional dependency 'html5lib'.  Use pip or conda to install html5lib.
+2025-11-13 09:53:59,053 [INFO] Cycle tickers: 28 total (28 personal + 0 random).
+2025-11-13 09:53:59,053 [INFO] Fetching batch: ['MSFT', 'AMZN', 'DNUT', 'USGOLD', 'NEE', 'GOOG', 'NVDA', 'PG']
+2025-11-13 09:53:59,599 [INFO] MSFT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:53:59,599 [INFO] AMZN: 0 fetched, 0 kept, 0 high
+2025-11-13 09:53:59,599 [INFO] DNUT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:53:59,599 [INFO] USGOLD: 0 fetched, 0 kept, 0 high
+2025-11-13 09:53:59,600 [WARNING] No Discord webhook configured.
+2025-11-13 09:53:59,600 [WARNING] No Discord webhook configured.
+2025-11-13 09:53:59,600 [INFO] NEE: 2 fetched, 2 kept, 2 high
+2025-11-13 09:53:59,600 [INFO] GOOG: 0 fetched, 0 kept, 0 high
+2025-11-13 09:53:59,600 [INFO] NVDA: 0 fetched, 0 kept, 0 high
+2025-11-13 09:53:59,600 [WARNING] No Discord webhook configured.
+2025-11-13 09:53:59,600 [WARNING] No Discord webhook configured.
+2025-11-13 09:53:59,600 [INFO] PG: 2 fetched, 2 kept, 2 high
+2025-11-13 09:54:00,800 [INFO] Fetching batch: ['TSLA', 'SES', 'NKE', 'CRCL', 'CAN', 'TGT', 'DEFT', 'SRFM']
+2025-11-13 09:54:01,278 [INFO] TSLA: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:01,278 [INFO] SES: 1 fetched, 1 kept, 0 high
+2025-11-13 09:54:01,279 [INFO] NKE: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:01,279 [WARNING] No Discord webhook configured.
+2025-11-13 09:54:01,279 [INFO] CRCL: 1 fetched, 1 kept, 1 high
+2025-11-13 09:54:01,279 [WARNING] No Discord webhook configured.
+2025-11-13 09:54:01,279 [INFO] CAN: 2 fetched, 2 kept, 1 high
+2025-11-13 09:54:01,279 [INFO] TGT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:01,279 [INFO] DEFT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:01,279 [INFO] SRFM: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:02,479 [INFO] Fetching batch: ['VOW', 'HNST', 'ABT', 'MRNA', 'RR', 'AAL', 'TNYA', 'AAPL']
+2025-11-13 09:54:02,961 [INFO] VOW: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:02,961 [INFO] HNST: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:02,961 [INFO] ABT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:02,961 [INFO] MRNA: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:02,961 [INFO] RR: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:02,961 [INFO] AAL: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:02,961 [INFO] TNYA: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:02,961 [INFO] AAPL: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:04,161 [INFO] Fetching batch: ['ASST', 'PYPL', 'BITF', 'META']
+2025-11-13 09:54:04,612 [INFO] ASST: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:04,612 [INFO] PYPL: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:04,612 [INFO] BITF: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:04,612 [INFO] META: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:05,813 [INFO] Cycle summary: HIGH=6 MED=0 LOW=2 posted=6
+2025-11-13 09:54:05,813 [INFO] Sleeping 6000s until next cycle.
+2025-11-13 09:54:33,032 [INFO] === Bot startup ===
+2025-11-13 09:54:33,048 [ERROR] Failed to load S&P500 list: Missing optional dependency 'html5lib'.  Use pip or conda to install html5lib.
+2025-11-13 09:54:33,048 [INFO] Cycle tickers: 28 total (28 personal + 0 random).
+2025-11-13 09:54:33,048 [INFO] Fetching batch: ['MSFT', 'AMZN', 'DNUT', 'USGOLD', 'NEE', 'GOOG', 'NVDA', 'PG']
+2025-11-13 09:54:33,564 [INFO] MSFT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:33,564 [INFO] AMZN: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:33,568 [INFO] DNUT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:33,568 [INFO] USGOLD: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:33,568 [WARNING] No Discord webhook configured.
+2025-11-13 09:54:33,568 [WARNING] No Discord webhook configured.
+2025-11-13 09:54:33,568 [INFO] NEE: 2 fetched, 2 kept, 2 high
+2025-11-13 09:54:33,568 [INFO] GOOG: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:33,568 [INFO] NVDA: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:33,568 [WARNING] No Discord webhook configured.
+2025-11-13 09:54:33,568 [WARNING] No Discord webhook configured.
+2025-11-13 09:54:33,568 [INFO] PG: 2 fetched, 2 kept, 2 high
+2025-11-13 09:54:34,769 [INFO] Fetching batch: ['TSLA', 'SES', 'NKE', 'CRCL', 'CAN', 'TGT', 'DEFT', 'SRFM']
+2025-11-13 09:54:35,110 [INFO] TSLA: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:35,110 [INFO] SES: 1 fetched, 1 kept, 0 high
+2025-11-13 09:54:35,110 [INFO] NKE: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:35,111 [WARNING] No Discord webhook configured.
+2025-11-13 09:54:35,111 [INFO] CRCL: 1 fetched, 1 kept, 1 high
+2025-11-13 09:54:35,111 [WARNING] No Discord webhook configured.
+2025-11-13 09:54:35,111 [INFO] CAN: 2 fetched, 2 kept, 1 high
+2025-11-13 09:54:35,111 [INFO] TGT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:35,111 [INFO] DEFT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:35,111 [INFO] SRFM: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:36,311 [INFO] Fetching batch: ['VOW', 'HNST', 'ABT', 'MRNA', 'RR', 'AAL', 'TNYA', 'AAPL']
+2025-11-13 09:54:36,675 [INFO] VOW: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:36,675 [INFO] HNST: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:36,675 [INFO] ABT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:36,675 [INFO] MRNA: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:36,675 [INFO] RR: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:36,675 [INFO] AAL: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:36,676 [INFO] TNYA: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:36,676 [INFO] AAPL: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:37,876 [INFO] Fetching batch: ['ASST', 'PYPL', 'BITF', 'META']
+2025-11-13 09:54:38,256 [INFO] ASST: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:38,256 [INFO] PYPL: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:38,256 [INFO] BITF: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:38,256 [INFO] META: 0 fetched, 0 kept, 0 high
+2025-11-13 09:54:39,457 [INFO] Cycle summary: HIGH=6 MED=0 LOW=2 posted=6
+2025-11-13 09:54:39,457 [INFO] Sleeping 6000s until next cycle.
+2025-11-13 09:57:42,404 [INFO] === Bot startup ===
+2025-11-13 09:57:42,423 [ERROR] Failed to load S&P500 list: Missing optional dependency 'html5lib'.  Use pip or conda to install html5lib.
+2025-11-13 09:57:42,423 [INFO] Cycle tickers: 28 total (28 personal + 0 random).
+2025-11-13 09:57:42,423 [INFO] Fetching batch: ['MSFT', 'AMZN', 'DNUT', 'USGOLD', 'NEE', 'GOOG', 'NVDA', 'PG']
+2025-11-13 09:57:42,938 [INFO] MSFT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:42,939 [INFO] AMZN: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:42,941 [INFO] DNUT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:42,941 [INFO] USGOLD: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:42,941 [WARNING] No Discord webhook configured.
+2025-11-13 09:57:42,941 [WARNING] No Discord webhook configured.
+2025-11-13 09:57:42,941 [INFO] NEE: 2 fetched, 2 kept, 2 high
+2025-11-13 09:57:42,941 [INFO] GOOG: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:42,941 [INFO] NVDA: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:42,942 [WARNING] No Discord webhook configured.
+2025-11-13 09:57:42,942 [WARNING] No Discord webhook configured.
+2025-11-13 09:57:42,942 [INFO] PG: 2 fetched, 2 kept, 2 high
+2025-11-13 09:57:44,142 [INFO] Fetching batch: ['TSLA', 'SES', 'NKE', 'CRCL', 'CAN', 'TGT', 'DEFT', 'SRFM']
+2025-11-13 09:57:44,578 [INFO] TSLA: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:44,578 [INFO] SES: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:44,578 [INFO] NKE: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:44,578 [WARNING] No Discord webhook configured.
+2025-11-13 09:57:44,579 [INFO] CRCL: 1 fetched, 1 kept, 1 high
+2025-11-13 09:57:44,579 [WARNING] No Discord webhook configured.
+2025-11-13 09:57:44,579 [INFO] CAN: 1 fetched, 1 kept, 1 high
+2025-11-13 09:57:44,579 [INFO] TGT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:44,579 [INFO] DEFT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:44,579 [INFO] SRFM: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:45,779 [INFO] Fetching batch: ['VOW', 'HNST', 'ABT', 'MRNA', 'RR', 'AAL', 'TNYA', 'AAPL']
+2025-11-13 09:57:46,195 [INFO] VOW: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:46,195 [INFO] HNST: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:46,195 [INFO] ABT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:46,195 [INFO] MRNA: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:46,195 [INFO] RR: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:46,195 [INFO] AAL: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:46,195 [INFO] TNYA: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:46,195 [INFO] AAPL: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:47,395 [INFO] Fetching batch: ['ASST', 'PYPL', 'BITF', 'META']
+2025-11-13 09:57:47,885 [INFO] ASST: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:47,886 [INFO] PYPL: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:47,886 [INFO] BITF: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:47,886 [INFO] META: 0 fetched, 0 kept, 0 high
+2025-11-13 09:57:49,086 [INFO] Cycle summary: HIGH=6 MED=0 LOW=0 posted=6
+2025-11-13 09:57:49,086 [INFO] Sleeping 6000s until next cycle.
+2025-11-13 09:58:29,757 [INFO] === Bot startup ===
+2025-11-13 09:58:29,772 [ERROR] Failed to load S&P500 list: Missing optional dependency 'html5lib'.  Use pip or conda to install html5lib.
+2025-11-13 09:58:29,772 [INFO] Cycle tickers: 28 total (28 personal + 0 random).
+2025-11-13 09:58:29,772 [INFO] Fetching batch: ['MSFT', 'AMZN', 'DNUT', 'USGOLD', 'NEE', 'GOOG', 'NVDA', 'PG']
+2025-11-13 09:58:30,239 [INFO] MSFT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:30,240 [INFO] AMZN: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:30,240 [INFO] DNUT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:30,240 [INFO] USGOLD: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:30,730 [INFO] NEE: 2 fetched, 2 kept, 2 high
+2025-11-13 09:58:30,730 [INFO] GOOG: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:30,731 [INFO] NVDA: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:31,177 [INFO] PG: 2 fetched, 2 kept, 2 high
+2025-11-13 09:58:32,377 [INFO] Fetching batch: ['TSLA', 'SES', 'NKE', 'CRCL', 'CAN', 'TGT', 'DEFT', 'SRFM']
+2025-11-13 09:58:32,820 [INFO] TSLA: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:32,820 [INFO] SES: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:32,820 [INFO] NKE: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:33,115 [INFO] CRCL: 1 fetched, 1 kept, 1 high
+2025-11-13 09:58:33,326 [INFO] CAN: 1 fetched, 1 kept, 1 high
+2025-11-13 09:58:33,327 [INFO] TGT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:33,327 [INFO] DEFT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:33,327 [INFO] SRFM: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:34,527 [INFO] Fetching batch: ['VOW', 'HNST', 'ABT', 'MRNA', 'RR', 'AAL', 'TNYA', 'AAPL']
+2025-11-13 09:58:34,937 [INFO] VOW: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:34,938 [INFO] HNST: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:34,938 [INFO] ABT: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:34,938 [INFO] MRNA: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:34,938 [INFO] RR: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:34,938 [INFO] AAL: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:34,938 [INFO] TNYA: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:34,938 [INFO] AAPL: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:36,139 [INFO] Fetching batch: ['ASST', 'PYPL', 'BITF', 'META']
+2025-11-13 09:58:36,585 [INFO] ASST: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:36,585 [INFO] PYPL: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:36,585 [INFO] BITF: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:36,585 [INFO] META: 0 fetched, 0 kept, 0 high
+2025-11-13 09:58:37,785 [INFO] Cycle summary: HIGH=6 MED=0 LOW=0 posted=6
+2025-11-13 09:58:37,786 [INFO] Sleeping 6000s until next cycle.
+2025-11-13 10:47:04,360 [INFO] === Bot startup ===
+2025-11-13 10:47:04,826 [ERROR] Failed to load S&P500 list: Missing optional dependency 'html5lib'.  Use pip or conda to install html5lib.
+2025-11-13 10:47:04,826 [INFO] Cycle tickers: 28 total (28 personal + 0 random).
+2025-11-13 10:47:04,827 [INFO] Fetching batch: ['SRFM', 'NVDA', 'AAPL', 'BITF', 'AMZN', 'GOOG', 'TNYA', 'NEE']
+2025-11-13 10:47:05,551 [INFO] SRFM: 1 fetched, 1 kept, 1 high
+2025-11-13 10:47:05,551 [INFO] NVDA: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:05,551 [INFO] AAPL: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:05,551 [INFO] BITF: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:05,551 [INFO] AMZN: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:05,551 [INFO] GOOG: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:05,551 [INFO] TNYA: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:05,551 [INFO] NEE: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:06,752 [INFO] Fetching batch: ['ABT', 'ASST', 'PYPL', 'DNUT', 'RR', 'MSFT', 'TSLA', 'DEFT']
+2025-11-13 10:47:07,242 [INFO] ABT: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:07,242 [INFO] ASST: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:07,242 [INFO] PYPL: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:07,242 [INFO] DNUT: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:07,244 [INFO] RR: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:07,244 [INFO] MSFT: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:07,244 [INFO] TSLA: 1 fetched, 1 kept, 0 high
+2025-11-13 10:47:07,244 [INFO] DEFT: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:08,444 [INFO] Fetching batch: ['VOW', 'USGOLD', 'CAN', 'MRNA', 'TGT', 'AAL', 'CRCL', 'PG']
+2025-11-13 10:47:08,924 [INFO] VOW: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:08,924 [INFO] USGOLD: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:08,924 [INFO] CAN: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:08,924 [INFO] MRNA: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:08,924 [INFO] TGT: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:08,924 [INFO] AAL: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:08,924 [INFO] CRCL: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:08,924 [INFO] PG: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:10,125 [INFO] Fetching batch: ['HNST', 'SES', 'NKE', 'META']
+2025-11-13 10:47:10,579 [INFO] HNST: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:10,579 [INFO] SES: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:10,579 [INFO] NKE: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:10,579 [INFO] META: 0 fetched, 0 kept, 0 high
+2025-11-13 10:47:11,779 [INFO] Cycle summary: HIGH=1 MED=0 LOW=1 posted=1
+2025-11-13 10:47:11,780 [INFO] Sleeping 6000s until next cycle.

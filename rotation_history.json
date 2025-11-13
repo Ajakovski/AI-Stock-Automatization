@@ -1,29 +1,5 @@
 [
   [
-    "RVTY",
-    "SOLS",
-    "FFIV",
-    "HCA",
-    "JBHT",
-    "LW",
-    "ABNB",
-    "WTW",
-    "TROW",
-    "BR",
-    "AZO",
-    "HD",
-    "EIX",
-    "INTU",
-    "KEY",
-    "STLD",
-    "CARR",
-    "VRSN",
-    "MTCH",
-    "MKC",
-    "NOC",
-    "INVH"
-  ],
-  [
     "LII",
     "TXT",
     "UPS",
@@ -70,5 +46,6 @@
     "ADI",
     "INCY",
     "DIS"
-  ]
+  ],
+  []
 ]
