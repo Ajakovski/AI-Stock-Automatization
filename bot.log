@@ -1282,3 +1282,686 @@ sqlite3.OperationalError: Cannot add a UNIQUE column
 2025-11-13 10:47:10,579 [INFO] META: 0 fetched, 0 kept, 0 high
 2025-11-13 10:47:11,779 [INFO] Cycle summary: HIGH=1 MED=0 LOW=1 posted=1
 2025-11-13 10:47:11,780 [INFO] Sleeping 6000s until next cycle.
+2025-11-15 11:21:43,450 [INFO] === Bot startup ===
+2025-11-15 11:21:44,060 [ERROR] Failed to load S&P500 list: Missing optional dependency 'html5lib'.  Use pip or conda to install html5lib.
+2025-11-15 11:21:44,060 [INFO] Cycle tickers: 28 total (28 personal + 0 random).
+2025-11-15 11:21:44,060 [INFO] Fetching batch: ['CRCL', 'BITF', 'TNYA', 'SES', 'PG', 'RR', 'AAPL', 'META']
+2025-11-15 11:21:44,564 [INFO] CRCL: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:44,564 [INFO] BITF: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:44,564 [INFO] TNYA: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:44,564 [INFO] SES: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:44,564 [INFO] PG: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:44,852 [INFO] RR: 2 fetched, 2 kept, 1 high
+2025-11-15 11:21:44,852 [INFO] AAPL: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:44,852 [INFO] META: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:46,052 [INFO] Fetching batch: ['HNST', 'DNUT', 'USGOLD', 'VOW', 'NVDA', 'MRNA', 'PYPL', 'AMZN']
+2025-11-15 11:21:46,703 [INFO] HNST: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:46,704 [INFO] DNUT: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:46,704 [INFO] USGOLD: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:46,704 [INFO] VOW: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:47,264 [INFO] NVDA: 2 fetched, 2 kept, 2 high
+2025-11-15 11:21:47,264 [INFO] MRNA: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:47,264 [INFO] PYPL: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:47,264 [INFO] AMZN: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:48,464 [INFO] Fetching batch: ['SRFM', 'TSLA', 'ABT', 'CAN', 'DEFT', 'GOOG', 'AAL', 'MSFT']
+2025-11-15 11:21:49,011 [INFO] SRFM: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:49,012 [INFO] TSLA: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:49,012 [INFO] ABT: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:49,607 [INFO] CAN: 3 fetched, 3 kept, 2 high
+2025-11-15 11:21:49,607 [INFO] DEFT: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:49,608 [INFO] GOOG: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:49,608 [INFO] AAL: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:49,608 [INFO] MSFT: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:50,808 [INFO] Fetching batch: ['ASST', 'NKE', 'TGT', 'NEE']
+2025-11-15 11:21:51,238 [INFO] ASST: 1 fetched, 1 kept, 0 high
+2025-11-15 11:21:51,998 [INFO] NKE: 3 fetched, 3 kept, 3 high
+2025-11-15 11:21:51,998 [INFO] TGT: 0 fetched, 0 kept, 0 high
+2025-11-15 11:21:52,295 [INFO] NEE: 1 fetched, 1 kept, 1 high
+2025-11-15 11:21:53,496 [INFO] Cycle summary: HIGH=9 MED=1 LOW=2 posted=9
+2025-11-15 11:21:53,496 [INFO] Sleeping 6000s until next cycle.
+2025-11-15 12:00:48,757 [INFO] ========== Bot Startup ==========
+2025-11-15 12:00:48,799 [INFO] Loaded 28 personal tickers from watchlist.txt.
+2025-11-15 12:00:48,980 [INFO] Fetched S&P500 master list: 503 tickers.
+2025-11-15 12:00:48,986 [INFO] Bot started; entering infinite cycle loop.
+2025-11-15 12:00:48,988 [INFO] Loaded 28 personal tickers from watchlist.txt.
+2025-11-15 12:00:49,019 [INFO] Fetched S&P500 master list: 503 tickers.
+2025-11-15 12:00:49,022 [INFO] Cycle composition: 28 personal + 22 random = 50 total.
+2025-11-15 12:00:49,023 [INFO] [1/50] Fetching articles for GOOG | GOOG
+2025-11-15 12:00:49,408 [WARNING] NewsData 422 for query 'GOOG': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:00:49,409 [INFO] GOOG: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:00:50,660 [INFO] [2/50] Fetching articles for AMZN | AMZN
+2025-11-15 12:00:51,029 [WARNING] NewsData 422 for query 'AMZN': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:00:51,030 [INFO] AMZN: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:00:52,281 [INFO] [3/50] Fetching articles for AAPL | AAPL
+2025-11-15 12:00:52,659 [WARNING] NewsData 422 for query 'AAPL': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:00:52,660 [INFO] AAPL: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:00:53,911 [INFO] [4/50] Fetching articles for NVDA | NVDA
+2025-11-15 12:00:54,249 [WARNING] NewsData 422 for query 'NVDA': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:00:54,251 [INFO] NVDA: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:00:55,502 [INFO] [5/50] Fetching articles for TSLA | TSLA
+2025-11-15 12:00:55,844 [WARNING] NewsData 422 for query 'TSLA': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:00:55,845 [INFO] TSLA: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:00:57,096 [INFO] [6/50] Fetching articles for META | META
+2025-11-15 12:00:57,432 [WARNING] NewsData 422 for query 'META': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:00:57,433 [INFO] META: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:00:58,684 [INFO] [7/50] Fetching articles for MSFT | MSFT
+2025-11-15 12:00:59,050 [WARNING] NewsData 422 for query 'MSFT': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:00:59,051 [INFO] MSFT: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:00,304 [INFO] [8/50] Fetching articles for PG | PG
+2025-11-15 12:01:00,654 [WARNING] NewsData 422 for query 'PG': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:00,655 [INFO] PG: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:01,906 [INFO] [9/50] Fetching articles for NKE | NKE
+2025-11-15 12:01:02,223 [WARNING] NewsData 422 for query 'NKE': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:02,224 [INFO] NKE: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:03,475 [INFO] [10/50] Fetching articles for TNYA | TNYA
+2025-11-15 12:01:03,817 [WARNING] NewsData 422 for query 'TNYA': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:03,818 [INFO] TNYA: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:05,069 [INFO] [11/50] Fetching articles for RR | RR
+2025-11-15 12:01:05,429 [WARNING] NewsData 422 for query 'RR': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:05,430 [INFO] RR: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:06,681 [INFO] [12/50] Fetching articles for CAN | CAN
+2025-11-15 12:01:07,019 [WARNING] NewsData 422 for query 'CAN': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:07,021 [INFO] CAN: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:08,273 [INFO] [13/50] Fetching articles for DEFT | DEFT
+2025-11-15 12:01:08,624 [WARNING] NewsData 422 for query 'DEFT': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:08,625 [INFO] DEFT: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:09,876 [INFO] [14/50] Fetching articles for SRFM | SRFM
+2025-11-15 12:01:10,230 [WARNING] NewsData 422 for query 'SRFM': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:10,231 [INFO] SRFM: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:11,482 [INFO] [15/50] Fetching articles for MRNA | MRNA
+2025-11-15 12:01:11,855 [WARNING] NewsData 422 for query 'MRNA': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:11,856 [INFO] MRNA: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:13,107 [INFO] [16/50] Fetching articles for TGT | TGT
+2025-11-15 12:01:13,430 [WARNING] NewsData 422 for query 'TGT': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:13,433 [INFO] TGT: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:14,683 [INFO] [17/50] Fetching articles for DNUT | DNUT
+2025-11-15 12:01:15,039 [WARNING] NewsData 422 for query 'DNUT': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:15,040 [INFO] DNUT: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:16,291 [INFO] [18/50] Fetching articles for ASST | ASST
+2025-11-15 12:01:16,643 [WARNING] NewsData 422 for query 'ASST': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:16,644 [INFO] ASST: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:17,895 [INFO] [19/50] Fetching articles for CRCL | CRCL
+2025-11-15 12:01:18,233 [WARNING] NewsData 422 for query 'CRCL': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:18,235 [INFO] CRCL: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:19,485 [INFO] [20/50] Fetching articles for HNST | HNST
+2025-11-15 12:01:19,837 [WARNING] NewsData 422 for query 'HNST': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:19,838 [INFO] HNST: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:21,089 [INFO] [21/50] Fetching articles for SES | SES
+2025-11-15 12:01:21,438 [WARNING] NewsData 422 for query 'SES': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:21,439 [INFO] SES: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:22,690 [INFO] [22/50] Fetching articles for AAL | AAL
+2025-11-15 12:01:23,031 [WARNING] NewsData 422 for query 'AAL': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:23,032 [INFO] AAL: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:24,283 [INFO] [23/50] Fetching articles for NEE | NEE
+2025-11-15 12:01:24,630 [WARNING] NewsData 422 for query 'NEE': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:24,631 [INFO] NEE: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:25,882 [INFO] [24/50] Fetching articles for VOW | VOW
+2025-11-15 12:01:26,222 [WARNING] NewsData 422 for query 'VOW': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:26,223 [INFO] VOW: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:27,474 [INFO] [25/50] Fetching articles for BITF | BITF
+2025-11-15 12:01:27,821 [WARNING] NewsData 422 for query 'BITF': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:27,822 [INFO] BITF: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:29,073 [INFO] [26/50] Fetching articles for PYPL | PYPL
+2025-11-15 12:01:29,420 [WARNING] NewsData 422 for query 'PYPL': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:29,421 [INFO] PYPL: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:30,672 [INFO] [27/50] Fetching articles for USGOLD | USGOLD
+2025-11-15 12:01:30,990 [WARNING] NewsData 422 for query 'USGOLD': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:30,991 [INFO] USGOLD: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:32,243 [INFO] [28/50] Fetching articles for ABT | ABT
+2025-11-15 12:01:32,582 [WARNING] NewsData 422 for query 'ABT': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:32,583 [INFO] ABT: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:33,834 [INFO] [29/50] Fetching articles for ACN | Accenture
+2025-11-15 12:01:34,185 [WARNING] NewsData 422 for query 'Accenture': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:34,186 [INFO] ACN: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:35,437 [INFO] [30/50] Fetching articles for ITW | Illinois Tool Works
+2025-11-15 12:01:35,799 [WARNING] NewsData 422 for query 'Illinois Tool Works': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:35,800 [INFO] ITW: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:37,051 [INFO] [31/50] Fetching articles for TMUS | T-Mobile US
+2025-11-15 12:01:37,375 [WARNING] NewsData 422 for query 'T-Mobile US': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:37,376 [INFO] TMUS: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:38,627 [INFO] [32/50] Fetching articles for MAS | Masco
+2025-11-15 12:01:38,963 [WARNING] NewsData 422 for query 'Masco': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:38,964 [INFO] MAS: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:40,216 [INFO] [33/50] Fetching articles for LUV | Southwest Airlines
+2025-11-15 12:01:40,551 [WARNING] NewsData 422 for query 'Southwest Airlines': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:40,552 [INFO] LUV: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:41,803 [INFO] [34/50] Fetching articles for AMP | Ameriprise Financial
+2025-11-15 12:01:42,168 [WARNING] NewsData 422 for query 'Ameriprise Financial': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:42,169 [INFO] AMP: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:43,420 [INFO] [35/50] Fetching articles for XYL | Xylem Inc.
+2025-11-15 12:01:43,773 [WARNING] NewsData 422 for query 'Xylem Inc.': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:43,774 [INFO] XYL: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:45,025 [INFO] [36/50] Fetching articles for ICE | Intercontinental Exchange
+2025-11-15 12:01:45,365 [WARNING] NewsData 422 for query 'Intercontinental Exchange': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:45,366 [INFO] ICE: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:46,617 [INFO] [37/50] Fetching articles for O | Realty Income
+2025-11-15 12:01:46,933 [WARNING] NewsData 422 for query 'Realty Income': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:46,934 [INFO] O: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:48,185 [INFO] [38/50] Fetching articles for NCLH | Norwegian Cruise Line Holdings
+2025-11-15 12:01:48,531 [WARNING] NewsData 422 for query 'Norwegian Cruise Line Holdings': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:48,532 [INFO] NCLH: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:49,783 [INFO] [39/50] Fetching articles for COP | ConocoPhillips
+2025-11-15 12:01:50,132 [WARNING] NewsData 422 for query 'ConocoPhillips': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:50,134 [INFO] COP: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:51,384 [INFO] [40/50] Fetching articles for MDT | Medtronic
+2025-11-15 12:01:51,720 [WARNING] NewsData 422 for query 'Medtronic': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:51,721 [INFO] MDT: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:52,972 [INFO] [41/50] Fetching articles for FICO | Fair Isaac
+2025-11-15 12:01:53,309 [WARNING] NewsData 422 for query 'Fair Isaac': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:53,310 [INFO] FICO: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:54,561 [INFO] [42/50] Fetching articles for CBRE | CBRE Group
+2025-11-15 12:01:54,908 [WARNING] NewsData 422 for query 'CBRE Group': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:54,909 [INFO] CBRE: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:56,161 [INFO] [43/50] Fetching articles for MO | Altria
+2025-11-15 12:01:56,508 [WARNING] NewsData 422 for query 'Altria': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:56,509 [INFO] MO: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:57,760 [INFO] [44/50] Fetching articles for FOX | Fox Corporation (Class B)
+2025-11-15 12:01:58,080 [WARNING] NewsData 422 for query 'Fox Corporation (Class B)': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:58,081 [INFO] FOX: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:01:59,332 [INFO] [45/50] Fetching articles for AVB | AvalonBay Communities
+2025-11-15 12:01:59,671 [WARNING] NewsData 422 for query 'AvalonBay Communities': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:01:59,672 [INFO] AVB: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:02:00,923 [INFO] [46/50] Fetching articles for BA | Boeing
+2025-11-15 12:02:01,266 [WARNING] NewsData 422 for query 'Boeing': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:02:01,267 [INFO] BA: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:02:02,519 [INFO] [47/50] Fetching articles for WBD | Warner Bros. Discovery
+2025-11-15 12:02:02,875 [WARNING] NewsData 422 for query 'Warner Bros. Discovery': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:02:02,876 [INFO] WBD: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:02:04,127 [INFO] [48/50] Fetching articles for CAH | Cardinal Health
+2025-11-15 12:02:04,477 [WARNING] NewsData 422 for query 'Cardinal Health': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:02:04,479 [INFO] CAH: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:02:05,730 [INFO] [49/50] Fetching articles for CINF | Cincinnati Financial
+2025-11-15 12:02:06,077 [WARNING] NewsData 422 for query 'Cincinnati Financial': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:02:06,079 [INFO] CINF: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:02:07,330 [INFO] [50/50] Fetching articles for EIX | Edison International
+2025-11-15 12:02:07,655 [WARNING] NewsData 422 for query 'Edison International': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 12:02:07,656 [INFO] EIX: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:02:08,907 [INFO] Cycle summary: HIGH=0 MED=0 LOW=0 posted=0
+2025-11-15 12:02:08,908 [INFO] Sleeping 6000s until next cycle.
+2025-11-15 12:02:37,553 [INFO] ========== Bot Startup ==========
+2025-11-15 12:02:37,560 [INFO] Loaded 28 personal tickers from watchlist.txt.
+2025-11-15 12:02:37,608 [INFO] Fetched S&P500 master list: 503 tickers.
+2025-11-15 12:02:37,618 [INFO] Bot started; entering infinite cycle loop.
+2025-11-15 12:02:37,623 [INFO] Loaded 28 personal tickers from watchlist.txt.
+2025-11-15 12:02:37,672 [INFO] Fetched S&P500 master list: 503 tickers.
+2025-11-15 12:02:37,675 [INFO] Cycle composition: 28 personal + 22 random = 50 total.
+2025-11-15 12:02:37,677 [INFO] [1/50] Fetching articles for GOOG | GOOG
+2025-11-15 12:02:38,031 [ERROR] NewsData HTTP error for 'GOOG': 401 Client Error: UNAUTHORIZED for url: https://newsdata.io/api/1/news?apikey=https%3A%2F%2Fnewsdata.io%2Fapi%2F1%2Fmarket%3Fapikey%3Dpub_f22ba9249c104a038d7e1b904b949e3a&q=%22GOOG%22&language=en&category=business&country=us&page=1
+2025-11-15 12:02:38,039 [INFO] GOOG: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:02:39,293 [INFO] [2/50] Fetching articles for AMZN | AMZN
+2025-11-15 12:02:39,653 [ERROR] NewsData HTTP error for 'AMZN': 401 Client Error: UNAUTHORIZED for url: https://newsdata.io/api/1/news?apikey=https%3A%2F%2Fnewsdata.io%2Fapi%2F1%2Fmarket%3Fapikey%3Dpub_f22ba9249c104a038d7e1b904b949e3a&q=%22AMZN%22&language=en&category=business&country=us&page=1
+2025-11-15 12:02:39,654 [INFO] AMZN: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:02:40,905 [INFO] [3/50] Fetching articles for AAPL | AAPL
+2025-11-15 12:02:41,255 [ERROR] NewsData HTTP error for 'AAPL': 401 Client Error: UNAUTHORIZED for url: https://newsdata.io/api/1/news?apikey=https%3A%2F%2Fnewsdata.io%2Fapi%2F1%2Fmarket%3Fapikey%3Dpub_f22ba9249c104a038d7e1b904b949e3a&q=%22AAPL%22&language=en&category=business&country=us&page=1
+2025-11-15 12:02:41,256 [INFO] AAPL: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:02:42,507 [INFO] [4/50] Fetching articles for NVDA | NVDA
+2025-11-15 12:02:42,834 [ERROR] NewsData HTTP error for 'NVDA': 401 Client Error: UNAUTHORIZED for url: https://newsdata.io/api/1/news?apikey=https%3A%2F%2Fnewsdata.io%2Fapi%2F1%2Fmarket%3Fapikey%3Dpub_f22ba9249c104a038d7e1b904b949e3a&q=%22NVDA%22&language=en&category=business&country=us&page=1
+2025-11-15 12:02:42,835 [INFO] NVDA: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:02:44,086 [INFO] [5/50] Fetching articles for TSLA | TSLA
+2025-11-15 12:02:44,422 [ERROR] NewsData HTTP error for 'TSLA': 401 Client Error: UNAUTHORIZED for url: https://newsdata.io/api/1/news?apikey=https%3A%2F%2Fnewsdata.io%2Fapi%2F1%2Fmarket%3Fapikey%3Dpub_f22ba9249c104a038d7e1b904b949e3a&q=%22TSLA%22&language=en&category=business&country=us&page=1
+2025-11-15 12:02:44,423 [INFO] TSLA: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:02:45,674 [INFO] [6/50] Fetching articles for META | META
+2025-11-15 12:02:46,010 [ERROR] NewsData HTTP error for 'META': 401 Client Error: UNAUTHORIZED for url: https://newsdata.io/api/1/news?apikey=https%3A%2F%2Fnewsdata.io%2Fapi%2F1%2Fmarket%3Fapikey%3Dpub_f22ba9249c104a038d7e1b904b949e3a&q=%22META%22&language=en&category=business&country=us&page=1
+2025-11-15 12:02:46,011 [INFO] META: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:02:47,262 [INFO] [7/50] Fetching articles for MSFT | MSFT
+2025-11-15 12:02:47,609 [ERROR] NewsData HTTP error for 'MSFT': 401 Client Error: UNAUTHORIZED for url: https://newsdata.io/api/1/news?apikey=https%3A%2F%2Fnewsdata.io%2Fapi%2F1%2Fmarket%3Fapikey%3Dpub_f22ba9249c104a038d7e1b904b949e3a&q=%22MSFT%22&language=en&category=business&country=us&page=1
+2025-11-15 12:02:47,610 [INFO] MSFT: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:02:48,861 [INFO] [8/50] Fetching articles for PG | PG
+2025-11-15 12:02:49,239 [ERROR] NewsData HTTP error for 'PG': 401 Client Error: UNAUTHORIZED for url: https://newsdata.io/api/1/news?apikey=https%3A%2F%2Fnewsdata.io%2Fapi%2F1%2Fmarket%3Fapikey%3Dpub_f22ba9249c104a038d7e1b904b949e3a&q=%22PG%22&language=en&category=business&country=us&page=1
+2025-11-15 12:02:49,240 [INFO] PG: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:02:50,491 [INFO] [9/50] Fetching articles for NKE | NKE
+2025-11-15 12:02:50,804 [ERROR] NewsData HTTP error for 'NKE': 401 Client Error: UNAUTHORIZED for url: https://newsdata.io/api/1/news?apikey=https%3A%2F%2Fnewsdata.io%2Fapi%2F1%2Fmarket%3Fapikey%3Dpub_f22ba9249c104a038d7e1b904b949e3a&q=%22NKE%22&language=en&category=business&country=us&page=1
+2025-11-15 12:02:50,805 [INFO] NKE: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:02:52,057 [INFO] [10/50] Fetching articles for TNYA | TNYA
+2025-11-15 12:02:52,391 [ERROR] NewsData HTTP error for 'TNYA': 401 Client Error: UNAUTHORIZED for url: https://newsdata.io/api/1/news?apikey=https%3A%2F%2Fnewsdata.io%2Fapi%2F1%2Fmarket%3Fapikey%3Dpub_f22ba9249c104a038d7e1b904b949e3a&q=%22TNYA%22&language=en&category=business&country=us&page=1
+2025-11-15 12:02:52,392 [INFO] TNYA: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:02:53,643 [INFO] [11/50] Fetching articles for RR | RR
+2025-11-15 12:02:53,992 [ERROR] NewsData HTTP error for 'RR': 401 Client Error: UNAUTHORIZED for url: https://newsdata.io/api/1/news?apikey=https%3A%2F%2Fnewsdata.io%2Fapi%2F1%2Fmarket%3Fapikey%3Dpub_f22ba9249c104a038d7e1b904b949e3a&q=%22RR%22&language=en&category=business&country=us&page=1
+2025-11-15 12:02:53,993 [INFO] RR: 0 fetched, 0 kept, 0 posted (highs).
+2025-11-15 12:02:54,037 [INFO] KeyboardInterrupt received — shutting down.
+2025-11-15 16:09:44,980 [INFO] ========== Bot Startup ==========
+2025-11-15 16:09:45,016 [INFO] === Cycle #1 startup ===
+2025-11-15 16:09:45,026 [INFO] Loaded 28 personal tickers from watchlist.txt.
+2025-11-15 16:09:46,682 [INFO] Fetched S&P500 master list: 503 tickers.
+2025-11-15 16:09:46,692 [INFO] Cycle tickers: 50 total (28 personal + 22 random).
+2025-11-15 16:09:46,695 [INFO] Random picks this cycle: ['PNC', 'BX', 'PLTR', 'VST', 'OXY', 'AME', 'EPAM', 'AMCR', 'BR', 'GILD', 'KMI', 'FISV', 'ORLY', 'EA', 'NOC', 'ALB', 'MCK', 'ROP', 'DAL', 'CRWD', 'DLTR', 'RL']
+2025-11-15 16:09:46,699 [INFO] Starting news scan cycle...
+2025-11-15 16:09:46,701 [INFO] [1/50] Fetching articles for GOOG | GOOG
+2025-11-15 16:09:47,135 [WARNING] NewsData 422 for query '"GOOG"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:09:47,139 [INFO] GOOG: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:09:48,493 [INFO] [2/50] Fetching articles for AMZN | AMZN
+2025-11-15 16:09:48,819 [WARNING] NewsData 422 for query '"AMZN"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:09:48,820 [INFO] AMZN: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:09:50,232 [INFO] [3/50] Fetching articles for AAPL | AAPL
+2025-11-15 16:09:50,591 [WARNING] NewsData 422 for query '"AAPL"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:09:50,596 [INFO] AAPL: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:09:52,067 [INFO] [4/50] Fetching articles for NVDA | NVDA
+2025-11-15 16:09:52,380 [WARNING] NewsData 422 for query '"NVDA"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:09:52,381 [INFO] NVDA: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:09:53,833 [INFO] [5/50] Fetching articles for TSLA | TSLA
+2025-11-15 16:09:54,185 [WARNING] NewsData 422 for query '"TSLA"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:09:54,186 [INFO] TSLA: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:09:55,668 [INFO] [6/50] Fetching articles for META | META
+2025-11-15 16:09:55,985 [WARNING] NewsData 422 for query '"META"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:09:55,986 [INFO] META: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:09:57,503 [INFO] [7/50] Fetching articles for MSFT | MSFT
+2025-11-15 16:09:57,876 [WARNING] NewsData 422 for query '"MSFT"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:09:57,877 [INFO] MSFT: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:09:59,100 [INFO] [8/50] Fetching articles for PG | PG
+2025-11-15 16:09:59,418 [WARNING] NewsData 422 for query '"PG"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:09:59,419 [INFO] PG: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:00,646 [INFO] [9/50] Fetching articles for NKE | NKE
+2025-11-15 16:10:00,990 [WARNING] NewsData 422 for query '"NKE"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:00,991 [INFO] NKE: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:02,527 [INFO] [10/50] Fetching articles for TNYA | TNYA
+2025-11-15 16:10:02,847 [WARNING] NewsData 422 for query '"TNYA"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:02,848 [INFO] TNYA: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:04,410 [INFO] [11/50] Fetching articles for RR | RR
+2025-11-15 16:10:04,763 [WARNING] NewsData 422 for query '"RR"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:04,764 [INFO] RR: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:06,044 [INFO] [12/50] Fetching articles for CAN | CAN
+2025-11-15 16:10:06,364 [WARNING] NewsData 422 for query '"CAN"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:06,365 [INFO] CAN: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:07,686 [INFO] [13/50] Fetching articles for DEFT | DEFT
+2025-11-15 16:10:08,030 [WARNING] NewsData 422 for query '"DEFT"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:08,031 [INFO] DEFT: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:09,382 [INFO] [14/50] Fetching articles for SRFM | SRFM
+2025-11-15 16:10:09,710 [WARNING] NewsData 422 for query '"SRFM"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:09,711 [INFO] SRFM: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:10,973 [INFO] [15/50] Fetching articles for MRNA | MRNA
+2025-11-15 16:10:11,288 [WARNING] NewsData 422 for query '"MRNA"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:11,289 [INFO] MRNA: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:12,641 [INFO] [16/50] Fetching articles for TGT | TGT
+2025-11-15 16:10:12,993 [WARNING] NewsData 422 for query '"TGT"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:12,994 [INFO] TGT: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:14,581 [INFO] [17/50] Fetching articles for DNUT | DNUT
+2025-11-15 16:10:14,933 [WARNING] NewsData 422 for query '"DNUT"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:14,934 [INFO] DNUT: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:16,216 [INFO] [18/50] Fetching articles for ASST | ASST
+2025-11-15 16:10:16,529 [WARNING] NewsData 422 for query '"ASST"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:16,530 [INFO] ASST: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:17,787 [INFO] [19/50] Fetching articles for CRCL | CRCL
+2025-11-15 16:10:18,105 [WARNING] NewsData 422 for query '"CRCL"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:18,106 [INFO] CRCL: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:19,705 [INFO] [20/50] Fetching articles for HNST | HNST
+2025-11-15 16:10:20,065 [WARNING] NewsData 422 for query '"HNST"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:20,067 [INFO] HNST: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:21,634 [INFO] [21/50] Fetching articles for SES | SES
+2025-11-15 16:10:21,981 [WARNING] NewsData 422 for query '"SES"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:21,982 [INFO] SES: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:23,333 [INFO] [22/50] Fetching articles for AAL | AAL
+2025-11-15 16:10:23,653 [WARNING] NewsData 422 for query '"AAL"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:23,655 [INFO] AAL: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:24,919 [INFO] [23/50] Fetching articles for NEE | NEE
+2025-11-15 16:10:25,281 [WARNING] NewsData 422 for query '"NEE"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:25,282 [INFO] NEE: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:26,710 [INFO] [24/50] Fetching articles for VOW | VOW
+2025-11-15 16:10:27,062 [WARNING] NewsData 422 for query '"VOW"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:27,063 [INFO] VOW: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:28,358 [INFO] [25/50] Fetching articles for BITF | BITF
+2025-11-15 16:10:28,722 [WARNING] NewsData 422 for query '"BITF"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:28,723 [INFO] BITF: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:30,196 [INFO] [26/50] Fetching articles for PYPL | PYPL
+2025-11-15 16:10:30,510 [WARNING] NewsData 422 for query '"PYPL"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:30,511 [INFO] PYPL: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:31,825 [INFO] [27/50] Fetching articles for USGOLD | USGOLD
+2025-11-15 16:10:32,137 [WARNING] NewsData 422 for query '"USGOLD"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:32,138 [INFO] USGOLD: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:33,627 [INFO] [28/50] Fetching articles for ABT | ABT
+2025-11-15 16:10:33,940 [WARNING] NewsData 422 for query '"ABT"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:33,941 [INFO] ABT: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:35,525 [INFO] [29/50] Fetching articles for PNC | PNC
+2025-11-15 16:10:35,866 [WARNING] NewsData 422 for query '"PNC"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:35,867 [INFO] PNC: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:37,360 [INFO] [30/50] Fetching articles for BX | BX
+2025-11-15 16:10:37,712 [WARNING] NewsData 422 for query '"BX"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:37,713 [INFO] BX: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:38,917 [INFO] [31/50] Fetching articles for PLTR | PLTR
+2025-11-15 16:10:39,232 [WARNING] NewsData 422 for query '"PLTR"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:39,239 [INFO] PLTR: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:40,803 [INFO] [32/50] Fetching articles for VST | VST
+2025-11-15 16:10:41,121 [WARNING] NewsData 422 for query '"VST"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:41,122 [INFO] VST: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:42,596 [INFO] [33/50] Fetching articles for OXY | OXY
+2025-11-15 16:10:42,945 [WARNING] NewsData 422 for query '"OXY"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:42,946 [INFO] OXY: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:44,343 [INFO] [34/50] Fetching articles for AME | AME
+2025-11-15 16:10:44,693 [WARNING] NewsData 422 for query '"AME"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:44,694 [INFO] AME: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:46,092 [INFO] [35/50] Fetching articles for EPAM | EPAM
+2025-11-15 16:10:46,402 [WARNING] NewsData 422 for query '"EPAM"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:46,403 [INFO] EPAM: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:47,967 [INFO] [36/50] Fetching articles for AMCR | AMCR
+2025-11-15 16:10:48,283 [WARNING] NewsData 422 for query '"AMCR"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:48,284 [INFO] AMCR: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:49,604 [INFO] [37/50] Fetching articles for BR | BR
+2025-11-15 16:10:49,946 [WARNING] NewsData 422 for query '"BR"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:49,947 [INFO] BR: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:51,359 [INFO] [38/50] Fetching articles for GILD | GILD
+2025-11-15 16:10:51,718 [WARNING] NewsData 422 for query '"GILD"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:51,719 [INFO] GILD: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:52,961 [INFO] [39/50] Fetching articles for KMI | KMI
+2025-11-15 16:10:53,286 [WARNING] NewsData 422 for query '"KMI"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:53,287 [INFO] KMI: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:54,766 [INFO] [40/50] Fetching articles for FISV | FISV
+2025-11-15 16:10:55,080 [WARNING] NewsData 422 for query '"FISV"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:55,081 [INFO] FISV: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:56,337 [INFO] [41/50] Fetching articles for ORLY | ORLY
+2025-11-15 16:10:56,680 [WARNING] NewsData 422 for query '"ORLY"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:56,681 [INFO] ORLY: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:58,139 [INFO] [42/50] Fetching articles for EA | EA
+2025-11-15 16:10:58,454 [WARNING] NewsData 422 for query '"EA"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:10:58,456 [INFO] EA: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:10:59,946 [INFO] [43/50] Fetching articles for NOC | NOC
+2025-11-15 16:11:00,257 [WARNING] NewsData 422 for query '"NOC"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:11:00,258 [INFO] NOC: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:11:01,711 [INFO] [44/50] Fetching articles for ALB | ALB
+2025-11-15 16:11:02,061 [WARNING] NewsData 422 for query '"ALB"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:11:02,062 [INFO] ALB: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:11:03,374 [INFO] [45/50] Fetching articles for MCK | MCK
+2025-11-15 16:11:03,722 [WARNING] NewsData 422 for query '"MCK"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:11:03,723 [INFO] MCK: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:11:05,126 [INFO] [46/50] Fetching articles for ROP | ROP
+2025-11-15 16:11:05,442 [WARNING] NewsData 422 for query '"ROP"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:11:05,443 [INFO] ROP: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:11:06,725 [INFO] [47/50] Fetching articles for DAL | DAL
+2025-11-15 16:11:07,039 [WARNING] NewsData 422 for query '"DAL"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:11:07,040 [INFO] DAL: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:11:08,267 [INFO] [48/50] Fetching articles for CRWD | CRWD
+2025-11-15 16:11:08,583 [WARNING] NewsData 422 for query '"CRWD"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:11:08,586 [INFO] CRWD: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:11:09,967 [INFO] [49/50] Fetching articles for DLTR | DLTR
+2025-11-15 16:11:10,310 [WARNING] NewsData 422 for query '"DLTR"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:11:10,311 [INFO] DLTR: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:11:11,625 [INFO] [50/50] Fetching articles for RL | RL
+2025-11-15 16:11:11,975 [WARNING] NewsData 422 for query '"RL"': {"status":"error","results":{"message":"The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination","code":"UnsupportedFilter"}}
+
+2025-11-15 16:11:11,978 [INFO] RL: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:11:13,465 [INFO] Cycle summary: HIGH=0 MED=0 LOW=0 posted=0
+2025-11-15 16:11:13,466 [INFO] Sleeping 6000s until next cycle.
+2025-11-15 16:28:37,169 [INFO] KeyboardInterrupt received — shutting down.
+2025-11-15 16:28:37,323 [INFO] ========== Bot Startup ==========
+2025-11-15 16:28:37,323 [INFO] ========== Bot Startup ==========
+2025-11-15 16:28:37,325 [INFO] Loaded 28 personal tickers from watchlist.txt.
+2025-11-15 16:28:37,325 [INFO] Loaded 28 personal tickers from watchlist.txt.
+2025-11-15 16:28:37,428 [WARNING] Unable to load S&P500 master list; returning empty list.
+2025-11-15 16:28:37,428 [WARNING] Unable to load S&P500 master list; returning empty list.
+2025-11-15 16:28:37,430 [INFO] Bot started; entering infinite loop.
+2025-11-15 16:28:37,430 [INFO] Bot started; entering infinite loop.
+2025-11-15 16:28:37,431 [INFO] === Cycle #1 startup ===
+2025-11-15 16:28:37,431 [INFO] === Cycle #1 startup ===
+2025-11-15 16:28:37,433 [INFO] Cycle tickers: 28 total (28 personal + 0 random).
+2025-11-15 16:28:37,433 [INFO] Cycle tickers: 28 total (28 personal + 0 random).
+2025-11-15 16:28:37,434 [INFO] Fetching batch: ['GOOG', 'AMZN', 'AAPL', 'NVDA', 'TSLA', 'META', 'MSFT', 'PG']
+2025-11-15 16:28:37,434 [INFO] Fetching batch: ['GOOG', 'AMZN', 'AAPL', 'NVDA', 'TSLA', 'META', 'MSFT', 'PG']
+2025-11-15 16:28:38,334 [WARNING] Yahoo scrape non-200 for GOOG: 404
+2025-11-15 16:28:38,334 [WARNING] Yahoo scrape non-200 for GOOG: 404
+2025-11-15 16:28:38,336 [WARNING] BAD_NAME: GOOG (saved fallback ticker as name). Please correct GOOG in company_map.json
+2025-11-15 16:28:38,336 [WARNING] BAD_NAME: GOOG (saved fallback ticker as name). Please correct GOOG in company_map.json
+2025-11-15 16:28:38,705 [WARNING] NewsData 422 for query 'GOOG': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:28:38,705 [WARNING] NewsData 422 for query 'GOOG': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:28:38,707 [INFO] GOOG: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:28:38,707 [INFO] GOOG: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:28:40,588 [WARNING] Yahoo scrape non-200 for AMZN: 404
+2025-11-15 16:28:40,588 [WARNING] Yahoo scrape non-200 for AMZN: 404
+2025-11-15 16:28:40,591 [WARNING] BAD_NAME: AMZN (saved fallback ticker as name). Please correct AMZN in company_map.json
+2025-11-15 16:28:40,591 [WARNING] BAD_NAME: AMZN (saved fallback ticker as name). Please correct AMZN in company_map.json
+2025-11-15 16:28:40,911 [WARNING] NewsData 422 for query 'AMZN': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:28:40,911 [WARNING] NewsData 422 for query 'AMZN': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:28:40,913 [INFO] AMZN: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:28:40,913 [INFO] AMZN: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:28:42,701 [WARNING] Yahoo scrape non-200 for AAPL: 404
+2025-11-15 16:28:42,701 [WARNING] Yahoo scrape non-200 for AAPL: 404
+2025-11-15 16:28:42,703 [WARNING] BAD_NAME: AAPL (saved fallback ticker as name). Please correct AAPL in company_map.json
+2025-11-15 16:28:42,703 [WARNING] BAD_NAME: AAPL (saved fallback ticker as name). Please correct AAPL in company_map.json
+2025-11-15 16:28:43,060 [WARNING] NewsData 422 for query 'AAPL': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:28:43,060 [WARNING] NewsData 422 for query 'AAPL': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:28:43,062 [INFO] AAPL: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:28:43,062 [INFO] AAPL: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:28:44,894 [WARNING] Yahoo scrape non-200 for NVDA: 404
+2025-11-15 16:28:44,894 [WARNING] Yahoo scrape non-200 for NVDA: 404
+2025-11-15 16:28:44,896 [WARNING] BAD_NAME: NVDA (saved fallback ticker as name). Please correct NVDA in company_map.json
+2025-11-15 16:28:44,896 [WARNING] BAD_NAME: NVDA (saved fallback ticker as name). Please correct NVDA in company_map.json
+2025-11-15 16:28:45,242 [WARNING] NewsData 422 for query 'NVDA': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:28:45,242 [WARNING] NewsData 422 for query 'NVDA': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:28:45,244 [INFO] NVDA: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:28:45,244 [INFO] NVDA: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:28:46,982 [INFO] KeyboardInterrupt received — shutting down.
+2025-11-15 16:28:46,982 [INFO] KeyboardInterrupt received — shutting down.
+2025-11-15 16:28:46,984 [INFO] Shutdown complete.
+2025-11-15 16:28:46,984 [INFO] Shutdown complete.
+2025-11-15 16:29:12,299 [INFO] ========== Bot Startup ==========
+2025-11-15 16:29:12,301 [INFO] Loaded 28 personal tickers from watchlist.txt.
+2025-11-15 16:29:12,323 [WARNING] Unable to load S&P500 master list; returning empty list.
+2025-11-15 16:29:12,328 [INFO] Bot started; entering infinite loop.
+2025-11-15 16:29:12,329 [INFO] === Cycle #1 startup ===
+2025-11-15 16:29:12,330 [INFO] Cycle tickers: 28 total (28 personal + 0 random).
+2025-11-15 16:29:12,332 [INFO] Fetching batch: ['GOOG', 'AMZN', 'AAPL', 'NVDA', 'TSLA', 'META', 'MSFT', 'PG']
+2025-11-15 16:29:12,698 [WARNING] NewsData 422 for query 'GOOG': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:12,700 [INFO] GOOG: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:13,923 [WARNING] NewsData 422 for query 'AMZN': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:13,934 [INFO] AMZN: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:15,198 [WARNING] NewsData 422 for query 'AAPL': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:15,199 [INFO] AAPL: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:16,421 [WARNING] NewsData 422 for query 'NVDA': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:16,422 [INFO] NVDA: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:18,220 [WARNING] Yahoo scrape non-200 for TSLA: 404
+2025-11-15 16:29:18,222 [WARNING] BAD_NAME: TSLA (saved fallback ticker as name). Please correct TSLA in company_map.json
+2025-11-15 16:29:18,537 [WARNING] NewsData 422 for query 'TSLA': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:18,538 [INFO] TSLA: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:20,474 [WARNING] Yahoo scrape non-200 for META: 404
+2025-11-15 16:29:20,476 [WARNING] BAD_NAME: META (saved fallback ticker as name). Please correct META in company_map.json
+2025-11-15 16:29:20,825 [WARNING] NewsData 422 for query 'META': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:20,826 [INFO] META: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:22,637 [WARNING] Yahoo scrape non-200 for MSFT: 404
+2025-11-15 16:29:22,639 [WARNING] BAD_NAME: MSFT (saved fallback ticker as name). Please correct MSFT in company_map.json
+2025-11-15 16:29:22,952 [WARNING] NewsData 422 for query 'MSFT': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:22,953 [INFO] MSFT: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:24,435 [WARNING] Yahoo scrape non-200 for PG: 404
+2025-11-15 16:29:24,436 [WARNING] BAD_NAME: PG (saved fallback ticker as name). Please correct PG in company_map.json
+2025-11-15 16:29:24,787 [WARNING] NewsData 422 for query 'PG': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:24,787 [INFO] PG: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:25,689 [INFO] Fetching batch: ['NKE', 'TNYA', 'RR', 'CAN', 'DEFT', 'SRFM', 'MRNA', 'TGT']
+2025-11-15 16:29:26,588 [WARNING] Yahoo scrape non-200 for NKE: 404
+2025-11-15 16:29:26,590 [WARNING] BAD_NAME: NKE (saved fallback ticker as name). Please correct NKE in company_map.json
+2025-11-15 16:29:26,904 [WARNING] NewsData 422 for query 'NKE': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:26,905 [INFO] NKE: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:28,736 [WARNING] Yahoo scrape non-200 for TNYA: 404
+2025-11-15 16:29:28,737 [WARNING] BAD_NAME: TNYA (saved fallback ticker as name). Please correct TNYA in company_map.json
+2025-11-15 16:29:29,082 [WARNING] NewsData 422 for query 'TNYA': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:29,083 [INFO] TNYA: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:30,862 [WARNING] Yahoo scrape non-200 for RR: 404
+2025-11-15 16:29:30,864 [WARNING] BAD_NAME: RR (saved fallback ticker as name). Please correct RR in company_map.json
+2025-11-15 16:29:31,177 [WARNING] NewsData 422 for query 'RR': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:31,178 [INFO] RR: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:32,970 [WARNING] Yahoo scrape non-200 for CAN: 404
+2025-11-15 16:29:32,972 [WARNING] BAD_NAME: CAN (saved fallback ticker as name). Please correct CAN in company_map.json
+2025-11-15 16:29:33,322 [WARNING] NewsData 422 for query 'CAN': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:33,323 [INFO] CAN: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:35,129 [WARNING] Yahoo scrape non-200 for DEFT: 404
+2025-11-15 16:29:35,131 [WARNING] BAD_NAME: DEFT (saved fallback ticker as name). Please correct DEFT in company_map.json
+2025-11-15 16:29:35,453 [WARNING] NewsData 422 for query 'DEFT': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:35,454 [INFO] DEFT: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:37,269 [WARNING] Yahoo scrape non-200 for SRFM: 404
+2025-11-15 16:29:37,271 [WARNING] BAD_NAME: SRFM (saved fallback ticker as name). Please correct SRFM in company_map.json
+2025-11-15 16:29:37,617 [WARNING] NewsData 422 for query 'SRFM': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:37,619 [INFO] SRFM: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:39,489 [WARNING] Yahoo scrape non-200 for MRNA: 404
+2025-11-15 16:29:39,490 [WARNING] BAD_NAME: MRNA (saved fallback ticker as name). Please correct MRNA in company_map.json
+2025-11-15 16:29:39,803 [WARNING] NewsData 422 for query 'MRNA': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:39,804 [INFO] MRNA: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:41,733 [WARNING] Yahoo scrape non-200 for TGT: 404
+2025-11-15 16:29:41,738 [WARNING] BAD_NAME: TGT (saved fallback ticker as name). Please correct TGT in company_map.json
+2025-11-15 16:29:42,096 [WARNING] NewsData 422 for query 'TGT': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:42,099 [INFO] TGT: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:43,000 [INFO] Fetching batch: ['DNUT', 'ASST', 'CRCL', 'HNST', 'SES', 'AAL', 'NEE', 'VOW']
+2025-11-15 16:29:43,907 [WARNING] Yahoo scrape non-200 for DNUT: 404
+2025-11-15 16:29:43,909 [WARNING] BAD_NAME: DNUT (saved fallback ticker as name). Please correct DNUT in company_map.json
+2025-11-15 16:29:44,257 [WARNING] NewsData 422 for query 'DNUT': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:44,258 [INFO] DNUT: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:46,063 [WARNING] Yahoo scrape non-200 for ASST: 404
+2025-11-15 16:29:46,064 [WARNING] BAD_NAME: ASST (saved fallback ticker as name). Please correct ASST in company_map.json
+2025-11-15 16:29:46,379 [WARNING] NewsData 422 for query 'ASST': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:46,380 [INFO] ASST: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:48,156 [WARNING] Yahoo scrape non-200 for CRCL: 404
+2025-11-15 16:29:48,158 [WARNING] BAD_NAME: CRCL (saved fallback ticker as name). Please correct CRCL in company_map.json
+2025-11-15 16:29:48,509 [WARNING] NewsData 422 for query 'CRCL': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:48,510 [INFO] CRCL: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:50,316 [WARNING] Yahoo scrape non-200 for HNST: 404
+2025-11-15 16:29:50,318 [WARNING] BAD_NAME: HNST (saved fallback ticker as name). Please correct HNST in company_map.json
+2025-11-15 16:29:50,634 [WARNING] NewsData 422 for query 'HNST': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:50,636 [INFO] HNST: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:52,752 [WARNING] Yahoo scrape non-200 for SES: 404
+2025-11-15 16:29:52,754 [WARNING] BAD_NAME: SES (saved fallback ticker as name). Please correct SES in company_map.json
+2025-11-15 16:29:53,099 [WARNING] NewsData 422 for query 'SES': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:53,100 [INFO] SES: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:54,893 [WARNING] Yahoo scrape non-200 for AAL: 404
+2025-11-15 16:29:54,895 [WARNING] BAD_NAME: AAL (saved fallback ticker as name). Please correct AAL in company_map.json
+2025-11-15 16:29:55,209 [WARNING] NewsData 422 for query 'AAL': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:55,210 [INFO] AAL: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:57,009 [WARNING] Yahoo scrape non-200 for NEE: 404
+2025-11-15 16:29:57,010 [WARNING] BAD_NAME: NEE (saved fallback ticker as name). Please correct NEE in company_map.json
+2025-11-15 16:29:57,362 [WARNING] NewsData 422 for query 'NEE': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:57,363 [INFO] NEE: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:29:59,292 [INFO] Mapped VOW -> Yahoo Finance (saved)
+2025-11-15 16:29:59,637 [WARNING] NewsData 422 for query '"Yahoo Finance"': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:29:59,638 [INFO] VOW: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:30:00,541 [INFO] Fetching batch: ['BITF', 'PYPL', 'USGOLD', 'ABT']
+2025-11-15 16:30:01,416 [WARNING] Yahoo scrape non-200 for BITF: 404
+2025-11-15 16:30:01,417 [WARNING] BAD_NAME: BITF (saved fallback ticker as name). Please correct BITF in company_map.json
+2025-11-15 16:30:01,751 [WARNING] NewsData 422 for query 'BITF': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:30:01,752 [INFO] BITF: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:30:03,553 [WARNING] Yahoo scrape non-200 for PYPL: 404
+2025-11-15 16:30:03,555 [WARNING] BAD_NAME: PYPL (saved fallback ticker as name). Please correct PYPL in company_map.json
+2025-11-15 16:30:03,949 [WARNING] NewsData 422 for query 'PYPL': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:30:03,951 [INFO] PYPL: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:30:05,564 [INFO] Mapped USGOLD -> Yahoo Finance (saved)
+2025-11-15 16:30:05,931 [WARNING] NewsData 422 for query '"Yahoo Finance"': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:30:05,932 [INFO] USGOLD: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:30:07,762 [WARNING] Yahoo scrape non-200 for ABT: 404
+2025-11-15 16:30:07,763 [WARNING] BAD_NAME: ABT (saved fallback ticker as name). Please correct ABT in company_map.json
+2025-11-15 16:30:08,081 [WARNING] NewsData 422 for query 'ABT': {'status': 'error', 'results': {'message': 'The provided value for the next page is invalid. For more information on pagination, please refer to the Newsdata documentation at: https://newsdata.io/documentation/#pagination', 'code': 'UnsupportedFilter'}}
+2025-11-15 16:30:08,082 [INFO] ABT: 0 fetched, 0 kept, 0 high posted
+2025-11-15 16:30:08,984 [INFO] Cycle summary: HIGH=0 MED=0 LOW=0 posted=0
+2025-11-15 16:30:08,985 [INFO] Cycle 1 completed in 56.7s. Fetched=0 Kept=0 Posted=0
+2025-11-15 16:30:08,986 [INFO] Sleeping 6000s until next cycle.
+2025-11-15 17:35:10,408 [INFO] KeyboardInterrupt received — shutting down.
+2025-11-15 17:35:10,409 [INFO] Shutdown complete.
+2025-11-15 17:35:17,507 [INFO] ========== Bot Startup ==========
+2025-11-15 17:35:17,509 [INFO] Loaded 28 personal tickers from watchlist.txt.
+2025-11-15 17:35:17,510 [INFO] Cycle composition: 28 personal + 0 random = 28 total.
+2025-11-15 17:35:17,510 [INFO] === Cycle #1 startup ===
+2025-11-15 17:35:17,511 [INFO] Loaded 28 personal tickers from watchlist.txt.
+2025-11-15 17:35:17,512 [INFO] Cycle tickers: 28 total (28 personal + 0 random).
+2025-11-15 17:35:17,514 [INFO] Fetching batch 1/3: ['GOOG', 'AMZN', 'AAPL', 'NVDA', 'TSLA', 'META', 'MSFT', 'PG', 'NKE', 'TNYA']
+2025-11-15 17:35:17,841 [WARNING] NewsData/MarketAux HTTP 400: {'error': {'code': 'malformed_parameters', 'message': 'The published_after parameter(s) are incorrectly formatted.'}}
+2025-11-15 17:35:17,845 [WARNING] Batch fetch failed or returned no data; continuing to next batch.
+2025-11-15 17:35:17,851 [INFO] Fetching batch 2/3: ['RR', 'CAN', 'DEFT', 'SRFM', 'MRNA', 'TGT', 'DNUT', 'ASST', 'CRCL', 'HNST']
+2025-11-15 17:35:18,222 [WARNING] NewsData/MarketAux HTTP 400: {'error': {'code': 'malformed_parameters', 'message': 'The published_after parameter(s) are incorrectly formatted.'}}
+2025-11-15 17:35:18,224 [WARNING] Batch fetch failed or returned no data; continuing to next batch.
+2025-11-15 17:35:18,225 [INFO] Fetching batch 3/3: ['SES', 'AAL', 'NEE', 'VOW', 'BITF', 'PYPL', 'USGOLD', 'ABT']
+2025-11-15 17:35:18,361 [WARNING] NewsData/MarketAux HTTP 400: {'error': {'code': 'malformed_parameters', 'message': 'The published_after parameter(s) are incorrectly formatted.'}}
+2025-11-15 17:35:18,362 [WARNING] Batch fetch failed or returned no data; continuing to next batch.
+2025-11-15 17:35:18,363 [INFO] Cycle summary: HIGH=0 MED/KEPT=0 LOW=?. posted=0
+2025-11-15 17:35:18,364 [INFO] Cycle 1 completed. Fetched=0 Kept=0 Posted=0
+2025-11-15 17:35:18,364 [INFO] Sleeping 3600s until next cycle.
+2025-11-15 17:35:49,316 [INFO] KeyboardInterrupt received — shutting down.
