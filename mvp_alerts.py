@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
 mvp_alerts.py
-
-MarketAux-based news scanner for a watchlist of tickers.
-- Batches queries (BATCH_SIZE tickers per MarketAux call)
-- Weighted severity model (HIGH alerts -> Discord; MED -> logged)
-- Balanced Filter Mode (2)
-- Smart cooldowns and rate limiting
-- Robust error handling, logging, and retries
+Market news scanner (MarketAux) -> Discord
+Features:
+ - Batch fetch (10 tickers per request) using /news/all
+ - Weighted severity model; only HIGH posted to Discord, MED logged/kept
+ - Balanced filter mode by default
+ - Smart per-ticker cooldown to avoid spam
+ - Robust timestamp formatting (Option D: use last cycle end timestamp)
+ - Detailed logging to bot.log
 """
 
 import os
@@ -16,586 +17,574 @@ import time
 import json
 import math
 import logging
-import random
-import signal
-from datetime import datetime, timedelta
-from collections import defaultdict, Counter
-from typing import List, Dict, Any, Tuple
-
+import traceback
 import requests
+from datetime import datetime, timedelta, timezone
+from typing import List, Dict, Any, Optional, Tuple
+from dateutil import parser as dateutil_parser
 
-# -----------------------
-# CONFIG (tweak these)
-# -----------------------
-MARKETAUX_API_KEY = "9Ydp4VNIm9zZ6WHmVcys40L9gUlUWOKW6ZYFxX2T"  # <-- your key (from message)
-DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1435654882710519888/ZDx_dGG22dknR4hGrENapdaG1Cm-VyUCUvrXmI6kGxcw0KLILP5AJKmNB14L9TzD65J-"  # set your webhook url here to enable posting
-WATCHLIST_FILE = "watchlist.txt"
-COMPANY_MAP_FILE = "company_map.json"  # optional map ticker -> company name
-LOGFILE = "bot.log"
-#USER_AGENT = {"User-Agent": "StockAI-Bot/2.0 (ajakovski@yahoo.com)"}
+# ---------------------------------------------
+# SQLite persistence for MED articles
+# ---------------------------------------------
+import sqlite3
+from pathlib import Path
 
-BATCH_SIZE = 10  # max tickers per marketaux call (you asked for max efficiency)
-CYCLE_SLEEP_SECONDS = 3600  # default time between cycles (seconds). Adjust later.
-CYCLE_INFINITE = True  # keep looping; change to False for single run
+DB_PATH = "med_alerts.db"
 
-MARKETAUX_URL = "https://api.marketaux.com/v1/news/all"
-MARKETAUX_LIMIT_PER_CALL = 50  # marketaux page limit, we'll request enough articles per batch
+def init_med_db():
+    """Create the SQLite DB if it doesn't exist."""
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS med_articles (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            ticker TEXT,
+            title TEXT,
+            description TEXT,
+            url TEXT,
+            severity REAL,
+            published_at TEXT,
+            detected_at TEXT
+        )
+    """)
+    conn.commit()
+    conn.close()
 
-# Filtering / severity
-FILTER_MODE = 2  # Balanced Mode
-ONLY_POST_HIGH = True  # only send HIGH to discord
-MED_LOG_ONLY = True
+def save_med_article(ticker, title, description, url, severity, published_at):
+    """Store a MED article persistently."""
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+    cur.execute("""
+        INSERT INTO med_articles (ticker, title, description, url, severity, published_at, detected_at)
+        VALUES (?, ?, ?, ?, ?, ?, datetime('now'))
+    """, (ticker, title, description, url, severity, published_at))
+    conn.commit()
+    conn.close()
 
-# Cooldown & rate limiting
-TICKER_COOLDOWN_MINUTES = 60  # per-ticker cooldown after posting HIGH
-SMART_COOLDOWN_BASE = 60  # base in minutes; will increase if many posts in short time
-DAILY_REQUEST_LIMIT = 100  # MarketAux free plan (requests/day)
-REQUESTS_BUFFER = 5  # keep some buffer below limit
+# --------------------------
+# Config / ENV
+# --------------------------
+MARKETAUX_API_KEY = os.getenv("MARKETAUX_API_KEY", "9Ydp4VNIm9zZ6WHmVcys40L9gUlUWOKW6ZYFxX2T")  # set in env
+DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL", "https://discord.com/api/webhooks/1435654882710519888/ZDx_dGG22dknR4hGrENapdaG1Cm-VyUCUvrXmI6kGxcw0KLILP5AJKmNB14L9TzD65J-")  # set in env if you want auto post
+WATCHLIST_PATH = "watchlist.txt"
+COMPANY_MAP_PATH = "company_map.json"  # optional mapping ticker->company name
+LAST_TS_PATH = "last_timestamp.txt"
+LOG_FILE = "bot.log"
 
-# Retry/backoff
-MAX_RETRIES = 4
-BACKOFF_BASE = 1.5
+# User-tunable parameters
+BATCH_SIZE = 10                 # 1 batch = 10 tickers (you requested this)
+CYCLE_SECONDS = int(os.getenv("CYCLE_SECONDS", "3600"))  # default 3600s
+COLD_START_HOURS = 12           # on first run, look back this many hours
+SMART_COOLDOWN_MINUTES = 30     # cooldown after a posted HIGH alert (per-ticker)
+MAX_RETRIES = 3                 # retry for MarketAux requests
+RETRY_BACKOFF_BASE = 1.5        # exponential backoff base
+FILTER_MODE = int(os.getenv("FILTER_MODE", "2"))  # Balanced (2) by default
+LOG_LEVEL = logging.INFO
 
-# Logging setup
-LOG_FORMAT = "%(asctime)s [%(levelname)s] %(message)s"
-logging.basicConfig(level=logging.INFO,
-                    format=LOG_FORMAT,
-                    handlers=[
-                        logging.FileHandler(LOGFILE, mode="a", encoding="utf-8"),
-                        logging.StreamHandler(sys.stdout)
-                    ])
-logger = logging.getLogger("mvp_alerts")
+# Severity thresholds (these can be tuned)
+# weighted score >= HIGH_THRESHOLD -> HIGH
+# weighted score >= MED_THRESHOLD -> MED
+# else LOW
+HIGH_THRESHOLD = 3.0
+MED_THRESHOLD = 1.5
 
-# -----------------------
-# Keyword weights (broader)
-# Larger list, tuned for company-impact words.
-# You can edit or expand this dictionary as you wish.
-# -----------------------
-keyword_weights = {
-    # corporate actions / finance (high impact)
-    "acquires": 5, "acquisition": 5, "merger": 5, "buyout": 5, "takeover": 5,
-    "ipo": 5, "bankruptcy": 6, "filed for bankruptcy": 6, "ceo resign": 4, "ceo steps down": 4,
-    "layoff": 5, "mass layoff": 6, "restructuring": 4, "divest": 4, "spin-off": 4,
-    "earnings": 5, "beat expectations": 5, "missed expectations": 5, "guidance lowered": 5,
-    "guidance raised": 5, "revenue miss": 5, "revenue beat": 5, "cut dividend": 5,
-    "major contract": 5, "contract award": 4, "fraud": 7, "lawsuit": 5, "sec investigation": 6,
-    "insider trading": 6, "shareholder": 3, "buyback": 4,
-    # regulatory / macro (can be medium-high)
-    "fined": 5, "settlement": 5, "regulator": 4, "recall": 6, "safety issue": 5,
-    # product / technology / supply chain (medium-high)
-    "outage": 5, "cyberattack": 6, "data breach": 6, "recall": 6, "launch": 3,
-    "partnership": 3, "contract": 3, "supply chain": 4, "shortage": 4,
-    # major market movers or sentiment terms (medium)
-    "downgrades": 4, "upgrades": 4, "analytic upgrade": 4, "price target": 3,
-    "merger talks": 5, "explores": 4, "plans to": 3,
-    # geo/political keywords (filtered depending on mode)
-    "sanction": 5, "trade war": 5, "tariff": 4, "government": 2,
-    # crypto / fintech specific
-    "token": 4, "exchange": 3, "insolvency": 6,
-    # generic signals (low to medium)
-    "interim ceo": 4, "management change": 4, "cut guidance": 5, "raise guidance": 5
+# If FILTER_MODE is Strict (3) we can bump thresholds; Balanced (2) uses defaults; Fast (1) lowers thresholds
+if FILTER_MODE == 3:
+    HIGH_THRESHOLD = 3.5
+    MED_THRESHOLD = 2.0
+elif FILTER_MODE == 1:
+    HIGH_THRESHOLD = 2.5
+    MED_THRESHOLD = 1.0
+
+# --------------------------
+# Expanded keyword weights (broader)
+# Add or tune these as you want. Weights tuned so significant events score higher.
+# --------------------------
+keyword_weights: Dict[str, float] = {
+    # Corporate actions / finance
+    "acquir": 1.5, "acquisition": 1.5, "acquired": 1.5, "merger": 1.5, "takeover": 1.5,
+    "lawsuit": 2.0, "settlement": 1.8, "investigation": 1.8, "charged": 2.5, "indict": 2.5,
+    "bankrupt": 3.0, "bankruptcy": 3.0, "delist": 2.5, "insider": 1.2, "stake": 0.7,
+    # Earnings / guidance
+    "earnings": 2.0, "beats": 1.8, "misses": 1.8, "guidance": 1.7, "revenue": 1.1,
+    "q1": 0.4, "q2": 0.4, "q3": 0.4, "q4": 0.4,
+    # People / leadership
+    "resign": 1.8, "resignation": 1.8, "stepping down": 1.8, "appoint": 1.4, "ceo": 1.0, "cfo": 1.0,
+    # Market-moving terms
+    "recall": 2.5, "accredit": 1.0, "regulator": 1.5, "sanction": 2.5, "fine": 2.0,
+    # Macroeconomic and sector
+    "merger": 1.5, "offer": 0.8, "buyback": 1.5, "dividend": 1.2, "layoff": 2.0, "shutdown": 2.5,
+    "bankrun": 3.0, "cyberattack": 2.5, "hack": 2.2, "data breach": 2.5,
+    # Crypto / token / exchange relevant
+    "delist": 2.0, "token": 1.2, "suspend": 1.8,
+    # Geopolitics / macro
+    "sanction": 2.5, "tariff": 1.5, "embargo": 2.0, "regime": 0.8, "war": 3.0,
+    # Short and sentiment
+    "downgrade": 1.6, "upgrade": 1.6, "price target": 0.9, "fraud": 3.0,
+    # Other common high-impact signals
+    "merger": 1.5, "offer": 0.9, "ipo": 1.2, "filing": 0.8, "lawsuit": 2.0,
+    # generic verbs / nouns that can appear frequently but assigned small weight
+    "announce": 0.5, "launch": 0.6, "contract": 1.0, "agreement": 0.8, "partnership": 0.9,
 }
 
-# Lowercase & expand keywords (we'll treat keys lowercased)
+# Pre-lowercase keys for faster matching
 keyword_weights = {k.lower(): v for k, v in keyword_weights.items()}
 
-# -----------------------
-# Helper utilities
-# -----------------------
-def now_ts() -> str:
-    return datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+# --------------------------
+# Logging
+# --------------------------
+logger = logging.getLogger("mvp_alerts")
+logger.setLevel(LOG_LEVEL)
+formatter = logging.Formatter("%(asctime)s [%(levelname)s] %(message)s", "%Y-%m-%d %H:%M:%S")
+file_handler = logging.FileHandler(LOG_FILE)
+file_handler.setFormatter(formatter)
+stream_handler = logging.StreamHandler(sys.stdout)
+stream_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
+logger.addHandler(stream_handler)
 
-def dt_from_iso(s: str) -> datetime:
-    try:
-        # Accept many ISO variants
-        return datetime.fromisoformat(s.replace("Z", "+00:00")).astimezone(tz=None)
-    except Exception:
-        try:
-            return datetime.strptime(s, "%Y-%m-%dT%H:%M:%SZ")
-        except Exception:
-            return datetime.utcnow()
+# --------------------------
+# Helpers / Utilities
+# --------------------------
 
-# -----------------------
-# Request / Rate tracking
-# -----------------------
-class RequestTracker:
-    def __init__(self, daily_limit: int):
-        self.daily_limit = daily_limit
-        self.window_start = datetime.utcnow().date()
-        self.count = 0
 
-    def increment(self, n=1) -> bool:
-        today = datetime.utcnow().date()
-        if today != self.window_start:
-            self.window_start = today
-            self.count = 0
-        if self.count + n > self.daily_limit - REQUESTS_BUFFER:
-            return False
-        self.count += n
-        return True
+def now_utc() -> datetime:
+    return datetime.now(timezone.utc)
 
-    def remaining(self) -> int:
-        today = datetime.utcnow().date()
-        if today != self.window_start:
-            return self.daily_limit - REQUESTS_BUFFER
-        return max(0, self.daily_limit - REQUESTS_BUFFER - self.count)
 
-request_tracker = RequestTracker(DAILY_REQUEST_LIMIT)
-
-# -----------------------
-# Load watchlist & company map
-# -----------------------
-def load_watchlist(path: str) -> List[str]:
+def load_watchlist(path: str = WATCHLIST_PATH) -> List[str]:
     if not os.path.exists(path):
-        logger.error("watchlist.txt not found at %s", path)
+        logger.warning("watchlist.txt not found; creating empty watchlist.")
         return []
     with open(path, "r", encoding="utf-8") as f:
         lines = [line.strip().upper() for line in f if line.strip()]
-    logger.info("Loaded %d personal tickers from %s.", len(lines), path)
+    logger.info(f"Loaded {len(lines)} personal tickers from {path}.")
     return lines
 
-def load_company_map(path: str) -> Dict[str, str]:
+
+def load_company_map(path: str = COMPANY_MAP_PATH) -> Dict[str, str]:
     if not os.path.exists(path):
-        logger.warning("company_map.json not found; continuing with tickers as names.")
+        logger.info("No company_map.json found; continuing with ticker-only names.")
         return {}
     try:
         with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
+            data = json.load(f)
+        # Normalize keys to upper tickers
+        data = {k.upper(): v for k, v in data.items()}
+        logger.info(f"Loaded company map from {path}.")
+        return data
     except Exception as e:
-        logger.warning("Failed to load company_map.json: %s", e)
+        logger.warning(f"Failed to load company_map.json: {e}")
         return {}
 
-company_map = load_company_map(COMPANY_MAP_FILE)
 
-def ticker_to_name(ticker: str) -> str:
-    return company_map.get(ticker.upper(), ticker.upper())
+def read_last_timestamp(path: str = LAST_TS_PATH) -> Optional[str]:
+    if not os.path.exists(path):
+        return None
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            ts = f.read().strip()
+            if not ts:
+                return None
+            # Validate parse
+            _ = dateutil_parser.parse(ts)
+            return ts
+    except Exception as e:
+        logger.warning(f"Failed to read last timestamp: {e}")
+        return None
 
-# -----------------------
-# MarketAux fetcher
-# -----------------------
-def build_marketaux_params(symbols: List[str], published_after_iso: str = None) -> Dict[str, str]:
+
+def write_last_timestamp(ts: str, path: str = LAST_TS_PATH):
+    try:
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(ts)
+    except Exception as e:
+        logger.warning(f"Failed to write last timestamp: {e}")
+
+
+def format_timestamp_for_marketaux(dt: datetime) -> str:
+    """
+    MarketAux required format observed: 'YYYY-MM-DDTHH:MM:SS' (no trailing Z).
+    We'll produce both variants when retrying.
+    """
+    return dt.replace(microsecond=0).isoformat().replace("+00:00", "")
+
+
+def try_multiple_ts_formats(dt: datetime) -> List[str]:
+    # Return candidate published_after strings in order of preference
+    candidates = []
+    # 1) 'YYYY-MM-DDTHH:MM:SS' (no timezone)
+    candidates.append(format_timestamp_for_marketaux(dt))
+    # 2) 'YYYY-MM-DDTHH:MM:SSZ' (UTC with Z)
+    candidates.append(dt.replace(microsecond=0).astimezone(timezone.utc).isoformat().replace("+00:00", "Z"))
+    # 3) RFC3339-like (include timezone offset)
+    candidates.append(dt.replace(microsecond=0).astimezone(timezone.utc).isoformat())
+    return candidates
+
+
+def safe_request_get(url: str, params: dict, headers: dict = None, max_retries: int = MAX_RETRIES) -> Tuple[Optional[requests.Response], Optional[dict]]:
+    """
+    Performs GET with retries and exponential backoff for 429/5xx.
+    Returns (response, json_or_none)
+    """
+    attempt = 0
+    backoff = 1.0
+    headers = headers or {}
+    while attempt < max_retries:
+        attempt += 1
+        try:
+            resp = requests.get(url, params=params, headers=headers, timeout=20)
+            if resp.status_code == 200:
+                try:
+                    return resp, resp.json()
+                except Exception:
+                    return resp, None
+            if resp.status_code in (429, 500, 502, 503, 504):
+                logger.warning(f"MarketAux HTTP {resp.status_code}: {resp.text}")
+                sleep_for = backoff * (RETRY_BACKOFF_BASE ** (attempt - 1))
+                logger.info(f"Retrying after {sleep_for:.1f}s (attempt {attempt}/{max_retries})")
+                time.sleep(sleep_for)
+                continue
+            # other status codes - return and let caller handle
+            return resp, None
+        except requests.RequestException as e:
+            logger.warning(f"Request error: {e}. attempt {attempt}/{max_retries}")
+            time.sleep(backoff * (RETRY_BACKOFF_BASE ** (attempt - 1)))
+            continue
+    logger.error("Exceeded max retries on request.")
+    return None, None
+
+
+def post_to_discord(content: str) -> bool:
+    """
+    POSTS to Discord webhook. Returns True on success.
+    """
+    if not DISCORD_WEBHOOK_URL:
+        logger.warning("DISCORD_WEBHOOK_URL not set; skipping Discord post.")
+        return False
+    try:
+        resp = requests.post(DISCORD_WEBHOOK_URL, json={"content": content}, timeout=10)
+        if resp.status_code in (200, 204):
+            logger.info("Discord posted.")
+            return True
+        else:
+            logger.warning(f"Discord post failed: {resp.status_code} {resp.text}")
+            return False
+    except requests.RequestException as e:
+        logger.warning(f"Discord post exception: {e}")
+        return False
+
+
+# --------------------------
+# Severity / Filtering
+# --------------------------
+
+
+def score_text(text: str) -> float:
+    """
+    Score a piece of text using keyword_weights. Return aggregated weight.
+    Simple approach: sum keyword matches (case-insensitive) * weight.
+    Multi-occurrence increases the score.
+    """
+    if not text:
+        return 0.0
+    s = 0.0
+    text_l = text.lower()
+    # Count occurrences for each keyword - simple substring matching
+    for kw, w in keyword_weights.items():
+        start = 0
+        count = 0
+        while True:
+            idx = text_l.find(kw, start)
+            if idx == -1:
+                break
+            count += 1
+            start = idx + len(kw)
+        if count:
+            s += count * w
+    return s
+
+
+def weighted_severity(article: Dict[str, Any]) -> Tuple[str, float]:
+    """
+    Given an article dict (with title, description, content), compute weighted score and return severity label.
+    """
+    title = article.get("title", "") or ""
+    desc = article.get("description", "") or ""
+    content = article.get("content", "") or ""
+    text_blob = " ".join([title, desc, content])
+    score = score_text(text_blob)
+    # Normalize for very long content (optional)
+    # Use thresholds
+    if score >= HIGH_THRESHOLD:
+        return "HIGH", score
+    elif score >= MED_THRESHOLD:
+        return "MED", score
+    else:
+        return "LOW", score
+
+
+# --------------------------
+# MarketAux fetch logic
+# --------------------------
+
+
+def marketaux_fetch_batch(symbols: List[str], published_after: str, page: int = 1) -> Tuple[List[dict], Optional[dict]]:
+    """
+    Fetch news for a batch of symbols via MarketAux /news/all
+    Returns (articles_list, raw_response)
+    """
+    base_url = "https://api.marketaux.com/v1/news/all"
     params = {
         "symbols": ",".join(symbols),
-        "api_token": MARKETAUX_API_KEY,
+        "published_after": published_after,
+        "page": page,
         "language": "en",
-        "limit": str(MARKETAUX_LIMIT_PER_CALL),
-        "filter_entities": "true"
     }
-    if published_after_iso:
-        params["published_after"] = published_after_iso
-    return params
-
-def marketaux_fetch_batch(symbols: List[str], published_after_iso: str = None) -> Tuple[List[Dict[str, Any]], bool]:
-    """
-    Returns (articles, success_flag). Articles is a list of dicts (raw MarketAux items).
-    """
-    params = build_marketaux_params(symbols, published_after_iso)
-    url = MARKETAUX_URL
-    attempt = 0
-    while attempt <= MAX_RETRIES:
-        # rate guard
-        if not request_tracker.increment():
-            logger.error("Daily request budget exhausted (or near limit). Skipping fetch.")
-            return [], False
+    headers = {"User-Agent": "mvp_alerts/1.0"}
+    # API key in query param expected by MarketAux
+    params["api_token"] = MARKETAUX_API_KEY
+    resp, j = safe_request_get(base_url, params, headers=headers)
+    if resp is None:
+        logger.warning("marketaux_fetch_batch: No response (network error).")
+        return [], None
+    if resp.status_code != 200:
+        # Some MarketAux errors return JSON body even on 400/422
         try:
-            r = requests.get(url, params=params, timeout=18)
-            if r.status_code == 200:
-                data = r.json()
-                # MarketAux returns 'data' array (best-effort parsing)
-                articles = data.get("data") if isinstance(data, dict) else []
-                if articles is None:
-                    articles = []
-                logger.info("MarketAux: fetched %d articles for batch (%s).", len(articles), ",".join(symbols))
-                return articles, True
-            else:
-                # parse helpful error
-                try:
-                    err = r.json()
-                except Exception:
-                    err = r.text
-                logger.warning("NewsData/MarketAux HTTP %d: %s", r.status_code, err)
-                # 422 unsupported filters -> likely bad param; bail this batch
-                if r.status_code == 422:
-                    return [], False
-                # 401 unauthorized -> check key
-                if r.status_code == 401:
-                    logger.error("UNAUTHORIZED: check API key. Response: %s", err)
-                    return [], False
-                # 429 rate limit -> exponential backoff
-                if r.status_code == 429:
-                    wait = BACKOFF_BASE ** (attempt + 1)
-                    logger.warning("Rate-limited (429). Backing off %.1fs (attempt %d).", wait, attempt + 1)
-                    time.sleep(wait)
-                    attempt += 1
-                    continue
-                # other 5xx -> retry
-                if 500 <= r.status_code < 600:
-                    wait = BACKOFF_BASE ** (attempt + 1)
-                    logger.warning("Server error %d. Backing off %.1fs (attempt %d).", r.status_code, wait, attempt + 1)
-                    time.sleep(wait)
-                    attempt += 1
-                    continue
-                # otherwise don't retry
-                return [], False
-        except requests.RequestException as e:
-            wait = BACKOFF_BASE ** (attempt + 1)
-            logger.warning("Request exception: %s — backing off %.1fs (attempt %d).", e, wait, attempt + 1)
-            time.sleep(wait)
-            attempt += 1
-    logger.error("Failed to fetch after %d attempts.", MAX_RETRIES)
-    return [], False
-
-# -----------------------
-# Severity logic (weighted)
-# -----------------------
-def score_article_for_ticker(article: Dict[str, Any], ticker: str) -> Tuple[int, Dict[str,int]]:
-    """
-    Returns (score, matched_keywords_counter)
-    Score is numeric; we later map to LOW/MED/HIGH thresholds.
-    We'll examine title, description, and entities (if provided).
-    """
-    score = 0
-    matches = Counter()
-
-    # Combine searchable text
-    parts = []
-    title = (article.get("title") or "") or ""
-    description = (article.get("description") or "") or ""
-    content = (article.get("content") or "") or ""
-    parts.append(title.lower())
-    parts.append(description.lower())
-    parts.append(content.lower())
-
-    # Entities: MarketAux may provide 'entities' list of dicts with 'name' or 'type'
-    entities = []
-    for e in article.get("entities", []):
-        if isinstance(e, dict):
-            entities.append((e.get("name","") or "").lower())
-        elif isinstance(e, str):
-            entities.append(e.lower())
-
-    full_text = " ".join(parts + entities)
-
-    # Weight by keyword occurrences (broad matching)
-    for kw, w in keyword_weights.items():
-        if kw in full_text:
-            # number of occurrences
-            count = full_text.count(kw)
-            matches[kw] += count
-            score += w * count
-
-    # Boost if ticker or company name appears in title (strong indicator)
-    if ticker.lower() in title.lower():
-        score += 2
-        matches[f"ticker_in_title_{ticker}"] += 1
-    name = ticker_to_name(ticker)
-    if name.lower() != ticker.lower() and name.lower() in title.lower():
-        score += 2
-        matches["company_in_title"] += 1
-
-    # Boost for 'source' types like 'press release' or 'official'
-    source = (article.get("source") or {}).get("name") if isinstance(article.get("source"), dict) else (article.get("source") or "")
-    if source:
-        s = str(source).lower()
-        if "press" in s or "prnewswire" in s or "businesswire" in s:
-            score += 1
-            matches["press_source"] += 1
-
-    # Time relevance boost (very recent items get a small bump)
-    pub = article.get("published_at") or article.get("published")
-    if pub:
-        try:
-            published_dt = dt_from_iso(pub)
-            age_seconds = (datetime.utcnow() - published_dt).total_seconds()
-            if age_seconds < 3600:
-                score += 1
-                matches["recent_boost"] += 1
+            parsed = resp.json()
         except Exception:
-            pass
-
-    return score, dict(matches)
-
-def map_score_to_severity(score: int) -> str:
-    """
-    Map numeric score to severity string.
-    Tuned conservatively: only strong signals end as HIGH.
-    """
-    if score >= 8:
-        return "HIGH"
-    if score >= 4:
-        return "MED"
-    return "LOW"
-
-# -----------------------
-# Filter modes
-# -----------------------
-def passes_filter_mode(article: Dict[str, Any], mode: int) -> bool:
-    """
-    Balanced Mode (2): attempt to remove geopolitical macro noise and clickbait.
-    We'll examine source, categories, and keywords.
-    """
-    if mode == 0:
-        return True  # permissive: accept everything
-    text = ((article.get("title") or "") + " " + (article.get("description") or "")).lower()
-    source_name = ""
-    if isinstance(article.get("source"), dict):
-        source_name = (article["source"].get("name") or "").lower()
-    else:
-        source_name = (article.get("source") or "").lower()
-
-    # Balanced: filter out generic market coverage, opinion pieces and non-company topics
-    if mode == 2:
-        # drop pure macro-only headlines (e.g., "Dow closes up 300 points")
-        if any(phrase in text for phrase in ["stock market today", "dow", "s&p", "nasdaq", "market today", "wall street"]):
-            return False
-        # drop general economic reports
-        if any(phrase in text for phrase in ["cpi", "interest rate", "fed minutes", "fed decision", "unemployment rate", "gdp"]):
-            return False
-        # drop clickbait sources that aren't company-specific if title is generic
-        if ("opinion" in source_name or "forbes" in source_name) and len(text.split()) < 6:
-            return False
-    # Strict mode can be added later
-    return True
-
-# -----------------------
-# Discord posting
-# -----------------------
-def post_to_discord(content: str) -> bool:
-    if not DISCORD_WEBHOOK_URL:
-        logger.info("Discord webhook not configured; skipping post. Content: %s", content[:200])
-        return False
-    payload = {"content": content}
+            parsed = {"error": {"code": str(resp.status_code), "message": resp.text}}
+        logger.warning(f"MarketAux HTTP {resp.status_code}: {parsed}")
+        return [], parsed
+    # expected structure: { "data": [...], "meta": {...} } or direct list - handle both
     try:
-        r = requests.post(DISCORD_WEBHOOK_URL, json=payload, timeout=10)
-        if r.status_code in (200, 204):
-            logger.info("Discord posted: %s", content.splitlines()[0] if content else "n/a")
-            return True
+        if isinstance(j, dict) and "data" in j:
+            articles = j["data"]
+        elif isinstance(j, dict) and "news" in j:
+            articles = j["news"]
+        elif isinstance(j, list):
+            articles = j
         else:
-            logger.warning("Discord post failed %d: %s", r.status_code, r.text)
-            return False
-    except Exception as e:
-        logger.warning("Discord post exception: %s", e)
-        return False
+            # attempt common keys
+            articles = j.get("articles") if isinstance(j, dict) else []
+            if articles is None:
+                articles = []
+        return articles, j
+    except Exception:
+        logger.exception("Failed to parse MarketAux JSON response.")
+        return [], j
 
-# -----------------------
-# Smart cooldown manager
-# -----------------------
+
+# --------------------------
+# Smart Cool-Down tracking
+# --------------------------
 class CooldownManager:
-    def __init__(self, base_minutes: int = TICKER_COOLDOWN_MINUTES):
-        self.base = base_minutes
-        self.last_post = {}  # ticker -> datetime
-        self.recent_post_counts = []  # timestamps of any posts to detect bursts
+    def __init__(self, cooldown_minutes: int = SMART_COOLDOWN_MINUTES):
+        self.cooldown = timedelta(minutes=cooldown_minutes)
+        self.last_posted: Dict[str, datetime] = {}  # ticker -> datetime
 
-    def allowed_to_post(self, ticker: str) -> bool:
-        now = datetime.utcnow()
-        last = self.last_post.get(ticker)
-        if not last:
+    def can_post(self, ticker: str) -> bool:
+        t = self.last_posted.get(ticker)
+        if t is None:
             return True
-        elapsed = (now - last).total_seconds() / 60.0
-        # dynamic cooldown: lengthen cooldown if many posts in last hour
-        burst = self.count_posts_since(minutes=60)
-        multiplier = 1 + (burst // 5)  # for every 5 posts in last hour, multiply cooldown
-        effective_cd = self.base * multiplier
-        if elapsed >= effective_cd:
+        if now_utc() - t >= self.cooldown:
             return True
-        else:
-            return False
+        return False
 
-    def record_post(self, ticker: str):
-        now = datetime.utcnow()
-        self.last_post[ticker] = now
-        self.recent_post_counts.append(now)
-        # prune to last 24h for memory
-        cutoff = now - timedelta(hours=24)
-        self.recent_post_counts = [t for t in self.recent_post_counts if t >= cutoff]
+    def mark_posted(self, ticker: str):
+        self.last_posted[ticker] = now_utc()
 
-    def count_posts_since(self, minutes: int = 60) -> int:
-        now = datetime.utcnow()
-        cutoff = now - timedelta(minutes=minutes)
-        return sum(1 for t in self.recent_post_counts if t >= cutoff)
 
-cooldowns = CooldownManager()
+# --------------------------
+# Main flow
+# --------------------------
 
-# -----------------------
-# Main loop flow
-# -----------------------
-def process_articles_for_batch(articles: List[Dict[str, Any]], tickers: List[str], published_after_iso: str = None) -> Tuple[int, int, int]:
-    """
-    Process a list of articles returned for the entire batch.
-    We map articles to tickers (MarketAux returns 'entities' - we'll trust them).
-    Returns counts: (fetched_count, kept_count, posted_count_high)
-    """
-    fetched = len(articles)
-    kept = 0
-    posted = 0
+def chunk_list(lst: List[str], n: int) -> List[List[str]]:
+    return [lst[i:i + n] for i in range(0, len(lst), n)]
 
-    # Group articles by ticker: check entities first; as fallback check title for ticker/name mention
-    ticker_articles = defaultdict(list)
-    for art in articles:
-        mapped_tickers = set()
-        # If entities provided, find tickers or company names in entities
-        for ent in art.get("entities", []):
-            if isinstance(ent, dict):
-                name = (ent.get("name") or "").upper()
-                # If entity equals ticker-like
-                if name in tickers:
-                    mapped_tickers.add(name)
-                # Map company_map reverse lookup
-                for t, nm in company_map.items():
-                    if nm and nm.lower() in name.lower():
-                        mapped_tickers.add(t.upper())
-            elif isinstance(ent, str):
-                e = ent.upper()
-                if e in tickers:
-                    mapped_tickers.add(e)
-        # fallback: check title for ticker or company name mention
-        title = (art.get("title") or "").upper()
-        for t in tickers:
-            if t in title:
-                mapped_tickers.add(t)
-            else:
-                nm = ticker_to_name(t).upper()
-                if nm and nm != t and nm in title:
-                    mapped_tickers.add(t)
-        # If still unmapped, we append to a "generic" bucket (we'll try to score for each ticker)
-        if not mapped_tickers:
-            # assign to every ticker in the batch as fallback (scored separately)
-            for t in tickers:
-                ticker_articles[t].append(art)
-        else:
-            for t in mapped_tickers:
-                ticker_articles[t].append(art)
 
-    # Now per ticker, score articles
-    for t in tickers:
-        arts = ticker_articles.get(t, [])
-        for art in arts:
-            # filter mode
-            if not passes_filter_mode(art, FILTER_MODE):
-                continue
-            score, matches = score_article_for_ticker(art, t)
-            severity = map_score_to_severity(score)
-            # Log details for kept (MED or HIGH). LOW -> drop
-            if severity == "LOW":
-                continue
-            kept += 1
-            headline = art.get("title") or art.get("description") or "(no title)"
-            source = art.get("source") or {}
-            source_name = source.get("name") if isinstance(source, dict) else (source or "")
-            published = art.get("published_at") or art.get("published") or ""
-            url = art.get("link") or art.get("url") or art.get("source_url") or ""
-            # Compose summary log line
-            log_line = f"{t} | {severity} | score={score} | {ticker_to_name(t)} — {headline} {('- ' + url) if url else ''}"
-            if severity == "MED":
-                logger.info("MED KEPT: %s", log_line)
-                # record MED info to separate log if needed
-                # but don't post
-            elif severity == "HIGH":
-                # check cooldown
-                if not cooldowns.allowed_to_post(t):
-                    logger.info("%s: HIGH detected but cooldown active; skipping post. %s", t, log_line)
-                    continue
-                # send to discord if configured
-                content = f"{t} | HIGH — {ticker_to_name(t)}\n{headline}\n{source_name} {published}\n{url}"
-                posted_success = False
-                if ONLY_POST_HIGH and DISCORD_WEBHOOK_URL:
-                    posted_success = post_to_discord(content)
-                else:
-                    # still log if not posting
-                    logger.info("HIGH (not posted): %s", log_line)
-                    posted_success = True  # treat as posted for cooldown logic or count
-                if posted_success:
-                    posted += 1
-                    cooldowns.record_post(t)
-    return fetched, kept, posted
+def normalize_company_name(ticker: str, company_map: Dict[str, str]) -> str:
+    name = company_map.get(ticker.upper())
+    if not name:
+        logger.info(f"Missing company name for ticker {ticker} — using ticker-only matching.")
+        return ticker.upper()
+    return name
 
-def chunk_list(lst: List[str], n: int):
-    for i in range(0, len(lst), n):
-        yield lst[i:i + n]
 
-# -----------------------
-# Entrypoint
-# -----------------------
+def build_article_summary(ticker: str, company: str, severity: str, score: float, article: Dict[str, Any]) -> str:
+    title = article.get("title") or ""
+    url = article.get("url") or article.get("link") or ""
+    # Format: TICKER | SEV | SCORE — COMPANY — TITLE (URL)
+    return f"{ticker} | {severity} | {score:.2f} — {company} — {title} {url}"
+
+
 def main_loop():
-    logger.info("========== Bot Startup ==========")
-    watchlist = load_watchlist(WATCHLIST_FILE)
-    if not watchlist:
-        logger.error("No tickers in watchlist. Exiting.")
+    if not MARKETAUX_API_KEY:
+        logger.error("MARKETAUX_API_KEY not set. Export it to the environment and restart.")
         return
+    # load resources
+    watchlist = load_watchlist()
+    if not watchlist:
+        logger.error("Watchlist empty. Add tickers to watchlist.txt and restart.")
+        return
+    company_map = load_company_map()
+    cooldown_mgr = CooldownManager()
 
-    # make cycle tickers: user wants only the 28 personal tickers for now
-    personal = watchlist
-    # For hybrid/random picks, you can enable below
-    # master_list = fetch_sp500_master_list()  # left out to keep simple
-    # random_picks = random.sample(master_list, k=22) if master_list else []
-    random_picks = []
-    cycle_tickers = personal + random_picks
-    logger.info("Cycle composition: %d personal + %d random = %d total.",
-                len(personal), len(random_picks), len(cycle_tickers))
+    # Determine initial published_after timestamp (Option D: use last cycle timestamp if exists)
+    last_ts = read_last_timestamp()
+    if last_ts:
+        try:
+            last_dt = dateutil_parser.parse(last_ts)
+            logger.info(f"Resuming from last_timestamp: {last_ts}")
+        except Exception:
+            last_dt = now_utc() - timedelta(hours=COLD_START_HOURS)
+            logger.warning("Invalid last_timestamp; falling back to cold start window.")
+    else:
+        last_dt = now_utc() - timedelta(hours=COLD_START_HOURS)
+        logger.info(f"No last_timestamp found. Cold start will use {COLD_START_HOURS} hours.")
 
-    # We will use 'published_after' to avoid re-fetching old articles.
-    # Use a sliding window seen_time; start at (now - 6 hours) to catch recent items
-    lookback_hours = 6
-    published_after_dt = datetime.utcnow() - timedelta(hours=lookback_hours)
-    published_after_iso = published_after_dt.isoformat() + "Z"
-
-    cycle = 0
-    try:
-        while True:
-            cycle += 1
-            logger.info("=== Cycle #%d startup ===", cycle)
-            logger.info("Loaded %d personal tickers from %s.", len(personal), WATCHLIST_FILE)
-            # (Rebuild cycle tickers in case watchlist changed)
-            cycle_tickers = personal + random_picks
-            logger.info("Cycle tickers: %d total (%d personal + %d random).",
-                        len(cycle_tickers), len(personal), len(random_picks))
-
-            # split into batches
-            batches = list(chunk_list(cycle_tickers, BATCH_SIZE))
-            total_fetched = total_kept = total_posted = 0
-            batch_index = 0
-            for batch in batches:
-                batch_index += 1
-                logger.info("Fetching batch %d/%d: %s", batch_index, len(batches), batch)
-                # Ensure daily request budget allows this batch
-                if not request_tracker.increment(1):
-                    logger.error("RequestTracker refused batch due to daily limit.")
+    # Main infinite loop (user asked for infinite loop)
+    cycle_count = 0
+    while True:
+        cycle_count += 1
+        logger.info(f"========== Bot Startup ==========" if cycle_count == 1 else f"=== Cycle #{cycle_count} startup ===")
+        init_med_db()
+        logger.info("SQLite MED DB ready.")
+        # Refresh watchlist each cycle
+        watchlist = load_watchlist()
+        total_tickers = len(watchlist)
+        logger.info(f"Cycle composition: {total_tickers} personal + 0 random = {total_tickers} total.")
+        # compute published_after candidate(s) based on last_dt
+        published_after_candidates = try_multiple_ts_formats(last_dt)
+        # We'll try each candidate until one works
+        batches = chunk_list(watchlist, BATCH_SIZE)
+        fetched_total = 0
+        kept_total = 0
+        posted_total = 0
+        # New cycle end timestamp - we will use this as last_timestamp for next cycle (Option D)
+        cycle_end_ts = now_utc().replace(microsecond=0).isoformat().replace("+00:00", "Z")
+        logger.info(f"=== Cycle #{cycle_count} startup ===")
+        logger.info(f"Starting news scan cycle. published_after candidates: {published_after_candidates[0]}")
+        for batch_idx, batch in enumerate(batches, start=1):
+            # Try different published_after string formats until success
+            batch_articles: List[Dict[str, Any]] = []
+            raw_response = None
+            success = False
+            for pa in published_after_candidates:
+                # build URL for logging
+                logger.info(f"Outbound URL: https://api.marketaux.com/v1/news/all?symbols={','.join(batch)}&published_after={pa}&page=1")
+                articles, raw_response = marketaux_fetch_batch(batch, pa, page=1)
+                # if raw_response came back with known malformed_parameters error, try next format
+                if raw_response and isinstance(raw_response, dict) and raw_response.get("error"):
+                    code = raw_response["error"].get("code")
+                    msg = raw_response["error"].get("message", "")
+                    if code in ("malformed_parameters", "malformed_parameter", "invalid_request") or ("published_after" in msg.lower()):
+                        logger.warning(f"MarketAux HTTP 400-like: {raw_response} — trying next timestamp format.")
+                        continue
+                # success condition: list returned or empty list legitimately
+                if articles is not None:
+                    batch_articles = articles
+                    success = True
                     break
+            if not success:
+                logger.warning("Batch fetch failed or returned no data; continuing to next batch.")
+                continue
 
-                # Fetch articles for this batch
-                articles, ok = marketaux_fetch_batch(batch, published_after_iso)
-                if not ok:
-                    # if the batch failed due to param or auth, move on
-                    logger.warning("Batch fetch failed or returned no data; continuing to next batch.")
-                    continue
+            fetched = len(batch_articles)
+            fetched_total += fetched
+            logger.info(f"Fetched {fetched} articles for batch ({','.join(batch)})")
+            # Process each article: determine which ticker it belongs to, compute severity, act accordingly
+            # MarketAux returns article with 'tickers' field sometimes; otherwise we attempt to match ticker substring in title/content
+            kept_in_batch = 0
+            posted_in_batch = 0
+            for art in batch_articles:
+                # Normalize a few fields
+                title = art.get("title", "") or ""
+                desc = art.get("description", "") or ""
+                url = art.get("url", "") or art.get("link", "") or ""
+                content = art.get("content", "") or ""
+                # determine tickers associated with this article
+                # MarketAux often returns 'tickers': ["AAPL", ...]
+                article_tickers = []
+                if isinstance(art.get("tickers"), list) and art.get("tickers"):
+                    article_tickers = [t.upper() for t in art.get("tickers")]
+                else:
+                    # fallback: try to find any watchlist ticker substring in text (title+desc)
+                    text_blob = (title + " " + desc + " " + content).upper()
+                    for t in batch:
+                        if t.upper() in text_blob:
+                            article_tickers.append(t.upper())
+                    # if still nothing, mark it with first batch ticker (to avoid losing)
+                    if not article_tickers:
+                        # use ticker heuristics: try company_map names
+                        for t in batch:
+                            comp_name = company_map.get(t.upper(), "")
+                            if comp_name and comp_name.upper() in text_blob:
+                                article_tickers.append(t.upper())
+                if not article_tickers:
+                    # If still empty, assign to the first batch ticker so it doesn't vanish; log so you can fix mapping
+                    fallback_t = batch[0].upper()
+                    logger.info(f"No tickers found for article '{title[:80]}...' — assigning fallback {fallback_t}")
+                    article_tickers = [fallback_t]
 
-                # process articles
-                fetched, kept, posted = process_articles_for_batch(articles, batch, published_after_iso)
-                logger.info("%s: %d fetched, %d kept, %d high posted", batch[0] if len(batch) == 1 else ",".join(batch[:1]) + "...", fetched, kept, posted)
-                total_fetched += fetched
-                total_kept += kept
-                total_posted += posted
+                # for each ticker connected to this article, compute severity and act
+                for at in article_tickers:
+                    company_name = normalize_company_name(at, company_map)
+                    severity, score = weighted_severity(art)
+                    kept = False
+                    posted = False
+                    # Balanced Mode: we post only HIGH and store MED as 'kept'
+                    if severity == "HIGH":
+                        # check cooldown
+                        if cooldown_mgr.can_post(at):
+                            summary = build_article_summary(at, company_name, "HIGH", score, art)
+                            success_post = post_to_discord(summary)
+                            if success_post:
+                                posted = True
+                                posted_in_batch += 1
+                                cooldown_mgr.mark_posted(at)
+                            # even if post fails, we still mark as kept for record
+                            kept = True
+                        else:
+                            logger.info(f"Cooldown active for {at}; skipping Discord post but logging kept.")
+                            kept = True
+                    elif severity == "MED":
+                        # MED persistence (corrected)
+                        published_at = art.get("published_at") or art.get("published_at_local") or ""
+                        save_med_article(
+                            at,            # ticker actually assigned
+                            title,
+                            desc,
+                            url,
+                            score,
+                            published_at
+                        )
+                        logger.info(f"MED saved to DB: {at} | {score:.2f} — {title}")
+                        kept = True
+                    else:
+                        # LOW: ignore (but you may want to log)
+                        logger.debug(f"LOW: {at} - {title[:120]}")
+                    if kept:
+                        kept_in_batch += 1
+            kept_total += kept_in_batch
+            posted_total += posted_in_batch
+            logger.info(f"Batch {batch_idx}/{len(batches)} result: fetched={fetched} kept={kept_in_batch} posted={posted_in_batch}")
+            # light rate-limit safety: small sleep (tunable). Keep small to preserve speed.
+            time.sleep(0.2)
 
-                # Smart cooldown increase if many posted recently
-                recent_posts = cooldowns.count_posts_since(60)
-                if recent_posts >= 10:
-                    # make system quieter: extend per-ticker cooldown multiplier will reflect this
-                    logger.info("High posting activity detected: %d posts in last 60m -> throttling further.", recent_posts)
+        # Cycle summary
+        logger.info(f"Cycle summary: fetched={fetched_total} kept={kept_total} posted={posted_total}")
+        # Save last timestamp as cycle_end_ts (Option D)
+        write_last_timestamp(cycle_end_ts)
+        logger.info(f"Cycle {cycle_count} completed in ... (stored last_timestamp={cycle_end_ts})")
+        logger.info(f"Sleeping {CYCLE_SECONDS}s until next cycle.")
+        time.sleep(CYCLE_SECONDS)
 
-                # small safety sleep between batches to avoid bursts (fast mode can set to 0)
-                time.sleep(0.3)
-
-            logger.info("Cycle summary: HIGH=%d MED/KEPT=%d LOW=?. posted=%d", total_posted, total_kept, total_posted)
-            logger.info("Cycle %d completed. Fetched=%d Kept=%d Posted=%d", cycle, total_fetched, total_kept, total_posted)
-            if not CYCLE_INFINITE:
-                break
-            logger.info("Sleeping %ds until next cycle.", CYCLE_SLEEP_SECONDS)
-            time.sleep(CYCLE_SLEEP_SECONDS)
-
-    except KeyboardInterrupt:
-        logger.info("KeyboardInterrupt received — shutting down.")
-    except Exception as e:
-        logger.exception("Unhandled exception: %s", e)
 
 if __name__ == "__main__":
-    main_loop()
+    try:
+        main_loop()
+    except KeyboardInterrupt:
+        logger.info("KeyboardInterrupt received — shutting down.")
+    except Exception:
+        logger.exception("Unhandled exception — shutting down.")
