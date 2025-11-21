@@ -4452,3 +4452,55 @@ sqlite3.OperationalError: Cannot add a UNIQUE column
 2025-11-20 09:21:34 [INFO] Cycle summary: fetched=0 kept=0 posted=0
 2025-11-20 09:21:34 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-20T09:21:32Z)
 2025-11-20 09:21:34 [INFO] Sleeping 3600s until next cycle.
+2025-11-20 09:23:02 [INFO] KeyboardInterrupt received — shutting down.
+2025-11-21 09:35:14 [INFO] Loaded 28 personal tickers from watchlist.txt.
+2025-11-21 09:35:14 [INFO] Loaded company map from company_map.json.
+2025-11-21 09:35:14 [INFO] Resuming from last_timestamp: 2025-11-20T09:21:32Z
+2025-11-21 09:35:14 [INFO] ========== Bot Startup ==========
+2025-11-21 09:35:14 [INFO] SQLite MED DB ready.
+2025-11-21 09:35:14 [INFO] Loaded 28 personal tickers from watchlist.txt.
+2025-11-21 09:35:14 [INFO] Cycle composition: 28 personal + 0 random = 28 total.
+2025-11-21 09:35:14 [INFO] === Cycle #1 startup ===
+2025-11-21 09:35:14 [INFO] Starting news scan cycle. published_after candidates: 2025-11-20T09:21:32
+2025-11-21 09:35:14 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOG,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-20T09:21:32&page=1
+2025-11-21 09:35:14 [INFO] Fetched 3 articles for batch (GOOG,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-21 09:35:14 [INFO] No tickers found for article 'EUR/USD Hanging in There...' — assigning fallback GOOG
+2025-11-21 09:35:14 [INFO] No tickers found for article 'CNBC Daily Open: Investors suffer from whiplash as AI stocks gyrate...' — assigning fallback GOOG
+2025-11-21 09:35:14 [INFO] Batch 1/3 result: fetched=3 kept=0 posted=0
+2025-11-21 09:35:15 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-20T09:21:32&page=1
+2025-11-21 09:35:15 [INFO] Fetched 1 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-21 09:35:15 [INFO] No tickers found for article 'Market Movers: Walmart’s Nasdaq Shift, Moderna’s Growth Outlook, and Key Economi...' — assigning fallback RR
+2025-11-21 09:35:15 [INFO] MED saved to DB: RR | 1.50 — Market Movers: Walmart’s Nasdaq Shift, Moderna’s Growth Outlook, and Key Economic Data
+2025-11-21 09:35:15 [INFO] Batch 2/3 result: fetched=1 kept=1 posted=0
+2025-11-21 09:35:15 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT&published_after=2025-11-20T09:21:32&page=1
+2025-11-21 09:35:16 [INFO] Fetched 3 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT)
+2025-11-21 09:35:16 [INFO] No tickers found for article 'UPS Plane That Crashed Had ‘Fatigue Cracks’ in Engine Mount...' — assigning fallback SES
+2025-11-21 09:35:16 [INFO] No tickers found for article 'Why Eaton's CFO change isn't a red flag — plus, Palo Alto's buzzy new deal...' — assigning fallback SES
+2025-11-21 09:35:16 [INFO] Batch 3/3 result: fetched=3 kept=0 posted=0
+2025-11-21 09:35:16 [INFO] Cycle summary: fetched=7 kept=1 posted=0
+2025-11-21 09:35:16 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-21T09:35:14Z)
+2025-11-21 09:35:16 [INFO] Sleeping 3600s until next cycle.
+2025-11-21 10:35:16 [INFO] === Cycle #2 startup ===
+2025-11-21 10:35:16 [INFO] SQLite MED DB ready.
+2025-11-21 10:35:16 [INFO] Loaded 28 personal tickers from watchlist.txt.
+2025-11-21 10:35:16 [INFO] Cycle composition: 28 personal + 0 random = 28 total.
+2025-11-21 10:35:16 [INFO] === Cycle #2 startup ===
+2025-11-21 10:35:16 [INFO] Starting news scan cycle. published_after candidates: 2025-11-20T09:21:32
+2025-11-21 10:35:16 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOG,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-20T09:21:32&page=1
+2025-11-21 10:35:16 [INFO] Fetched 3 articles for batch (GOOG,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-21 10:35:16 [INFO] No tickers found for article 'EUR/USD Hanging in There...' — assigning fallback GOOG
+2025-11-21 10:35:16 [INFO] No tickers found for article 'CNBC Daily Open: Investors suffer from whiplash as AI stocks gyrate...' — assigning fallback GOOG
+2025-11-21 10:35:16 [INFO] Batch 1/3 result: fetched=3 kept=0 posted=0
+2025-11-21 10:35:16 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-20T09:21:32&page=1
+2025-11-21 10:35:18 [INFO] Fetched 1 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-21 10:35:18 [INFO] No tickers found for article 'Market Movers: Walmart’s Nasdaq Shift, Moderna’s Growth Outlook, and Key Economi...' — assigning fallback RR
+2025-11-21 10:35:18 [INFO] MED saved to DB: RR | 1.50 — Market Movers: Walmart’s Nasdaq Shift, Moderna’s Growth Outlook, and Key Economic Data
+2025-11-21 10:35:18 [INFO] Batch 2/3 result: fetched=1 kept=1 posted=0
+2025-11-21 10:35:18 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT&published_after=2025-11-20T09:21:32&page=1
+2025-11-21 10:35:18 [INFO] Fetched 3 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT)
+2025-11-21 10:35:18 [INFO] No tickers found for article 'UPS Plane That Crashed Had ‘Fatigue Cracks’ in Engine Mount...' — assigning fallback SES
+2025-11-21 10:35:18 [INFO] No tickers found for article 'Why Eaton's CFO change isn't a red flag — plus, Palo Alto's buzzy new deal...' — assigning fallback SES
+2025-11-21 10:35:18 [INFO] Batch 3/3 result: fetched=3 kept=0 posted=0
+2025-11-21 10:35:18 [INFO] Cycle summary: fetched=7 kept=1 posted=0
+2025-11-21 10:35:18 [INFO] Cycle 2 completed in ... (stored last_timestamp=2025-11-21T10:35:16Z)
+2025-11-21 10:35:18 [INFO] Sleeping 3600s until next cycle.
