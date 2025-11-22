@@ -1,5 +1,5 @@
 {
-  "GOOG": "Alphabet Inc.",
+  "GOOGL": "Alphabet Inc.",
   "AMZN": "Amazon.com, Inc.",
   "AAPL": "Apple Inc.",
   "NVDA": "NVIDIA Corporation",
@@ -26,5 +26,11 @@
   "BITF": "Bitfarms Ltd.",
   "PYPL": "PayPal Holdings, Inc.",
   "0LHW.L": "US Gold Corp.",
-  "ABT": "Abbott Laboratories"
+  "ABT": "Abbott Laboratories",
+  "NOC":"Northrop Grumman Corporation",
+  "QCOM":"QUALCOMM Incorporated",
+  "LMT":"Lockheed Martin Corporation",
+  "HD":"The Home Depot, Inc.",
+  "PGR":"The Progressive Corporation",
+  "MRK":"Merck & Co., Inc."
 }
