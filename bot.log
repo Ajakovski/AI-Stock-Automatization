@@ -4841,3 +4841,88 @@ sqlite3.OperationalError: Cannot add a UNIQUE column
 2025-11-22 20:51:37 [INFO] Cycle summary: fetched=0 kept=0 posted=0
 2025-11-22 20:51:37 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-22T20:51:35Z)
 2025-11-22 20:51:37 [INFO] Sleeping 3600s until next cycle.
+2025-11-22 20:53:45 [INFO] KeyboardInterrupt received — shutting down.
+2025-11-23 14:56:54 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-23 14:56:54 [INFO] Loaded company map from company_map.json.
+2025-11-23 14:56:54 [INFO] Resuming from last_timestamp: 2025-11-22T20:51:35Z
+2025-11-23 14:56:54 [INFO] ========== Bot 2.3 Startup ==========
+2025-11-23 14:56:54 [INFO] SQLite MED DB ready.
+2025-11-23 14:56:54 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-23 14:56:54 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-23 14:56:54 [INFO] === Cycle #1 startup ===
+2025-11-23 14:56:54 [INFO] Starting news scan cycle. published_after candidates: 2025-11-22T20:51:35
+2025-11-23 14:56:54 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-22T20:51:35&page=1
+2025-11-23 14:56:55 [INFO] Fetched 3 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-23 14:56:55 [INFO] Matched by fuzzy token similarity: ['AAPL', 'AMZN', 'GOOGL', 'META', 'NKE', 'TSLA'] (tier 5)
+2025-11-23 14:56:55 [INFO] No tickers detected — assigning fallback GOOGL (tier 8)
+2025-11-23 14:56:55 [INFO] Matched by fuzzy token similarity: ['AAPL', 'AMZN', 'GOOGL', 'META', 'NKE', 'TSLA'] (tier 5)
+2025-11-23 14:56:55 [INFO] Batch 1/4 result: fetched=3 kept=0 posted=0
+2025-11-23 14:56:56 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-22T20:51:35&page=1
+2025-11-23 14:56:56 [INFO] Fetched 1 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-23 14:56:56 [INFO] Matched by exact company name in title/desc: ['MRNA'] (tier 2)
+2025-11-23 14:56:56 [INFO] Batch 2/4 result: fetched=1 kept=0 posted=0
+2025-11-23 14:56:56 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-22T20:51:35&page=1
+2025-11-23 14:56:57 [INFO] Fetched 1 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-23 14:56:57 [INFO] Matched by fuzzy token similarity: ['AAL', 'NEE', 'PYPL'] (tier 5)
+2025-11-23 14:56:57 [INFO] Batch 3/4 result: fetched=1 kept=0 posted=0
+2025-11-23 14:56:57 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-22T20:51:35&page=1
+2025-11-23 14:56:57 [INFO] Fetched 0 articles for batch (LMT,HD,PGR,MRK)
+2025-11-23 14:56:57 [INFO] Batch 4/4 result: fetched=0 kept=0 posted=0
+2025-11-23 14:56:57 [INFO] Cycle summary: fetched=5 kept=0 posted=0
+2025-11-23 14:56:57 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-23T14:56:54Z)
+2025-11-23 14:56:57 [INFO] Sleeping 3600s until next cycle.
+2025-11-23 16:38:29 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-23 16:38:29 [INFO] Loaded company map from company_map.json.
+2025-11-23 16:38:29 [INFO] Resuming from last_timestamp: 2025-11-23T14:56:54Z
+2025-11-23 16:38:29 [INFO] ========== Bot 2.3 Startup ==========
+2025-11-23 16:38:29 [INFO] SQLite MED DB ready.
+2025-11-23 16:38:29 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-23 16:38:29 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-23 16:38:29 [INFO] === Cycle #1 startup ===
+2025-11-23 16:38:29 [INFO] Starting news scan cycle. published_after candidates: 2025-11-23T14:56:54
+2025-11-23 16:38:29 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-23T14:56:54&page=1
+2025-11-23 16:38:29 [INFO] Fetched 1 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-23 16:38:29 [INFO] Matched by exact company name in title/desc: ['META'] (tier 2)
+2025-11-23 16:38:29 [INFO] Batch 1/4 result: fetched=1 kept=0 posted=0
+2025-11-23 16:38:30 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-23T14:56:54&page=1
+2025-11-23 16:38:30 [INFO] Fetched 0 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-23 16:38:30 [INFO] Batch 2/4 result: fetched=0 kept=0 posted=0
+2025-11-23 16:38:30 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-23T14:56:54&page=1
+2025-11-23 16:38:31 [INFO] Fetched 0 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-23 16:38:31 [INFO] Batch 3/4 result: fetched=0 kept=0 posted=0
+2025-11-23 16:38:31 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-23T14:56:54&page=1
+2025-11-23 16:38:31 [INFO] Fetched 0 articles for batch (LMT,HD,PGR,MRK)
+2025-11-23 16:38:31 [INFO] Batch 4/4 result: fetched=0 kept=0 posted=0
+2025-11-23 16:38:31 [INFO] Cycle summary: fetched=1 kept=0 posted=0
+2025-11-23 16:38:31 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-23T16:38:29Z)
+2025-11-23 16:38:31 [INFO] Sleeping 3600s until next cycle.
+2025-11-23 20:43:17 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-23 20:43:17 [INFO] Loaded company map from company_map.json.
+2025-11-23 20:43:17 [INFO] Resuming from last_timestamp: 2025-11-23T16:38:29Z
+2025-11-23 20:43:17 [INFO] ========== Bot 2.3 Startup ==========
+2025-11-23 20:43:17 [INFO] SQLite MED DB ready.
+2025-11-23 20:43:17 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-23 20:43:17 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-23 20:43:17 [INFO] === Cycle #1 startup ===
+2025-11-23 20:43:17 [INFO] Starting news scan cycle. published_after candidates: 2025-11-23T16:38:29
+2025-11-23 20:43:17 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-23T16:38:29&page=1
+2025-11-23 20:43:17 [INFO] Fetched 3 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-23 20:43:17 [INFO] Matched by exact company name in title/desc: ['NVDA'] (tier 2)
+2025-11-23 20:43:17 [INFO] Matched by fuzzy token similarity: ['NVDA'] (tier 5)
+2025-11-23 20:43:17 [INFO] Matched by fuzzy token similarity: ['NVDA'] (tier 5)
+2025-11-23 20:43:17 [INFO] Batch 1/4 result: fetched=3 kept=0 posted=0
+2025-11-23 20:43:18 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-23T16:38:29&page=1
+2025-11-23 20:43:18 [INFO] Fetched 0 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-23 20:43:18 [INFO] Batch 2/4 result: fetched=0 kept=0 posted=0
+2025-11-23 20:43:18 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-23T16:38:29&page=1
+2025-11-23 20:43:18 [INFO] Fetched 1 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-23 20:43:18 [INFO] Matched by exact company name in title/desc: ['ABT'] (tier 2)
+2025-11-23 20:43:18 [INFO] MED saved to DB: ABT | 2.80 — Jim Cramer on Abbott: “I Think It’s a Terrific Time to Do Some Buying”
+2025-11-23 20:43:18 [INFO] Batch 3/4 result: fetched=1 kept=1 posted=0
+2025-11-23 20:43:19 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-23T16:38:29&page=1
+2025-11-23 20:43:19 [INFO] Fetched 0 articles for batch (LMT,HD,PGR,MRK)
+2025-11-23 20:43:19 [INFO] Batch 4/4 result: fetched=0 kept=0 posted=0
+2025-11-23 20:43:19 [INFO] Cycle summary: fetched=4 kept=1 posted=0
+2025-11-23 20:43:19 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-23T20:43:17Z)
+2025-11-23 20:43:19 [INFO] Sleeping 3600s until next cycle.
+2025-11-23 20:44:06 [INFO] KeyboardInterrupt received — shutting down.
