@@ -31,7 +31,7 @@ from pathlib import Path
 # Configuration
 # ---------------------------
 MARKETAUX_API_KEY = os.getenv("MARKETAUX_API_KEY", "9Ydp4VNIm9zZ6WHmVcys40L9gUlUWOKW6ZYFxX2T")
-DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL", "")
+DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL", "https://discord.com/api/webhooks/1435654882710519888/ZDx_dGG22dknR4hGrENapdaG1Cm-VyUCUvrXmI6kGxcw0KLILP5AJKmNB14L9TzD65J-")
 WATCHLIST_PATH = "watchlist.txt"
 COMPANY_MAP_PATH = "company_map.json"
 LAST_TS_PATH = "last_timestamp.txt"
@@ -49,11 +49,14 @@ FILTER_MODE = int(os.getenv("FILTER_MODE", "2"))
 LOG_LEVEL = logging.INFO
 
 # Severity thresholds
-HIGH_THRESHOLD = 3.0
-MED_THRESHOLD = 1.5
+HIGH_THRESHOLD = 2.75
+MED_THRESHOLD = 1.25
 if FILTER_MODE == 3:
     HIGH_THRESHOLD = 3.5
     MED_THRESHOLD = 2.0
+elif FILTER_MODE == 2:
+    HIGH_THRESHOLD = 2.75
+    MED_THRESHOLD = 1.25
 elif FILTER_MODE == 1:
     HIGH_THRESHOLD = 2.5
     MED_THRESHOLD = 1.0
@@ -515,7 +518,7 @@ def detect_tickers_extended(article: Dict[str, Any], batch: List[str], company_m
             continue
         name = company_name_for(t)
         if not name:
-            continue
+            continue 
         name_tokens = [tok for tok in re.split(r"\s+", name.lower()) if tok]
         for nt in name_tokens:
             if nt in url_tokens or nt.replace(" ", "") in url_tokens:

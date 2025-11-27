@@ -4926,3 +4926,468 @@ sqlite3.OperationalError: Cannot add a UNIQUE column
 2025-11-23 20:43:19 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-23T20:43:17Z)
 2025-11-23 20:43:19 [INFO] Sleeping 3600s until next cycle.
 2025-11-23 20:44:06 [INFO] KeyboardInterrupt received — shutting down.
+2025-11-24 14:43:16 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-24 14:43:16 [INFO] Loaded company map from company_map.json.
+2025-11-24 14:43:16 [INFO] Resuming from last_timestamp: 2025-11-23T20:43:17Z
+2025-11-24 14:43:16 [INFO] ========== Bot 2.3 Startup ==========
+2025-11-24 14:43:16 [INFO] SQLite MED DB ready.
+2025-11-24 14:43:16 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-24 14:43:16 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-24 14:43:16 [INFO] === Cycle #1 startup ===
+2025-11-24 14:43:16 [INFO] Starting news scan cycle. published_after candidates: 2025-11-23T20:43:17
+2025-11-24 14:43:16 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-23T20:43:17&page=1
+2025-11-24 14:43:17 [INFO] Fetched 3 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-24 14:43:17 [INFO] No tickers detected — assigning fallback GOOGL (tier 8)
+2025-11-24 14:43:17 [INFO] No tickers detected — assigning fallback GOOGL (tier 8)
+2025-11-24 14:43:17 [INFO] Matched by exact company name in title/desc: ['NVDA'] (tier 2)
+2025-11-24 14:43:17 [INFO] Batch 1/4 result: fetched=3 kept=0 posted=0
+2025-11-24 14:43:17 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-23T20:43:17&page=1
+2025-11-24 14:43:17 [INFO] Fetched 1 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-24 14:43:17 [INFO] Matched by ticker word-boundary in text: ['TGT'] (tier 6)
+2025-11-24 14:43:17 [INFO] Batch 2/4 result: fetched=1 kept=0 posted=0
+2025-11-24 14:43:17 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-23T20:43:17&page=1
+2025-11-24 14:43:18 [INFO] Fetched 0 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-24 14:43:18 [INFO] Batch 3/4 result: fetched=0 kept=0 posted=0
+2025-11-24 14:43:18 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-23T20:43:17&page=1
+2025-11-24 14:43:18 [INFO] Fetched 2 articles for batch (LMT,HD,PGR,MRK)
+2025-11-24 14:43:18 [INFO] Matched by fuzzy token similarity: ['HD', 'MRK'] (tier 5)
+2025-11-24 14:43:18 [INFO] Matched by fuzzy token similarity: ['HD', 'MRK'] (tier 5)
+2025-11-24 14:43:18 [INFO] Batch 4/4 result: fetched=2 kept=0 posted=0
+2025-11-24 14:43:19 [INFO] Cycle summary: fetched=6 kept=0 posted=0
+2025-11-24 14:43:19 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-24T14:43:16Z)
+2025-11-24 14:43:19 [INFO] Sleeping 3600s until next cycle.
+2025-11-24 15:48:40 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-24 15:48:40 [INFO] Loaded company map from company_map.json.
+2025-11-24 15:48:40 [INFO] Resuming from last_timestamp: 2025-11-24T14:43:16Z
+2025-11-24 15:48:40 [INFO] ========== Bot 2.3 Startup ==========
+2025-11-24 15:48:40 [INFO] SQLite MED DB ready.
+2025-11-24 15:48:40 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-24 15:48:40 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-24 15:48:40 [INFO] === Cycle #1 startup ===
+2025-11-24 15:48:40 [INFO] Starting news scan cycle. published_after candidates: 2025-11-24T14:43:16
+2025-11-24 15:48:40 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-24T14:43:16&page=1
+2025-11-24 15:48:40 [INFO] Fetched 0 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-24 15:48:40 [INFO] Batch 1/4 result: fetched=0 kept=0 posted=0
+2025-11-24 15:48:40 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-24T14:43:16&page=1
+2025-11-24 15:48:40 [INFO] Fetched 0 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-24 15:48:40 [INFO] Batch 2/4 result: fetched=0 kept=0 posted=0
+2025-11-24 15:48:41 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-24T14:43:16&page=1
+2025-11-24 15:48:41 [INFO] Fetched 0 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-24 15:48:41 [INFO] Batch 3/4 result: fetched=0 kept=0 posted=0
+2025-11-24 15:48:41 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-24T14:43:16&page=1
+2025-11-24 15:48:41 [INFO] Fetched 0 articles for batch (LMT,HD,PGR,MRK)
+2025-11-24 15:48:41 [INFO] Batch 4/4 result: fetched=0 kept=0 posted=0
+2025-11-24 15:48:42 [INFO] Cycle summary: fetched=0 kept=0 posted=0
+2025-11-24 15:48:42 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-24T15:48:40Z)
+2025-11-24 15:48:42 [INFO] Sleeping 3600s until next cycle.
+2025-11-24 15:48:46 [INFO] KeyboardInterrupt received — shutting down.
+2025-11-24 15:48:51 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-24 15:48:51 [INFO] Loaded company map from company_map.json.
+2025-11-24 15:48:51 [INFO] Resuming from last_timestamp: 2025-11-24T15:48:40Z
+2025-11-24 15:48:51 [INFO] ========== Bot 2.3 Startup ==========
+2025-11-24 15:48:51 [INFO] SQLite MED DB ready.
+2025-11-24 15:48:51 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-24 15:48:51 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-24 15:48:51 [INFO] === Cycle #1 startup ===
+2025-11-24 15:48:51 [INFO] Starting news scan cycle. published_after candidates: 2025-11-24T15:48:40
+2025-11-24 15:48:51 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-24T15:48:40&page=1
+2025-11-24 15:48:52 [INFO] Fetched 0 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-24 15:48:52 [INFO] Batch 1/4 result: fetched=0 kept=0 posted=0
+2025-11-24 15:48:52 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-24T15:48:40&page=1
+2025-11-24 15:48:52 [INFO] Fetched 0 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-24 15:48:52 [INFO] Batch 2/4 result: fetched=0 kept=0 posted=0
+2025-11-24 15:48:52 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-24T15:48:40&page=1
+2025-11-24 15:48:53 [INFO] Fetched 0 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-24 15:48:53 [INFO] Batch 3/4 result: fetched=0 kept=0 posted=0
+2025-11-24 15:48:53 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-24T15:48:40&page=1
+2025-11-24 15:48:53 [INFO] Fetched 0 articles for batch (LMT,HD,PGR,MRK)
+2025-11-24 15:48:53 [INFO] Batch 4/4 result: fetched=0 kept=0 posted=0
+2025-11-24 15:48:53 [INFO] Cycle summary: fetched=0 kept=0 posted=0
+2025-11-24 15:48:53 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-24T15:48:51Z)
+2025-11-24 15:48:53 [INFO] Sleeping 3600s until next cycle.
+2025-11-24 15:49:04 [INFO] KeyboardInterrupt received — shutting down.
+2025-11-24 15:54:34 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-24 15:54:34 [INFO] Loaded company map from company_map.json.
+2025-11-24 15:54:34 [INFO] Resuming from last_timestamp: 2025-11-24T15:48:51Z
+2025-11-24 15:54:34 [INFO] ========== Bot 2.3 Startup ==========
+2025-11-24 15:54:34 [INFO] SQLite MED DB ready.
+2025-11-24 15:54:34 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-24 15:54:34 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-24 15:54:34 [INFO] === Cycle #1 startup ===
+2025-11-24 15:54:34 [INFO] Starting news scan cycle. published_after candidates: 2025-11-24T15:48:51
+2025-11-24 15:54:34 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-24T15:48:51&page=1
+2025-11-24 15:54:34 [INFO] Fetched 0 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-24 15:54:34 [INFO] Batch 1/4 result: fetched=0 kept=0 posted=0
+2025-11-24 15:54:34 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-24T15:48:51&page=1
+2025-11-24 15:54:35 [INFO] Fetched 0 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-24 15:54:35 [INFO] Batch 2/4 result: fetched=0 kept=0 posted=0
+2025-11-24 15:54:35 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-24T15:48:51&page=1
+2025-11-24 15:54:35 [INFO] Fetched 0 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-24 15:54:35 [INFO] Batch 3/4 result: fetched=0 kept=0 posted=0
+2025-11-24 15:54:36 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-24T15:48:51&page=1
+2025-11-24 15:54:36 [INFO] Fetched 0 articles for batch (LMT,HD,PGR,MRK)
+2025-11-24 15:54:36 [INFO] Batch 4/4 result: fetched=0 kept=0 posted=0
+2025-11-24 15:54:36 [INFO] Cycle summary: fetched=0 kept=0 posted=0
+2025-11-24 15:54:36 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-24T15:54:34Z)
+2025-11-24 15:54:36 [INFO] Sleeping 3600s until next cycle.
+2025-11-24 16:54:36 [INFO] === Cycle #2 startup ===
+2025-11-24 16:54:36 [INFO] SQLite MED DB ready.
+2025-11-24 16:54:36 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-24 16:54:36 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-24 16:54:36 [INFO] === Cycle #2 startup ===
+2025-11-24 16:54:36 [INFO] Starting news scan cycle. published_after candidates: 2025-11-24T15:48:51
+2025-11-24 16:54:36 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-24T15:48:51&page=1
+2025-11-24 16:54:36 [INFO] Fetched 0 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-24 16:54:36 [INFO] Batch 1/4 result: fetched=0 kept=0 posted=0
+2025-11-24 16:54:36 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-24T15:48:51&page=1
+2025-11-24 16:54:37 [INFO] Fetched 0 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-24 16:54:37 [INFO] Batch 2/4 result: fetched=0 kept=0 posted=0
+2025-11-24 16:54:37 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-24T15:48:51&page=1
+2025-11-24 16:54:37 [INFO] Fetched 0 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-24 16:54:37 [INFO] Batch 3/4 result: fetched=0 kept=0 posted=0
+2025-11-24 16:54:38 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-24T15:48:51&page=1
+2025-11-24 16:54:38 [INFO] Fetched 0 articles for batch (LMT,HD,PGR,MRK)
+2025-11-24 16:54:38 [INFO] Batch 4/4 result: fetched=0 kept=0 posted=0
+2025-11-24 16:54:38 [INFO] Cycle summary: fetched=0 kept=0 posted=0
+2025-11-24 16:54:38 [INFO] Cycle 2 completed in ... (stored last_timestamp=2025-11-24T16:54:36Z)
+2025-11-24 16:54:38 [INFO] Sleeping 3600s until next cycle.
+2025-11-24 20:50:55 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-24 20:50:55 [INFO] Loaded company map from company_map.json.
+2025-11-24 20:50:55 [INFO] Resuming from last_timestamp: 2025-11-24T16:54:36Z
+2025-11-24 20:50:55 [INFO] ========== Bot 2.3 Startup ==========
+2025-11-24 20:50:55 [INFO] SQLite MED DB ready.
+2025-11-24 20:50:55 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-24 20:50:55 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-24 20:50:55 [INFO] === Cycle #1 startup ===
+2025-11-24 20:50:55 [INFO] Starting news scan cycle. published_after candidates: 2025-11-24T16:54:36
+2025-11-24 20:50:55 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-24T16:54:36&page=1
+2025-11-24 20:50:55 [INFO] Fetched 3 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-24 20:50:55 [INFO] Matched by fuzzy token similarity: ['META', 'NVDA', 'TSLA'] (tier 5)
+2025-11-24 20:50:55 [INFO] Matched by fuzzy token similarity: ['AAPL', 'AMZN', 'GOOGL', 'META', 'NKE', 'TSLA'] (tier 5)
+2025-11-24 20:50:55 [INFO] Matched by fuzzy token similarity: ['TSLA'] (tier 5)
+2025-11-24 20:50:55 [INFO] Batch 1/4 result: fetched=3 kept=0 posted=0
+2025-11-24 20:50:56 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-24T16:54:36&page=1
+2025-11-24 20:50:56 [INFO] Fetched 0 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-24 20:50:56 [INFO] Batch 2/4 result: fetched=0 kept=0 posted=0
+2025-11-24 20:50:56 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-24T16:54:36&page=1
+2025-11-24 20:50:56 [INFO] Fetched 0 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-24 20:50:56 [INFO] Batch 3/4 result: fetched=0 kept=0 posted=0
+2025-11-24 20:50:57 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-24T16:54:36&page=1
+2025-11-24 20:50:57 [INFO] Fetched 1 articles for batch (LMT,HD,PGR,MRK)
+2025-11-24 20:50:57 [INFO] Matched by fuzzy token similarity: ['HD', 'LMT', 'MRK'] (tier 5)
+2025-11-24 20:50:57 [INFO] MED saved to DB: HD | 2.80 — Critical Mineral Stock Locksley Resources Limited (OTCQX: LKYRF) Strengthens U.S. Defense Supply Chain Strategy with Appointment of Lockhead Martin (NYSE: LMT) Materials Leader to Advisory Board
+2025-11-24 20:50:57 [INFO] MED saved to DB: LMT | 2.80 — Critical Mineral Stock Locksley Resources Limited (OTCQX: LKYRF) Strengthens U.S. Defense Supply Chain Strategy with Appointment of Lockhead Martin (NYSE: LMT) Materials Leader to Advisory Board
+2025-11-24 20:50:57 [INFO] MED saved to DB: MRK | 2.80 — Critical Mineral Stock Locksley Resources Limited (OTCQX: LKYRF) Strengthens U.S. Defense Supply Chain Strategy with Appointment of Lockhead Martin (NYSE: LMT) Materials Leader to Advisory Board
+2025-11-24 20:50:57 [INFO] Batch 4/4 result: fetched=1 kept=3 posted=0
+2025-11-24 20:50:57 [INFO] Cycle summary: fetched=4 kept=3 posted=0
+2025-11-24 20:50:57 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-24T20:50:55Z)
+2025-11-24 20:50:57 [INFO] Sleeping 3600s until next cycle.
+2025-11-25 11:59:13 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-25 11:59:13 [INFO] Loaded company map from company_map.json.
+2025-11-25 11:59:13 [INFO] Resuming from last_timestamp: 2025-11-24T20:50:55Z
+2025-11-25 11:59:13 [INFO] ========== Bot 2.3 Startup ==========
+2025-11-25 11:59:13 [INFO] SQLite MED DB ready.
+2025-11-25 11:59:13 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-25 11:59:13 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-25 11:59:13 [INFO] === Cycle #1 startup ===
+2025-11-25 11:59:13 [INFO] Starting news scan cycle. published_after candidates: 2025-11-24T20:50:55
+2025-11-25 11:59:13 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-24T20:50:55&page=1
+2025-11-25 11:59:14 [INFO] Fetched 3 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-25 11:59:14 [INFO] No tickers detected — assigning fallback GOOGL (tier 8)
+2025-11-25 11:59:14 [INFO] Matched by exact company name in title/desc: ['MSFT'] (tier 2)
+2025-11-25 11:59:14 [INFO] Matched by exact company name in title/desc: ['META'] (tier 2)
+2025-11-25 11:59:14 [WARNING] DISCORD_WEBHOOK_URL not set; skipping Discord post.
+2025-11-25 11:59:14 [INFO] Batch 1/4 result: fetched=3 kept=1 posted=0
+2025-11-25 11:59:14 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-24T20:50:55&page=1
+2025-11-25 11:59:14 [INFO] Fetched 1 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-25 11:59:14 [INFO] Matched by exact company name in title/desc: ['MRNA'] (tier 2)
+2025-11-25 11:59:15 [INFO] Batch 2/4 result: fetched=1 kept=0 posted=0
+2025-11-25 11:59:15 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-24T20:50:55&page=1
+2025-11-25 11:59:15 [INFO] Fetched 0 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-25 11:59:15 [INFO] Batch 3/4 result: fetched=0 kept=0 posted=0
+2025-11-25 11:59:15 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-24T20:50:55&page=1
+2025-11-25 11:59:15 [INFO] Fetched 1 articles for batch (LMT,HD,PGR,MRK)
+2025-11-25 11:59:15 [INFO] Matched by fuzzy token similarity: ['HD', 'MRK'] (tier 5)
+2025-11-25 11:59:15 [INFO] Batch 4/4 result: fetched=1 kept=0 posted=0
+2025-11-25 11:59:16 [INFO] Cycle summary: fetched=5 kept=1 posted=0
+2025-11-25 11:59:16 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-25T11:59:13Z)
+2025-11-25 11:59:16 [INFO] Sleeping 3600s until next cycle.
+2025-11-25 12:00:20 [INFO] KeyboardInterrupt received — shutting down.
+2025-11-25 12:02:46 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-25 12:02:46 [INFO] Loaded company map from company_map.json.
+2025-11-25 12:02:46 [INFO] Resuming from last_timestamp: 2025-11-25T11:59:13Z
+2025-11-25 12:02:46 [INFO] ========== Bot 2.3 Startup ==========
+2025-11-25 12:02:46 [INFO] SQLite MED DB ready.
+2025-11-25 12:02:46 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-25 12:02:46 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-25 12:02:46 [INFO] === Cycle #1 startup ===
+2025-11-25 12:02:46 [INFO] Starting news scan cycle. published_after candidates: 2025-11-25T11:59:13
+2025-11-25 12:02:46 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-25T11:59:13&page=1
+2025-11-25 12:02:47 [INFO] Fetched 0 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-25 12:02:47 [INFO] Batch 1/4 result: fetched=0 kept=0 posted=0
+2025-11-25 12:02:47 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-25T11:59:13&page=1
+2025-11-25 12:02:47 [INFO] Fetched 0 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-25 12:02:47 [INFO] Batch 2/4 result: fetched=0 kept=0 posted=0
+2025-11-25 12:02:47 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-25T11:59:13&page=1
+2025-11-25 12:02:48 [INFO] Fetched 0 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-25 12:02:48 [INFO] Batch 3/4 result: fetched=0 kept=0 posted=0
+2025-11-25 12:02:48 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-25T11:59:13&page=1
+2025-11-25 12:02:48 [INFO] Fetched 0 articles for batch (LMT,HD,PGR,MRK)
+2025-11-25 12:02:48 [INFO] Batch 4/4 result: fetched=0 kept=0 posted=0
+2025-11-25 12:02:48 [INFO] Cycle summary: fetched=0 kept=0 posted=0
+2025-11-25 12:02:48 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-25T12:02:46Z)
+2025-11-25 12:02:48 [INFO] Sleeping 3600s until next cycle.
+2025-11-25 15:29:03 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-25 15:29:03 [INFO] Loaded company map from company_map.json.
+2025-11-25 15:29:03 [INFO] Resuming from last_timestamp: 2025-11-25T12:02:46Z
+2025-11-25 15:29:03 [INFO] ========== Bot 2.3 Startup ==========
+2025-11-25 15:29:03 [INFO] SQLite MED DB ready.
+2025-11-25 15:29:03 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-25 15:29:03 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-25 15:29:03 [INFO] === Cycle #1 startup ===
+2025-11-25 15:29:03 [INFO] Starting news scan cycle. published_after candidates: 2025-11-25T12:02:46
+2025-11-25 15:29:03 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-25T12:02:46&page=1
+2025-11-25 15:29:04 [INFO] Fetched 3 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-25 15:29:04 [INFO] Matched by fuzzy token similarity: ['META'] (tier 5)
+2025-11-25 15:29:04 [INFO] MED saved to DB: META | 2.10 — Target bets on $5B store revamp plan to revive sales
+2025-11-25 15:29:04 [INFO] Matched by exact company name in title/desc: ['GOOGL'] (tier 2)
+2025-11-25 15:29:04 [INFO] Matched by fuzzy token similarity: ['AAPL', 'AMZN', 'GOOGL', 'META', 'NKE', 'TSLA'] (tier 5)
+2025-11-25 15:29:04 [INFO] Batch 1/4 result: fetched=3 kept=1 posted=0
+2025-11-25 15:29:04 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-25T12:02:46&page=1
+2025-11-25 15:29:04 [INFO] Fetched 1 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-25 15:29:04 [INFO] Matched by fuzzy token similarity: ['TGT'] (tier 5)
+2025-11-25 15:29:04 [INFO] Batch 2/4 result: fetched=1 kept=0 posted=0
+2025-11-25 15:29:04 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-25T12:02:46&page=1
+2025-11-25 15:29:05 [INFO] Fetched 1 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-25 15:29:05 [INFO] Matched by fuzzy token similarity: ['AAL'] (tier 5)
+2025-11-25 15:29:05 [INFO] Batch 3/4 result: fetched=1 kept=0 posted=0
+2025-11-25 15:29:05 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-25T12:02:46&page=1
+2025-11-25 15:29:05 [INFO] Fetched 0 articles for batch (LMT,HD,PGR,MRK)
+2025-11-25 15:29:05 [INFO] Batch 4/4 result: fetched=0 kept=0 posted=0
+2025-11-25 15:29:06 [INFO] Cycle summary: fetched=5 kept=1 posted=0
+2025-11-25 15:29:06 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-25T15:29:03Z)
+2025-11-25 15:29:06 [INFO] Sleeping 3600s until next cycle.
+2025-11-25 16:55:23 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-25 16:55:23 [INFO] Loaded company map from company_map.json.
+2025-11-25 16:55:23 [INFO] Resuming from last_timestamp: 2025-11-25T15:29:03Z
+2025-11-25 16:55:23 [INFO] ========== Bot 2.3 Startup ==========
+2025-11-25 16:55:23 [INFO] SQLite MED DB ready.
+2025-11-25 16:55:23 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-25 16:55:23 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-25 16:55:23 [INFO] === Cycle #1 startup ===
+2025-11-25 16:55:23 [INFO] Starting news scan cycle. published_after candidates: 2025-11-25T15:29:03
+2025-11-25 16:55:23 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-25T15:29:03&page=1
+2025-11-25 16:55:24 [INFO] Fetched 3 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-25 16:55:24 [INFO] Matched by fuzzy token similarity: ['AAPL', 'AMZN', 'GOOGL', 'META', 'NKE', 'TSLA'] (tier 5)
+2025-11-25 16:55:24 [INFO] Matched by fuzzy token similarity: ['PG'] (tier 5)
+2025-11-25 16:55:24 [INFO] Matched by fuzzy token similarity: ['PG'] (tier 5)
+2025-11-25 16:55:24 [INFO] Batch 1/4 result: fetched=3 kept=0 posted=0
+2025-11-25 16:55:24 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-25T15:29:03&page=1
+2025-11-25 16:55:24 [INFO] Fetched 0 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-25 16:55:24 [INFO] Batch 2/4 result: fetched=0 kept=0 posted=0
+2025-11-25 16:55:24 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-25T15:29:03&page=1
+2025-11-25 16:55:25 [INFO] Fetched 0 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-25 16:55:25 [INFO] Batch 3/4 result: fetched=0 kept=0 posted=0
+2025-11-25 16:55:25 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-25T15:29:03&page=1
+2025-11-25 16:55:25 [INFO] Fetched 0 articles for batch (LMT,HD,PGR,MRK)
+2025-11-25 16:55:25 [INFO] Batch 4/4 result: fetched=0 kept=0 posted=0
+2025-11-25 16:55:25 [INFO] Cycle summary: fetched=3 kept=0 posted=0
+2025-11-25 16:55:25 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-25T16:55:23Z)
+2025-11-25 16:55:25 [INFO] Sleeping 3600s until next cycle.
+2025-11-25 21:26:09 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-25 21:26:09 [INFO] Loaded company map from company_map.json.
+2025-11-25 21:26:09 [INFO] Resuming from last_timestamp: 2025-11-25T16:55:23Z
+2025-11-25 21:26:09 [INFO] ========== Bot 2.3 Startup ==========
+2025-11-25 21:26:09 [INFO] SQLite MED DB ready.
+2025-11-25 21:26:09 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-25 21:26:09 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-25 21:26:09 [INFO] === Cycle #1 startup ===
+2025-11-25 21:26:09 [INFO] Starting news scan cycle. published_after candidates: 2025-11-25T16:55:23
+2025-11-25 21:26:09 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-25T16:55:23&page=1
+2025-11-25 21:26:09 [INFO] Fetched 3 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-25 21:26:09 [INFO] Matched by fuzzy token similarity: ['AAPL', 'AMZN', 'GOOGL', 'META', 'NKE', 'TSLA'] (tier 5)
+2025-11-25 21:26:10 [INFO] Matched by fuzzy token similarity: ['AAPL'] (tier 5)
+2025-11-25 21:26:10 [INFO] Discord posted.
+2025-11-25 21:26:10 [INFO] Matched by exact company name in title/desc: ['GOOGL', 'MSFT'] (tier 2)
+2025-11-25 21:26:10 [INFO] Batch 1/4 result: fetched=3 kept=1 posted=1
+2025-11-25 21:26:10 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-25T16:55:23&page=1
+2025-11-25 21:26:11 [INFO] Fetched 1 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-25 21:26:11 [INFO] Matched by exact company name in title/desc: ['TGT'] (tier 2)
+2025-11-25 21:26:11 [INFO] Batch 2/4 result: fetched=1 kept=0 posted=0
+2025-11-25 21:26:11 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-25T16:55:23&page=1
+2025-11-25 21:26:11 [INFO] Fetched 1 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-25 21:26:11 [INFO] Matched by fuzzy token similarity: ['AAL', 'NEE', 'PYPL'] (tier 5)
+2025-11-25 21:26:11 [INFO] Batch 3/4 result: fetched=1 kept=0 posted=0
+2025-11-25 21:26:11 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-25T16:55:23&page=1
+2025-11-25 21:26:12 [INFO] Fetched 0 articles for batch (LMT,HD,PGR,MRK)
+2025-11-25 21:26:12 [INFO] Batch 4/4 result: fetched=0 kept=0 posted=0
+2025-11-25 21:26:12 [INFO] Cycle summary: fetched=5 kept=1 posted=1
+2025-11-25 21:26:12 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-25T21:26:09Z)
+2025-11-25 21:26:12 [INFO] Sleeping 3600s until next cycle.
+2025-11-25 21:29:32 [INFO] KeyboardInterrupt received — shutting down.
+2025-11-26 13:04:20 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-26 13:04:20 [INFO] Loaded company map from company_map.json.
+2025-11-26 13:04:20 [INFO] Resuming from last_timestamp: 2025-11-25T21:26:09Z
+2025-11-26 13:04:20 [INFO] ========== Bot 2.3 Startup ==========
+2025-11-26 13:04:20 [INFO] SQLite MED DB ready.
+2025-11-26 13:04:20 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-26 13:04:20 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-26 13:04:20 [INFO] === Cycle #1 startup ===
+2025-11-26 13:04:20 [INFO] Starting news scan cycle. published_after candidates: 2025-11-25T21:26:09
+2025-11-26 13:04:20 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-25T21:26:09&page=1
+2025-11-26 13:04:20 [INFO] Fetched 3 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-26 13:04:20 [INFO] Matched by fuzzy token similarity: ['AAPL', 'META'] (tier 5)
+2025-11-26 13:04:21 [INFO] Discord posted.
+2025-11-26 13:04:21 [INFO] Discord posted.
+2025-11-26 13:04:21 [INFO] Matched by fuzzy token similarity: ['TSLA'] (tier 5)
+2025-11-26 13:04:21 [INFO] Discord posted.
+2025-11-26 13:04:21 [INFO] Matched by fuzzy token similarity: ['AAPL', 'AMZN', 'GOOGL', 'META', 'NKE', 'TSLA'] (tier 5)
+2025-11-26 13:04:21 [INFO] Batch 1/4 result: fetched=3 kept=3 posted=3
+2025-11-26 13:04:22 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-25T21:26:09&page=1
+2025-11-26 13:04:22 [INFO] Fetched 0 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-26 13:04:22 [INFO] Batch 2/4 result: fetched=0 kept=0 posted=0
+2025-11-26 13:04:22 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-25T21:26:09&page=1
+2025-11-26 13:04:22 [INFO] Fetched 0 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-26 13:04:22 [INFO] Batch 3/4 result: fetched=0 kept=0 posted=0
+2025-11-26 13:04:23 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-25T21:26:09&page=1
+2025-11-26 13:04:23 [INFO] Fetched 0 articles for batch (LMT,HD,PGR,MRK)
+2025-11-26 13:04:23 [INFO] Batch 4/4 result: fetched=0 kept=0 posted=0
+2025-11-26 13:04:23 [INFO] Cycle summary: fetched=3 kept=3 posted=3
+2025-11-26 13:04:23 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-26T13:04:20Z)
+2025-11-26 13:04:23 [INFO] Sleeping 3600s until next cycle.
+2025-11-26 14:04:23 [INFO] === Cycle #2 startup ===
+2025-11-26 14:04:23 [INFO] SQLite MED DB ready.
+2025-11-26 14:04:23 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-26 14:04:23 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-26 14:04:23 [INFO] === Cycle #2 startup ===
+2025-11-26 14:04:23 [INFO] Starting news scan cycle. published_after candidates: 2025-11-25T21:26:09
+2025-11-26 14:04:23 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-25T21:26:09&page=1
+2025-11-26 14:04:23 [INFO] Fetched 3 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-26 14:04:23 [INFO] Matched by fuzzy token similarity: ['META'] (tier 5)
+2025-11-26 14:04:24 [INFO] Discord posted.
+2025-11-26 14:04:24 [INFO] No tickers detected — assigning fallback GOOGL (tier 8)
+2025-11-26 14:04:24 [INFO] Matched by fuzzy token similarity: ['AAPL', 'AMZN', 'GOOGL', 'META', 'NKE', 'TSLA'] (tier 5)
+2025-11-26 14:04:24 [INFO] MED saved to DB: AAPL | 2.00 — Softbank CEO Masayoshi Son Loses Nearly $5 Billion In Net Worth As Google Steps Up Rivalry Against OpenAI - Alphabet (NASDAQ:GOOG), Alphabet (NASDAQ:GOOGL)
+2025-11-26 14:04:24 [INFO] MED saved to DB: AMZN | 2.00 — Softbank CEO Masayoshi Son Loses Nearly $5 Billion In Net Worth As Google Steps Up Rivalry Against OpenAI - Alphabet (NASDAQ:GOOG), Alphabet (NASDAQ:GOOGL)
+2025-11-26 14:04:24 [INFO] MED saved to DB: GOOGL | 2.00 — Softbank CEO Masayoshi Son Loses Nearly $5 Billion In Net Worth As Google Steps Up Rivalry Against OpenAI - Alphabet (NASDAQ:GOOG), Alphabet (NASDAQ:GOOGL)
+2025-11-26 14:04:24 [INFO] MED saved to DB: META | 2.00 — Softbank CEO Masayoshi Son Loses Nearly $5 Billion In Net Worth As Google Steps Up Rivalry Against OpenAI - Alphabet (NASDAQ:GOOG), Alphabet (NASDAQ:GOOGL)
+2025-11-26 14:04:24 [INFO] MED saved to DB: NKE | 2.00 — Softbank CEO Masayoshi Son Loses Nearly $5 Billion In Net Worth As Google Steps Up Rivalry Against OpenAI - Alphabet (NASDAQ:GOOG), Alphabet (NASDAQ:GOOGL)
+2025-11-26 14:04:24 [INFO] MED saved to DB: TSLA | 2.00 — Softbank CEO Masayoshi Son Loses Nearly $5 Billion In Net Worth As Google Steps Up Rivalry Against OpenAI - Alphabet (NASDAQ:GOOG), Alphabet (NASDAQ:GOOGL)
+2025-11-26 14:04:24 [INFO] Batch 1/4 result: fetched=3 kept=7 posted=1
+2025-11-26 14:04:24 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-25T21:26:09&page=1
+2025-11-26 14:04:24 [INFO] Fetched 2 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-26 14:04:24 [INFO] Matched by exact company name in title/desc: ['TGT'] (tier 2)
+2025-11-26 14:04:25 [INFO] Discord posted.
+2025-11-26 14:04:25 [INFO] Matched by fuzzy token similarity: ['TGT'] (tier 5)
+2025-11-26 14:04:25 [INFO] Batch 2/4 result: fetched=2 kept=1 posted=1
+2025-11-26 14:04:25 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-25T21:26:09&page=1
+2025-11-26 14:04:25 [INFO] Fetched 1 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-26 14:04:25 [INFO] Matched by fuzzy token similarity: ['AAL'] (tier 5)
+2025-11-26 14:04:25 [INFO] Batch 3/4 result: fetched=1 kept=0 posted=0
+2025-11-26 14:04:25 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-25T21:26:09&page=1
+2025-11-26 14:04:26 [INFO] Fetched 0 articles for batch (LMT,HD,PGR,MRK)
+2025-11-26 14:04:26 [INFO] Batch 4/4 result: fetched=0 kept=0 posted=0
+2025-11-26 14:04:26 [INFO] Cycle summary: fetched=6 kept=8 posted=2
+2025-11-26 14:04:26 [INFO] Cycle 2 completed in ... (stored last_timestamp=2025-11-26T14:04:23Z)
+2025-11-26 14:04:26 [INFO] Sleeping 3600s until next cycle.
+2025-11-26 15:04:26 [INFO] === Cycle #3 startup ===
+2025-11-26 15:04:26 [INFO] SQLite MED DB ready.
+2025-11-26 15:04:26 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-26 15:04:26 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-26 15:04:26 [INFO] === Cycle #3 startup ===
+2025-11-26 15:04:26 [INFO] Starting news scan cycle. published_after candidates: 2025-11-25T21:26:09
+2025-11-26 15:04:26 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-25T21:26:09&page=1
+2025-11-26 15:04:26 [INFO] Fetched 3 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-26 15:04:26 [INFO] Matched by exact company name in title/desc: ['NVDA'] (tier 2)
+2025-11-26 15:04:27 [INFO] Discord posted.
+2025-11-26 15:04:27 [INFO] Matched by exact company name in title/desc: ['GOOGL', 'NVDA'] (tier 2)
+2025-11-26 15:04:27 [INFO] Matched by fuzzy token similarity: ['AAPL', 'AMZN', 'GOOGL', 'META', 'NKE', 'TSLA'] (tier 5)
+2025-11-26 15:04:27 [INFO] MED saved to DB: AAPL | 1.50 — Apple Stock: Don't Buy Into This Strength (NASDAQ:AAPL)
+2025-11-26 15:04:27 [INFO] MED saved to DB: AMZN | 1.50 — Apple Stock: Don't Buy Into This Strength (NASDAQ:AAPL)
+2025-11-26 15:04:27 [INFO] MED saved to DB: GOOGL | 1.50 — Apple Stock: Don't Buy Into This Strength (NASDAQ:AAPL)
+2025-11-26 15:04:27 [INFO] MED saved to DB: META | 1.50 — Apple Stock: Don't Buy Into This Strength (NASDAQ:AAPL)
+2025-11-26 15:04:27 [INFO] MED saved to DB: NKE | 1.50 — Apple Stock: Don't Buy Into This Strength (NASDAQ:AAPL)
+2025-11-26 15:04:27 [INFO] MED saved to DB: TSLA | 1.50 — Apple Stock: Don't Buy Into This Strength (NASDAQ:AAPL)
+2025-11-26 15:04:27 [INFO] Batch 1/4 result: fetched=3 kept=7 posted=1
+2025-11-26 15:04:27 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-25T21:26:09&page=1
+2025-11-26 15:04:27 [INFO] Fetched 2 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-26 15:04:27 [INFO] Matched by exact company name in title/desc: ['TGT'] (tier 2)
+2025-11-26 15:04:27 [INFO] Discord posted.
+2025-11-26 15:04:27 [INFO] Matched by fuzzy token similarity: ['TGT'] (tier 5)
+2025-11-26 15:04:27 [INFO] Batch 2/4 result: fetched=2 kept=1 posted=1
+2025-11-26 15:04:28 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-25T21:26:09&page=1
+2025-11-26 15:04:28 [INFO] Fetched 1 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-26 15:04:28 [INFO] Matched by fuzzy token similarity: ['AAL'] (tier 5)
+2025-11-26 15:04:28 [INFO] Batch 3/4 result: fetched=1 kept=0 posted=0
+2025-11-26 15:04:28 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-25T21:26:09&page=1
+2025-11-26 15:04:29 [INFO] Fetched 0 articles for batch (LMT,HD,PGR,MRK)
+2025-11-26 15:04:29 [INFO] Batch 4/4 result: fetched=0 kept=0 posted=0
+2025-11-26 15:04:29 [INFO] Cycle summary: fetched=6 kept=8 posted=2
+2025-11-26 15:04:29 [INFO] Cycle 3 completed in ... (stored last_timestamp=2025-11-26T15:04:26Z)
+2025-11-26 15:04:29 [INFO] Sleeping 3600s until next cycle.
+2025-11-27 16:35:48 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-27 16:35:48 [INFO] Loaded company map from company_map.json.
+2025-11-27 16:35:48 [INFO] Resuming from last_timestamp: 2025-11-26T15:04:26Z
+2025-11-27 16:35:48 [INFO] ========== Bot 2.3 Startup ==========
+2025-11-27 16:35:48 [INFO] SQLite MED DB ready.
+2025-11-27 16:35:48 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-27 16:35:48 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-27 16:35:48 [INFO] === Cycle #1 startup ===
+2025-11-27 16:35:48 [INFO] Starting news scan cycle. published_after candidates: 2025-11-26T15:04:26
+2025-11-27 16:35:48 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-26T15:04:26&page=1
+2025-11-27 16:35:48 [INFO] Fetched 3 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-27 16:35:48 [INFO] No tickers detected — assigning fallback GOOGL (tier 8)
+2025-11-27 16:35:48 [INFO] Matched by fuzzy token similarity: ['AAPL', 'AMZN', 'GOOGL', 'META', 'NKE', 'TSLA'] (tier 5)
+2025-11-27 16:35:48 [INFO] Matched by fuzzy token similarity: ['AAPL', 'AMZN', 'GOOGL', 'META', 'NKE', 'TSLA'] (tier 5)
+2025-11-27 16:35:49 [INFO] Discord posted.
+2025-11-27 16:35:49 [INFO] Discord posted.
+2025-11-27 16:35:50 [INFO] Discord posted.
+2025-11-27 16:35:50 [INFO] Discord posted.
+2025-11-27 16:35:50 [INFO] Discord posted.
+2025-11-27 16:35:51 [INFO] Discord posted.
+2025-11-27 16:35:51 [INFO] Batch 1/4 result: fetched=3 kept=6 posted=6
+2025-11-27 16:35:51 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-26T15:04:26&page=1
+2025-11-27 16:35:51 [INFO] Fetched 1 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-27 16:35:51 [INFO] No tickers detected — assigning fallback RR (tier 8)
+2025-11-27 16:35:51 [INFO] Batch 2/4 result: fetched=1 kept=0 posted=0
+2025-11-27 16:35:51 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-26T15:04:26&page=1
+2025-11-27 16:35:52 [INFO] Fetched 2 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-27 16:35:52 [INFO] Matched by exact company name in title/desc: ['PYPL'] (tier 2)
+2025-11-27 16:35:52 [INFO] Matched by fuzzy token similarity: ['NEE'] (tier 5)
+2025-11-27 16:35:52 [INFO] Batch 3/4 result: fetched=2 kept=0 posted=0
+2025-11-27 16:35:52 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-26T15:04:26&page=1
+2025-11-27 16:35:52 [INFO] Fetched 3 articles for batch (LMT,HD,PGR,MRK)
+2025-11-27 16:35:52 [INFO] Matched by fuzzy token similarity: ['HD', 'MRK'] (tier 5)
+2025-11-27 16:35:52 [INFO] Matched by fuzzy token similarity: ['HD', 'LMT', 'MRK'] (tier 5)
+2025-11-27 16:35:52 [INFO] Matched by fuzzy token similarity: ['HD', 'MRK'] (tier 5)
+2025-11-27 16:35:52 [INFO] MED saved to DB: HD | 2.00 — [DowJonesToday]Dow Jones Advances on Rate Cut Hopes and Strong Corporate Earnings
+2025-11-27 16:35:52 [INFO] MED saved to DB: MRK | 2.00 — [DowJonesToday]Dow Jones Advances on Rate Cut Hopes and Strong Corporate Earnings
+2025-11-27 16:35:52 [INFO] Batch 4/4 result: fetched=3 kept=2 posted=0
+2025-11-27 16:35:52 [INFO] Cycle summary: fetched=9 kept=8 posted=6
+2025-11-27 16:35:52 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-27T16:35:48Z)
+2025-11-27 16:35:52 [INFO] Sleeping 3600s until next cycle.
+2025-11-27 18:34:29 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-27 18:34:29 [INFO] Loaded company map from company_map.json.
+2025-11-27 18:34:29 [INFO] Resuming from last_timestamp: 2025-11-27T16:35:48Z
+2025-11-27 18:34:29 [INFO] ========== Bot 2.3 Startup ==========
+2025-11-27 18:34:29 [INFO] SQLite MED DB ready.
+2025-11-27 18:34:29 [INFO] Loaded 34 personal tickers from watchlist.txt.
+2025-11-27 18:34:29 [INFO] Cycle composition: 34 personal + 0 random = 34 total.
+2025-11-27 18:34:29 [INFO] === Cycle #1 startup ===
+2025-11-27 18:34:29 [INFO] Starting news scan cycle. published_after candidates: 2025-11-27T16:35:48
+2025-11-27 18:34:29 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA&published_after=2025-11-27T16:35:48&page=1
+2025-11-27 18:34:30 [INFO] Fetched 0 articles for batch (GOOGL,AMZN,AAPL,NVDA,TSLA,META,MSFT,PG,NKE,TNYA)
+2025-11-27 18:34:30 [INFO] Batch 1/4 result: fetched=0 kept=0 posted=0
+2025-11-27 18:34:30 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST&published_after=2025-11-27T16:35:48&page=1
+2025-11-27 18:34:30 [INFO] Fetched 0 articles for batch (RR,CAN,DEFT,SRFM,MRNA,TGT,DNUT,ASST,CRCL,HNST)
+2025-11-27 18:34:30 [INFO] Batch 2/4 result: fetched=0 kept=0 posted=0
+2025-11-27 18:34:30 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM&published_after=2025-11-27T16:35:48&page=1
+2025-11-27 18:34:31 [INFO] Fetched 0 articles for batch (SES,AAL,NEE,VOW,BITF,PYPL,USGOLD,ABT,NOC,QCOM)
+2025-11-27 18:34:31 [INFO] Batch 3/4 result: fetched=0 kept=0 posted=0
+2025-11-27 18:34:31 [INFO] Outbound URL: https://api.marketaux.com/v1/news/all?symbols=LMT,HD,PGR,MRK&published_after=2025-11-27T16:35:48&page=1
+2025-11-27 18:34:31 [INFO] Fetched 0 articles for batch (LMT,HD,PGR,MRK)
+2025-11-27 18:34:31 [INFO] Batch 4/4 result: fetched=0 kept=0 posted=0
+2025-11-27 18:34:32 [INFO] Cycle summary: fetched=0 kept=0 posted=0
+2025-11-27 18:34:32 [INFO] Cycle 1 completed in ... (stored last_timestamp=2025-11-27T18:34:29Z)
+2025-11-27 18:34:32 [INFO] Sleeping 3600s until next cycle.
+2025-11-27 18:34:36 [INFO] KeyboardInterrupt received — shutting down.
